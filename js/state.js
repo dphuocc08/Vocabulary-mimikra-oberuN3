@@ -3,8 +3,9 @@
 
     const state = {
         levels: [],
+        manifestLoaded: false,
         currentLevel: "n3",
-        loadedFiles: new Set(),
+        loadedUnitsById: new Map(),
         isLoadingLevel: false,
 
         units: [],
@@ -39,38 +40,38 @@
             .replace(/'/g, "&#39;");
     }
 
-    function initManifest() {
-        state.levels = Array.isArray(global.MIMI_LEVELS) ? global.MIMI_LEVELS : [];
+    async function loadManifest() {
+        if (state.manifestLoaded && state.levels.length > 0) {
+            return state.levels;
+        }
+        const res = await fetch("data/manifest.json");
+        if (!res.ok) {
+            throw new Error(`Không thể tải data/manifest.json (HTTP ${res.status})`);
+        }
+        const data = await res.json();
+        state.levels = Array.isArray(data) ? data : [];
+        state.manifestLoaded = true;
+        return state.levels;
     }
 
-    function loadScriptOnce(src) {
-        if (!src || state.loadedFiles.has(src)) {
-            return Promise.resolve();
+    async function loadUnitJsonOnce(entry) {
+        if (!entry || !entry.file) return null;
+        if (state.loadedUnitsById.has(entry.id)) {
+            return state.loadedUnitsById.get(entry.id);
         }
-        return new Promise((resolve, reject) => {
-            const existing = document.querySelector(`script[data-mimi-src="${src}"]`);
-            if (existing) {
-                state.loadedFiles.add(src);
-                resolve();
-                return;
-            }
-            const script = document.createElement("script");
-            script.src = src;
-            script.async = false;
-            script.dataset.mimiSrc = src;
-            script.onload = () => {
-                state.loadedFiles.add(src);
-                resolve();
-            };
-            script.onerror = () => {
-                reject(new Error(`Không thể tải tệp dữ liệu: ${src}`));
-            };
-            document.body.appendChild(script);
-        });
+        const res = await fetch(entry.file);
+        if (!res.ok) {
+            throw new Error(`Không thể tải tệp dữ liệu: ${entry.file} (HTTP ${res.status})`);
+        }
+        const unit = await res.json();
+        if (unit && unit.id) {
+            state.loadedUnitsById.set(unit.id, unit);
+        }
+        return unit;
     }
 
     async function loadLevel(levelId) {
-        initManifest();
+        await loadManifest();
         const targetMeta = state.levels.find((l) => l.id === levelId) || state.levels[0];
         if (!targetMeta) {
             initData();
@@ -80,14 +81,10 @@
         state.isLoadingLevel = true;
         try {
             const unitEntries = Array.isArray(targetMeta.units) ? targetMeta.units : [];
-            const alreadyLoadedIds = new Set(
-                (Array.isArray(global.MIMI_UNITS) ? global.MIMI_UNITS : []).map((u) => u.id)
-            );
+            const missingEntries = unitEntries.filter((entry) => !state.loadedUnitsById.has(entry.id));
 
-            for (const entry of unitEntries) {
-                if (!alreadyLoadedIds.has(entry.id)) {
-                    await loadScriptOnce(entry.file);
-                }
+            if (missingEntries.length > 0) {
+                await Promise.all(missingEntries.map((entry) => loadUnitJsonOnce(entry)));
             }
 
             state.currentLevel = targetMeta.id;
@@ -101,16 +98,25 @@
     }
 
     function initData() {
-        initManifest();
-        const rawUnits = Array.isArray(global.MIMI_UNITS) ? global.MIMI_UNITS : [];
+        const orderedRawUnits = [];
         const seenUnitIds = new Set();
+
+        for (const lvl of state.levels) {
+            const entries = Array.isArray(lvl.units) ? lvl.units : [];
+            for (const entry of entries) {
+                const unit = state.loadedUnitsById.get(entry.id);
+                if (unit && !seenUnitIds.has(unit.id)) {
+                    seenUnitIds.add(unit.id);
+                    orderedRawUnits.push(unit);
+                }
+            }
+        }
+
         state.allVocab = [];
         state.vocabById.clear();
-
         state.units = [];
-        for (const unit of rawUnits) {
-            if (!unit || !unit.id || seenUnitIds.has(unit.id)) continue;
-            seenUnitIds.add(unit.id);
+
+        for (const unit of orderedRawUnits) {
 
             const levelId = unit.level || "n3";
             const batchesMap = new Map();

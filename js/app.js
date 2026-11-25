@@ -12,8 +12,21 @@
         AppState.state.studyMode = Storage.getStudyMode();
         const savedLevel = Storage.getSelectedLevel();
         HomeView.renderLoadingState(savedLevel);
-        await AppState.loadLevel(savedLevel);
-        HomeView.renderHome();
+        try {
+            await AppState.loadLevel(savedLevel);
+            HomeView.renderHome();
+        } catch (err) {
+            console.error(err);
+            const container = document.getElementById("units-container");
+            if (container) {
+                container.innerHTML = `
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 text-center space-y-2">
+                        <div class="font-bold text-amber-900">Không thể tải tệp dữ liệu JSON</div>
+                        <p class="text-sm text-amber-800">Trình duyệt chặn đọc tệp JSON khi mở trực tiếp bằng <code>file://</code>. Hãy chạy bằng máy chủ cục bộ (ví dụ: <code>npx serve .</code> hoặc VS Code Live Server).</p>
+                    </div>
+                `;
+            }
+        }
         Audio.setupKeyboardShortcuts();
         MistakeBank.setupMistakeSearchListener();
         Backup.setupBackupListener();
