@@ -12,7 +12,9 @@
     }
 
     function renderMistakeBankList() {
-        const wrongIds = Storage.getWrongIds();
+        const levelVocabIds = new Set(global.MimiAppState.getCurrentLevelVocab().map((v) => v.id));
+        const meta = global.MimiAppState.getCurrentLevelMeta();
+        const wrongIds = Storage.getWrongIds().filter((id) => levelVocabIds.has(id));
         const items = wrongIds.map((id) => state.vocabById.get(id)).filter(Boolean);
 
         const countBadge = document.getElementById("mistake-page-count");
@@ -21,7 +23,7 @@
         const listEl = document.getElementById("mistake-bank-list");
         const emptyEl = document.getElementById("mistake-bank-empty");
 
-        countBadge.textContent = `${items.length} từ`;
+        countBadge.textContent = `${items.length} từ (${meta.code})`;
         startAllBtn.disabled = items.length === 0;
         clearAllBtn.disabled = items.length === 0;
 
@@ -79,10 +81,14 @@
     }
 
     function clearAllMistakeBank() {
-        const count = Storage.getWrongIds().length;
-        if (count === 0) return;
-        if (!global.confirm(`Bạn có chắc muốn xóa toàn bộ ${count} từ khỏi Sổ tay từ sai không?`)) return;
-        Storage.clearWrongIds();
+        const levelVocabIds = new Set(global.MimiAppState.getCurrentLevelVocab().map((v) => v.id));
+        const meta = global.MimiAppState.getCurrentLevelMeta();
+        const levelWrongIds = Storage.getWrongIds().filter((id) => levelVocabIds.has(id));
+        if (levelWrongIds.length === 0) return;
+        if (!global.confirm(`Bạn có chắc muốn xóa toàn bộ ${levelWrongIds.length} từ ${meta.code} khỏi Sổ tay từ sai không?`)) return;
+        for (const id of levelWrongIds) {
+            Storage.removeWrongId(id);
+        }
         renderMistakeBankList();
     }
 

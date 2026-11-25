@@ -1,0 +1,32 @@
+window.MIMI_UNITS = window.MIMI_UNITS || [];
+
+window.MIMI_UNITS.push({
+    id: "n4-bai45",
+    level: "n4",
+    code: "Bài 45",
+    title: "～場合は・～のに (Trong trường hợp & Nghịch lý)",
+    range: "Bài 45",
+    batchSize: 18,
+    items: [
+        { id: 44501, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "謝ります", reading: "あやまります", pos: "Động từ (I)", meaning: "Xin lỗi", sentence: "間違えた場合は、すぐ（　）ます。", sentenceVi: "Trong trường hợp làm sai thì xin lỗi ngay.", note: "" },
+        { id: 44502, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "あいます", reading: "あいます", pos: "Động từ (I)", meaning: "Gặp phải (tai nạn)", sentence: "事故に（　）た場合は、警察に電話してください。", sentenceVi: "Trong trường hợp gặp tai nạn hãy gọi cảnh sát.", note: "事故にあいます (dùng trợ từ に)." },
+        { id: 44503, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "信じます", reading: "しんじます", pos: "Động từ (II)", meaning: "Tin, tin tưởng", sentence: "彼の言葉を（　）ています。", sentenceVi: "Tôi tin lời anh ấy nói.", note: "" },
+        { id: 44504, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "用意します", reading: "よういします", pos: "Động từ (III)", meaning: "Chuẩn bị sẵn", sentence: "会議の資料を（　）ておきます。", sentenceVi: "Tôi chuẩn bị sẵn tài liệu cuộc họp.", note: "" },
+        { id: 44505, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "キャンセルします", reading: "キャンセルします", pos: "Động từ (III)", meaning: "Hủy bỏ (đặt chỗ, lịch hẹn)", sentence: "ホテルの予約を（　）ました。", sentenceVi: "Tôi đã hủy đặt phòng khách sạn.", note: "" },
+        { id: 44506, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "うまくいきます", reading: "うまくいきます", pos: "Cụm động từ", meaning: "Tiến triển tốt đẹp, suôn sẻ", sentence: "新しい仕事が（　）ました。", sentenceVi: "Công việc mới tiến triển rất suôn sẻ.", note: "" },
+        { id: 44507, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "保証書", reading: "ほしょうしょ", pos: "Danh từ", meaning: "Phiếu bảo hành", sentence: "（　）がないと無料で修理できません。", sentenceVi: "Không có phiếu bảo hành thì không được sửa miễn phí.", note: "" },
+        { id: 44508, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "領収書", reading: "りょうしゅうしょ", pos: "Danh từ", meaning: "Hóa đơn, biên lai", sentence: "すみません、（　）をください。", sentenceVi: "Xin lỗi, cho tôi xin hóa đơn.", note: "" },
+        { id: 44509, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "贈り物", reading: "おくりもの", pos: "Danh từ", meaning: "Quà tặng", sentence: "友達に（　）を選びました。", sentenceVi: "Tôi đã chọn quà tặng cho bạn.", note: "" },
+        { id: 44510, part: "Chặng 1", partTitle: "Động từ & Tình huống", word: "中止", reading: "ちゅうし", pos: "Danh từ", meaning: "Hủy bỏ, đình chỉ (sự kiện)", sentence: "雨の場合、運動会は（　）になります。", sentenceVi: "Trường hợp trời mưa hội thao sẽ bị hủy.", note: "" },
+
+        { id: 44511, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "ちゃんと", reading: "ちゃんと", pos: "Phó từ", meaning: "Đàng hoàng, cẩn thận, đầy đủ", sentence: "（　）勉強したのに、試験に落ちました。", sentenceVi: "Đã học hành đàng hoàng thế mà vẫn trượt.", note: "" },
+        { id: 44512, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "係員", reading: "かかりいん", pos: "Danh từ", meaning: "Nhân viên phụ trách", sentence: "困ったときは（　）に聞いてください。", sentenceVi: "Khi gặp khó khăn hãy hỏi nhân viên phụ trách.", note: "" },
+        { id: 44513, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "優勝します", reading: "ゆうしょうします", pos: "Động từ (III)", meaning: "Vô địch, giành giải nhất", sentence: "大会で（　）ました。", sentenceVi: "Tôi đã giành chức vô địch trong giải đấu.", note: "" },
+        { id: 44514, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "悩み", reading: "なやみ", pos: "Danh từ", meaning: "Nỗi lo lắng, phiền muộn", sentence: "何か（　）がありますか。", sentenceVi: "Bạn có nỗi lo lắng nào không?", note: "" },
+        { id: 44515, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "目覚まし時計", reading: "めざましどけい", pos: "Danh từ", meaning: "Đồng hồ báo thức", sentence: "（　）を6時にセットしました。", sentenceVi: "Tôi đã đặt đồng hồ báo thức lúc 6 giờ.", note: "" },
+        { id: 44516, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "眠ります", reading: "ねむります", pos: "Động từ (I)", meaning: "Ngủ say", sentence: "昨夜はぐっすり（　）ました。", sentenceVi: "Tối qua tôi đã ngủ rất say.", note: "" },
+        { id: 44517, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "目が覚めます", reading: "めがさめます", pos: "Cụm động từ", meaning: "Tỉnh giấc, thức giấc", sentence: "朝6時に（　）ました。", sentenceVi: "Tôi tỉnh giấc lúc 6 giờ sáng.", note: "" },
+        { id: 44518, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "鳴ります", reading: "なります", pos: "Động từ (I)", meaning: "Reo, kêu (chuông, đồng hồ)", sentence: "目覚まし時計が（　）たのに起きられませんでした。", sentenceVi: "Đồng hồ báo thức đã reo mà tôi vẫn không dậy được.", note: "" },
+        { id: 44519, part: "Chặng 2", partTitle: "Đời sống & Phản xạ", word: "それでも", reading: "それでも", pos: "Liên từ", meaning: "Thế nhưng, dù vậy vẫn", sentence: "3つも目覚ましをセットしました。（　）起きられません。", sentenceVi: "Tôi đặt tận 3 báo thức. Dù vậy vẫn không dậy nổi.", note: "" }
+    ]
+});

@@ -8,9 +8,11 @@
     const MistakeBank = global.MimiMistakeBank;
     const Backup = global.MimiBackupModal;
 
-    function init() {
-        AppState.initData();
+    async function init() {
         AppState.state.studyMode = Storage.getStudyMode();
+        const savedLevel = Storage.getSelectedLevel();
+        HomeView.renderLoadingState(savedLevel);
+        await AppState.loadLevel(savedLevel);
         HomeView.renderHome();
         Audio.setupKeyboardShortcuts();
         MistakeBank.setupMistakeSearchListener();
@@ -18,7 +20,8 @@
     }
 
     global.MimiApp = {
-        // Home / Mode
+        // Home / Level / Mode
+        selectLevel: HomeView.selectLevel,
         setStudyMode: HomeView.setStudyMode,
 
         // Quiz flow

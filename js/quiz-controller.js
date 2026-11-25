@@ -30,11 +30,13 @@
     }
 
     function startGlobalRandomQuiz(count = 20) {
-        if (state.allVocab.length === 0) return;
-        const picked = Engine.shuffle(state.allVocab).slice(0, Math.min(count, state.allVocab.length));
+        const levelVocab = global.MimiAppState.getCurrentLevelVocab();
+        const meta = global.MimiAppState.getCurrentLevelMeta();
+        if (levelVocab.length === 0) return;
+        const picked = Engine.shuffle(levelVocab).slice(0, Math.min(count, levelVocab.length));
 
         launchQuiz(picked, {
-            label: `Ôn tổng hợp ngẫu nhiên (${picked.length} từ)`,
+            label: `Ôn tổng hợp ${meta.code} (${picked.length} từ)`,
             batchKey: null,
             isMistakeBank: false,
             sourceItems: picked
@@ -42,14 +44,17 @@
     }
 
     function startMistakeBankQuiz() {
+        const levelVocabIds = new Set(global.MimiAppState.getCurrentLevelVocab().map((v) => v.id));
+        const meta = global.MimiAppState.getCurrentLevelMeta();
         const items = Storage.getWrongIds()
+            .filter((id) => levelVocabIds.has(id))
             .map((id) => state.vocabById.get(id))
             .filter(Boolean);
 
         if (items.length === 0) return;
 
         launchQuiz(items, {
-            label: `📕 Sổ tay từ sai (${items.length} từ)`,
+            label: `📕 Sổ tay từ sai ${meta.code} (${items.length} từ)`,
             batchKey: null,
             isMistakeBank: true,
             sourceItems: items
@@ -57,7 +62,12 @@
     }
 
     function launchQuiz(items, meta) {
-        state.quizQuestions = Engine.buildQuestions(items, state.allVocab, state.studyMode);
+        const distractorPool = global.MimiAppState.getCurrentLevelVocab();
+        state.quizQuestions = Engine.buildQuestions(
+            items,
+            distractorPool.length >= 4 ? distractorPool : state.allVocab,
+            state.studyMode
+        );
         state.currentIndex = 0;
         state.correctCount = 0;
         state.wrongCount = 0;

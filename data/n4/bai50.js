@@ -1,0 +1,36 @@
+window.MIMI_UNITS = window.MIMI_UNITS || [];
+
+window.MIMI_UNITS.push({
+    id: "n4-bai50",
+    level: "n4",
+    code: "Bài 50",
+    title: "謙譲語 (Khiêm nhường ngữ)",
+    range: "Bài 50",
+    batchSize: 18,
+    items: [
+        { id: 45001, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "参ります", reading: "まいります", pos: "Động từ (I)", meaning: "Đi, đến (khiêm nhường ngữ của 行きます/来ます)", sentence: "あした10時に（　）。", sentenceVi: "Ngày mai tôi sẽ đến lúc 10 giờ.", note: "" },
+        { id: 45002, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "おります", reading: "おります", pos: "Động từ (I)", meaning: "Ở, có (khiêm nhường ngữ của います)", sentence: "東京に住んで（　）。", sentenceVi: "Tôi đang sống ở Tokyo.", note: "" },
+        { id: 45003, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "いただきます", reading: "いただきます", pos: "Động từ (I)", meaning: "Ăn, uống, nhận (khiêm nhường ngữ)", sentence: "コーヒーを（　）ました。", sentenceVi: "Tôi đã dùng cà phê ạ.", note: "" },
+        { id: 45004, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "申します", reading: "もうします", pos: "Động từ (I)", meaning: "Tên là, nói (khiêm nhường ngữ của 言います)", sentence: "わたくしはミラーと（　）。", sentenceVi: "Tôi tên là Miller.", note: "" },
+        { id: 45005, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "いたします", reading: "いたします", pos: "Động từ (I)", meaning: "Làm (khiêm nhường ngữ của します)", sentence: "ご案内（　）。", sentenceVi: "Tôi xin phép hướng dẫn ạ.", note: "" },
+        { id: 45006, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "拝見します", reading: "はいけんします", pos: "Động từ (III)", meaning: "Xem (khiêm nhường ngữ của 見ます)", sentence: "先生の本を（　）ました。", sentenceVi: "Tôi đã đọc/xem quyển sách của thầy.", note: "" },
+        { id: 45007, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "存じます", reading: "ぞんじます", pos: "Động từ (II)", meaning: "Biết (khiêm nhường ngữ của 知ります)", sentence: "はい、よく（　）ております。", sentenceVi: "Vâng, tôi biết rõ ạ.", note: "" },
+        { id: 45008, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "伺います", reading: "うかがいます", pos: "Động từ (I)", meaning: "Hỏi, nghe, đến thăm (khiêm nhường ngữ)", sentence: "あしたお宅へ（　）。", sentenceVi: "Ngày mai tôi xin phép đến thăm nhà anh/chị.", note: "" },
+        { id: 45009, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "お目にかかります", reading: "おめにかかります", pos: "Động từ (I)", meaning: "Gặp (khiêm nhường ngữ của 会います)", sentence: "社長に（　）たいのですが。", sentenceVi: "Tôi muốn được gặp giám đốc ạ.", note: "" },
+        { id: 45010, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "ございます", reading: "ございます", pos: "Động từ (I)", meaning: "Có (lịch sự của あります)", sentence: "お手洗いはあちらに（　）。", sentenceVi: "Nhà vệ sinh ở đằng kia ạ.", note: "" },
+        { id: 45011, part: "Chặng 1", partTitle: "Động từ Khiêm nhường ngữ", word: "わたくし", reading: "わたくし", pos: "Đại từ", meaning: "Tôi (trang trọng của わたし)", sentence: "（　）はIMCのミラーと申します。", sentenceVi: "Tôi là Miller của công ty IMC.", note: "" },
+
+        { id: 45012, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "お宅", reading: "おたく", pos: "Danh từ", meaning: "Nhà (của người khác, lịch sự)", sentence: "先生の（　）へ伺いました。", sentenceVi: "Tôi đã đến thăm nhà thầy giáo.", note: "" },
+        { id: 45013, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "郊外", reading: "こうがい", pos: "Danh từ", meaning: "Ngoại ô", sentence: "東京の（　）に住んでおります。", sentenceVi: "Tôi đang sống ở ngoại ô Tokyo.", note: "" },
+        { id: 45014, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "半年", reading: "はんとし", pos: "Danh từ", meaning: "Nửa năm (6 tháng)", sentence: "日本へ来て（　）になります。", sentenceVi: "Tôi đến Nhật đã được nửa năm.", note: "" },
+        { id: 45015, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "最初に", reading: "さいしょに", pos: "Phó từ", meaning: "Đầu tiên, trước hết", sentence: "（　）自己紹介をいたします。", sentenceVi: "Đầu tiên tôi xin phép tự giới thiệu.", note: "Cuối cùng: 最後に (さいごに)." },
+        { id: 45016, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "緊張します", reading: "きんちょうします", pos: "Động từ (III)", meaning: "Căng thẳng, hồi hộp", sentence: "スピーチのまえはとても（　）ました。", sentenceVi: "Trước bài phát biểu tôi đã rất hồi hộp.", note: "" },
+        { id: 45017, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "賞金", reading: "しょうきん", pos: "Danh từ", meaning: "Tiền thưởng", sentence: "コンテストで（　）をもらいました。", sentenceVi: "Tôi đã nhận được tiền thưởng trong cuộc thi.", note: "" },
+        { id: 45018, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "自然", reading: "しぜん", pos: "Danh từ", meaning: "Thiên nhiên", sentence: "（　）が豊かな所に住みたいです。", sentenceVi: "Tôi muốn sống ở nơi giàu thiên nhiên.", note: "" },
+        { id: 45019, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "かないます", reading: "かないます", pos: "Động từ (I)", meaning: "Trở thành hiện thực (ước mơ)", sentence: "ずっと持っていた夢が（　）ました。", sentenceVi: "Ước mơ ấp ủ bấy lâu đã thành hiện thực.", note: "夢がかないます." },
+        { id: 45020, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "協力します", reading: "きょうりょくします", pos: "Động từ (III)", meaning: "Hợp tác, giúp sức", sentence: "みんなで（　）て仕事を終わらせました。", sentenceVi: "Mọi người cùng hợp tác hoàn thành công việc.", note: "" },
+        { id: 45021, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "感謝します", reading: "かんしゃします", pos: "Động từ (III)", meaning: "Cảm ơn sâu sắc, biết ơn", sentence: "心から（　）ております。", sentenceVi: "Tôi xin chân thành cảm ơn từ đáy lòng.", note: "" },
+        { id: 45022, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "お礼", reading: "おれい", pos: "Danh từ", meaning: "Lời cảm ơn, quà cảm ơn", sentence: "先生に（　）の手紙を書きました。", sentenceVi: "Tôi đã viết thư cảm ơn thầy giáo.", note: "" },
+        { id: 45023, part: "Chặng 2", partTitle: "Giao tiếp trang trọng & Thư từ", word: "生かします", reading: "いかします", pos: "Động từ (I)", meaning: "Vận dụng, phát huy (kinh nghiệm, kiến thức)", sentence: "日本での経験を仕事に（　）たいです。", sentenceVi: "Tôi muốn vận dụng kinh nghiệm ở Nhật vào công việc.", note: "" }
+    ]
+});

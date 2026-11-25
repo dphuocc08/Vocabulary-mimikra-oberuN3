@@ -3,10 +3,12 @@
         WRONG_IDS: "mimi_n3_wrong_vocab_ids",
         MASTERED_IDS: "mimi_n3_mastered_ids",
         COMPLETED_BATCHES: "mimi_n3_completed_batches",
-        STUDY_MODE: "mimi_n3_study_mode"
+        STUDY_MODE: "mimi_n3_study_mode",
+        SELECTED_LEVEL: "mimi_selected_level"
     };
 
     const VALID_MODES = new Set(["two_step", "context_fill"]);
+    const VALID_LEVELS = new Set(["n5", "n4", "n3", "n2"]);
 
     function safeGetItem(key) {
         try {
@@ -142,16 +144,28 @@
         return nextMode;
     }
 
+    function getSelectedLevel() {
+        const lvl = safeGetItem(KEYS.SELECTED_LEVEL);
+        return VALID_LEVELS.has(lvl) ? lvl : "n3";
+    }
+
+    function setSelectedLevel(levelId) {
+        const nextLevel = VALID_LEVELS.has(levelId) ? levelId : "n3";
+        safeSetItem(KEYS.SELECTED_LEVEL, nextLevel);
+        return nextLevel;
+    }
+
     function exportBackup() {
         const payload = {
             app: "mimi-kara-n3",
-            version: 1,
+            version: 2,
             exportedAt: new Date().toISOString(),
             data: {
                 wrongIds: getWrongIds(),
                 masteredIds: getMasteredIds(),
                 completedBatches: getCompletedBatches(),
-                studyMode: getStudyMode()
+                studyMode: getStudyMode(),
+                selectedLevel: getSelectedLevel()
             }
         };
         return JSON.stringify(payload, null, 2);
@@ -190,6 +204,9 @@
         writeJson(KEYS.MASTERED_IDS, cleanMastered);
         writeJson(KEYS.COMPLETED_BATCHES, cleanBatches);
         setStudyMode(studyMode);
+        if (parsed.data.selectedLevel) {
+            setSelectedLevel(parsed.data.selectedLevel);
+        }
 
         return {
             wrongCount: cleanWrong.length,
@@ -211,6 +228,8 @@
         recordBatchCompletion,
         getStudyMode,
         setStudyMode,
+        getSelectedLevel,
+        setSelectedLevel,
         exportBackup,
         importBackup
     };

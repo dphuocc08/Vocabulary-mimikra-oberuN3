@@ -3,20 +3,68 @@ window.MIMI_LEVELS = [
         id: "n5",
         code: "N5",
         name: "JLPT N5",
-        subtitle: "Từ vựng sơ cấp N5",
+        subtitle: "Minna no Nihongo I (25 bài)",
         accent: "sky",
         units: [
-            { id: "n5-unit01", file: "data/n5/unit01.js" }
+            { id: "n5-bai01", file: "data/n5/bai01.js" },
+            { id: "n5-bai02", file: "data/n5/bai02.js" },
+            { id: "n5-bai03", file: "data/n5/bai03.js" },
+            { id: "n5-bai04", file: "data/n5/bai04.js" },
+            { id: "n5-bai05", file: "data/n5/bai05.js" },
+            { id: "n5-bai06", file: "data/n5/bai06.js" },
+            { id: "n5-bai07", file: "data/n5/bai07.js" },
+            { id: "n5-bai08", file: "data/n5/bai08.js" },
+            { id: "n5-bai09", file: "data/n5/bai09.js" },
+            { id: "n5-bai10", file: "data/n5/bai10.js" },
+            { id: "n5-bai11", file: "data/n5/bai11.js" },
+            { id: "n5-bai12", file: "data/n5/bai12.js" },
+            { id: "n5-bai13", file: "data/n5/bai13.js" },
+            { id: "n5-bai14", file: "data/n5/bai14.js" },
+            { id: "n5-bai15", file: "data/n5/bai15.js" },
+            { id: "n5-bai16", file: "data/n5/bai16.js" },
+            { id: "n5-bai17", file: "data/n5/bai17.js" },
+            { id: "n5-bai18", file: "data/n5/bai18.js" },
+            { id: "n5-bai19", file: "data/n5/bai19.js" },
+            { id: "n5-bai20", file: "data/n5/bai20.js" },
+            { id: "n5-bai21", file: "data/n5/bai21.js" },
+            { id: "n5-bai22", file: "data/n5/bai22.js" },
+            { id: "n5-bai23", file: "data/n5/bai23.js" },
+            { id: "n5-bai24", file: "data/n5/bai24.js" },
+            { id: "n5-bai25", file: "data/n5/bai25.js" }
         ]
     },
     {
         id: "n4",
         code: "N4",
         name: "JLPT N4",
-        subtitle: "Từ vựng sơ trung cấp N4",
+        subtitle: "Minna no Nihongo II (Bài 26–50)",
         accent: "indigo",
         units: [
-            { id: "n4-unit01", file: "data/n4/unit01.js" }
+            { id: "n4-bai26", file: "data/n4/bai26.js" },
+            { id: "n4-bai27", file: "data/n4/bai27.js" },
+            { id: "n4-bai28", file: "data/n4/bai28.js" },
+            { id: "n4-bai29", file: "data/n4/bai29.js" },
+            { id: "n4-bai30", file: "data/n4/bai30.js" },
+            { id: "n4-bai31", file: "data/n4/bai31.js" },
+            { id: "n4-bai32", file: "data/n4/bai32.js" },
+            { id: "n4-bai33", file: "data/n4/bai33.js" },
+            { id: "n4-bai34", file: "data/n4/bai34.js" },
+            { id: "n4-bai35", file: "data/n4/bai35.js" },
+            { id: "n4-bai36", file: "data/n4/bai36.js" },
+            { id: "n4-bai37", file: "data/n4/bai37.js" },
+            { id: "n4-bai38", file: "data/n4/bai38.js" },
+            { id: "n4-bai39", file: "data/n4/bai39.js" },
+            { id: "n4-bai40", file: "data/n4/bai40.js" },
+            { id: "n4-bai41", file: "data/n4/bai41.js" },
+            { id: "n4-bai42", file: "data/n4/bai42.js" },
+            { id: "n4-bai43", file: "data/n4/bai43.js" },
+            { id: "n4-bai44", file: "data/n4/bai44.js" },
+            { id: "n4-bai45", file: "data/n4/bai45.js" },
+            { id: "n4-bai46", file: "data/n4/bai46.js" },
+            { id: "n4-bai47", file: "data/n4/bai47.js" },
+            { id: "n4-bai48", file: "data/n4/bai48.js" },
+            { id: "n4-bai49", file: "data/n4/bai49.js" },
+            { id: "n4-bai50", file: "data/n4/bai50.js" }
         ]
     },
     {
@@ -27,7 +75,11 @@ window.MIMI_LEVELS = [
         accent: "emerald",
         units: [
             { id: "unit01", file: "data/n3/unit01.js" },
-            { id: "unit02", file: "data/n3/unit02.js" }
+            { id: "unit02", file: "data/n3/unit02.js" },
+            { id: "unit03", file: "data/n3/unit03.js" },
+            { id: "unit04", file: "data/n3/unit04.js" },
+            { id: "unit05", file: "data/n3/unit05.js" },
+            { id: "unit06", file: "data/n3/unit06.js" }
         ]
     }
 ];

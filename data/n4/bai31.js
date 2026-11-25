@@ -1,0 +1,37 @@
+window.MIMI_UNITS = window.MIMI_UNITS || [];
+
+window.MIMI_UNITS.push({
+    id: "n4-bai31",
+    level: "n4",
+    code: "Bài 31",
+    title: "意向形・～つもりです (Thể ý hướng & Dự định)",
+    range: "Bài 31",
+    batchSize: 18,
+    items: [
+        { id: 43101, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "続けます", reading: "つづけます", pos: "Động từ (II)", meaning: "Tiếp tục", sentence: "これからも日本語の勉強を（　）つもりです。", sentenceVi: "Từ nay tôi vẫn dự định tiếp tục học tiếng Nhật.", note: "" },
+        { id: 43102, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "見つけます", reading: "みつけます", pos: "Động từ (II)", meaning: "Tìm thấy", sentence: "いい仕事を（　）たいと思っています。", sentenceVi: "Tôi muốn tìm một công việc tốt.", note: "" },
+        { id: 43103, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "取ります", reading: "とります", pos: "Động từ (I)", meaning: "Xin nghỉ, lấy (kỳ nghỉ)", sentence: "来週、休みを（　）つもりです。", sentenceVi: "Tuần sau tôi dự định xin nghỉ phép.", note: "休みを取ります." },
+        { id: 43104, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "受けます", reading: "うけます", pos: "Động từ (II)", meaning: "Thi, tham dự (kỳ thi)", sentence: "12月にJLPTの試験を（　）予定です。", sentenceVi: "Tháng 12 tôi dự định thi JLPT.", note: "試験を受けます." },
+        { id: 43105, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "休憩します", reading: "きゅうけいします", pos: "Động từ (III)", meaning: "Nghỉ giải lao", sentence: "ちょっと（　）ましょうか。", sentenceVi: "Chúng ta nghỉ giải lao một chút nhé?", note: "" },
+        { id: 43106, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "連休", reading: "れんきゅう", pos: "Danh từ", meaning: "Kỳ nghỉ lễ dài ngày", sentence: "今度の（　）に温泉へ行こうと思っています。", sentenceVi: "Kỳ nghỉ dài tới tôi định đi suối nước nóng.", note: "" },
+        { id: 43107, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "作文", reading: "さくぶん", pos: "Danh từ", meaning: "Bài văn, bài tập làm văn", sentence: "日本語で（　）を書きます。", sentenceVi: "Tôi viết bài văn bằng tiếng Nhật.", note: "" },
+        { id: 43108, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "発表", reading: "はっぴょう", pos: "Danh từ", meaning: "Phát biểu, thuyết trình", sentence: "来週、研究の（　）があります。", sentenceVi: "Tuần sau có buổi thuyết trình nghiên cứu.", note: "" },
+        { id: 43109, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "展覧会", reading: "てんらんかい", pos: "Danh từ", meaning: "Triển lãm", sentence: "美術館で絵の（　）を見ます。", sentenceVi: "Tôi xem triển lãm tranh ở bảo tàng mỹ thuật.", note: "" },
+        { id: 43110, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "結婚式", reading: "けっこんしき", pos: "Danh từ", meaning: "Lễ cưới", sentence: "友達の（　）に出席します。", sentenceVi: "Tôi dự lễ cưới của bạn.", note: "Đám tang: お葬式 (おそうしき), buổi lễ: 式 (しき)." },
+        { id: 43111, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "本社", reading: "ほんしゃ", pos: "Danh từ", meaning: "Trụ sở chính", sentence: "東京の（　）へ出張します。", sentenceVi: "Tôi đi công tác ở trụ sở chính tại Tokyo.", note: "Chi nhánh: 支店 (してん)." },
+        { id: 43112, part: "Chặng 1", partTitle: "Động từ & Sự kiện", word: "教会", reading: "きょうかい", pos: "Danh từ", meaning: "Nhà thờ", sentence: "（　）で結婚式を挙げます。", sentenceVi: "Tổ chức lễ cưới ở nhà thờ.", note: "" },
+
+        { id: 43113, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "大学院", reading: "だいがくいん", pos: "Danh từ", meaning: "Cao học, trường sau đại học", sentence: "大学を卒業したら、（　）へ行くつもりです。", sentenceVi: "Tốt nghiệp đại học xong tôi định học cao học.", note: "" },
+        { id: 43114, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "動物園", reading: "どうぶつえん", pos: "Danh từ", meaning: "Vườn bách thú, sở thú", sentence: "子どもを（　）へ連れて行きます。", sentenceVi: "Tôi dẫn con đi sở thú.", note: "" },
+        { id: 43115, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "温泉", reading: "おんせん", pos: "Danh từ", meaning: "Suối nước nóng", sentence: "寒い冬は（　）に入りたいです。", sentenceVi: "Mùa đông lạnh tôi muốn ngâm suối nước nóng.", note: "" },
+        { id: 43116, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "帰り", reading: "かえり", pos: "Danh từ", meaning: "Lúc về, đường về", sentence: "学校の（　）にスーパーへ寄ります。", sentenceVi: "Trên đường đi học về tôi ghé siêu thị.", note: "" },
+        { id: 43117, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "お子さん", reading: "おこさん", pos: "Danh từ", meaning: "Con (của người khác)", sentence: "（　）は何歳ですか。", sentenceVi: "Con của anh/chị mấy tuổi rồi ạ?", note: "" },
+        { id: 43118, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "残ります", reading: "のこります", pos: "Động từ (I)", meaning: "Ở lại, còn lại", sentence: "会社に（　）て残業します。", sentenceVi: "Tôi ở lại công ty làm thêm giờ.", note: "" },
+        { id: 43119, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "卒業します", reading: "そつぎょうします", pos: "Động từ (III)", meaning: "Tốt nghiệp", sentence: "来年、大学を（　）予定です。", sentenceVi: "Sang năm tôi dự kiến tốt nghiệp đại học.", note: "大学を卒業します (dùng trợ từ を)." },
+        { id: 43120, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "村", reading: "むら", pos: "Danh từ", meaning: "Làng", sentence: "静かな（　）に住みたいです。", sentenceVi: "Tôi muốn sống ở một ngôi làng yên tĩnh.", note: "" },
+        { id: 43121, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "映画館", reading: "えいがかん", pos: "Danh từ", meaning: "Rạp chiếu phim", sentence: "週末、（　）へ映画を見に行きます。", sentenceVi: "Cuối tuần tôi đi rạp chiếu phim xem phim.", note: "" },
+        { id: 43122, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "嫌", reading: "いや", pos: "Tính từ -na", meaning: "Ghét, không thích, chán", sentence: "残業は（　）です。", sentenceVi: "Tôi ghét làm thêm giờ.", note: "" },
+        { id: 43123, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "閉じます", reading: "とじます", pos: "Động từ (II)", meaning: "Nhắm (mắt), gấp (sách)", sentence: "目を（　）て休んでください。", sentenceVi: "Hãy nhắm mắt lại nghỉ ngơi.", note: "" },
+        { id: 43124, part: "Chặng 2", partTitle: "Địa điểm, Cuộc sống & Tương lai", word: "都会", reading: "とかい", pos: "Danh từ", meaning: "Thành thị, đô thị", sentence: "（　）は便利ですが、人が多すぎます。", sentenceVi: "Đô thị tiện lợi nhưng quá đông người.", note: "" }
+    ]
+});

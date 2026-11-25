@@ -1,0 +1,33 @@
+window.MIMI_UNITS = window.MIMI_UNITS || [];
+
+window.MIMI_UNITS.push({
+    id: "n5-bai15",
+    level: "n5",
+    code: "Bài 15",
+    title: "写真を撮ってもいいですか (Xin phép, Cấm đoán & Trạng thái)",
+    range: "Bài 15",
+    batchSize: 22,
+    items: [
+        { id: 51501, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "置きます", reading: "おきます", pos: "Động từ (I)", meaning: "Đặt, để", sentence: "ここに荷物を（　）ないでください。", sentenceVi: "Xin đừng để hành lý ở đây.", note: "" },
+        { id: 51502, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "作ります", reading: "つくります", pos: "Động từ (I)", meaning: "Làm, chế tạo, sản xuất", sentence: "IMCはソフトを（　）ています。", sentenceVi: "Công ty IMC chế tạo phần mềm.", note: "造ります cũng đọc là つくります (sản xuất quy mô lớn)." },
+        { id: 51503, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "売ります", reading: "うります", pos: "Động từ (I)", meaning: "Bán", sentence: "スーパーでナンプラーを（　）ています。", sentenceVi: "Siêu thị có bán nước mắm.", note: "" },
+        { id: 51504, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "知ります", reading: "しります", pos: "Động từ (I)", meaning: "Biết", sentence: "市役所の電話番号を（　）ていますか。", sentenceVi: "Anh có biết số điện thoại tòa thị chính không?", note: "Phủ định của 知っています là 知りません." },
+        { id: 51505, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "住みます", reading: "すみます", pos: "Động từ (I)", meaning: "Sống, ở", sentence: "わたしは大阪に（　）ています。", sentenceVi: "Tôi sống ở Osaka.", note: "" },
+        { id: 51506, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "研究します", reading: "けんきゅうします", pos: "Động từ (III)", meaning: "Nghiên cứu", sentence: "大学で経済を（　）ています。", sentenceVi: "Tôi đang nghiên cứu kinh tế ở đại học.", note: "" },
+        { id: 51507, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "資料", reading: "しりょう", pos: "Danh từ", meaning: "Tài liệu, tư liệu", sentence: "この（　）をコピーしてもいいですか。", sentenceVi: "Tôi photo tài liệu này có được không?", note: "" },
+        { id: 51508, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "カタログ", reading: "カタログ", pos: "Danh từ", meaning: "Ca-ta-lô", sentence: "この（　）をもらってもいいですか。", sentenceVi: "Tôi lấy tờ ca-ta-lô này có được không?", note: "" },
+        { id: 51509, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "時刻表", reading: "じこくひょう", pos: "Danh từ", meaning: "Bảng giờ chạy tàu", sentence: "電車の（　）を見ます。", sentenceVi: "Tôi xem bảng giờ chạy tàu điện.", note: "" },
+        { id: 51510, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "服", reading: "ふく", pos: "Danh từ", meaning: "Quần áo", sentence: "デパートで（　）を買います。", sentenceVi: "Tôi mua quần áo ở bách hóa.", note: "" },
+        { id: 51511, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "製品", reading: "せいひん", pos: "Danh từ", meaning: "Sản phẩm", sentence: "この会社はいろいろな（　）を作っています。", sentenceVi: "Công ty này sản xuất nhiều sản phẩm.", note: "" },
+        { id: 51512, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "ソフト", reading: "ソフト", pos: "Danh từ", meaning: "Phần mềm", sentence: "コンピューターの（　）を作っています。", sentenceVi: "Chế tạo phần mềm máy vi tính.", note: "" },
+        { id: 51513, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "電子辞書", reading: "でんしじしょ", pos: "Danh từ", meaning: "Kim từ điển", sentence: "サントスさんは（　）を持っています。", sentenceVi: "Anh Santos có kim từ điển.", note: "" },
+        { id: 51514, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "経済", reading: "けいざい", pos: "Danh từ", meaning: "Kinh tế", sentence: "大学で（　）を勉強しています。", sentenceVi: "Tôi đang học kinh tế ở đại học.", note: "" },
+        { id: 51515, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "市役所", reading: "しやくしょ", pos: "Danh từ", meaning: "Tòa thị chính", sentence: "（　）の電話番号を知っていますか。", sentenceVi: "Anh có biết số điện thoại của tòa thị chính không?", note: "" },
+        { id: 51516, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "高校", reading: "こうこう", pos: "Danh từ", meaning: "Trường THPT, trường cấp 3", sentence: "母は（　）で英語を教えています。", sentenceVi: "Mẹ tôi dạy tiếng Anh ở trường cấp 3.", note: "" },
+        { id: 51517, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "歯医者", reading: "はいしゃ", pos: "Danh từ", meaning: "Nha sĩ", sentence: "兄は（　）です。", sentenceVi: "Anh trai tôi là nha sĩ.", note: "" },
+        { id: 51518, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "独身", reading: "どくしん", pos: "Danh từ", meaning: "Độc thân", sentence: "いいえ、まだ（　）です。", sentenceVi: "Không, anh ấy vẫn còn độc thân.", note: "" },
+        { id: 51519, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "皆さん", reading: "みなさん", pos: "Danh từ", meaning: "Các anh chị, các bạn, quý vị", sentence: "（　）、おはようございます。", sentenceVi: "Chào buổi sáng mọi người.", note: "" },
+        { id: 51520, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "思い出します", reading: "おもいだします", pos: "Động từ (I)", meaning: "Nhớ lại, hồi tưởng lại", sentence: "家族を（　）。", sentenceVi: "Tôi nhớ lại gia đình mình.", note: "" },
+        { id: 51521, part: "Chặng 1", partTitle: "Từ vựng Bài 15", word: "いらっしゃいます", reading: "いらっしゃいます", pos: "Động từ (I)", meaning: "Ở, có (kính ngữ của います)", sentence: "ご家族はどちらに（　）か。", sentenceVi: "Gia đình anh đang sống ở đâu ạ?", note: "" }
+    ]
+});

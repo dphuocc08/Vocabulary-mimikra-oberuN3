@@ -38,10 +38,11 @@
         if (!file) return;
 
         const reader = new FileReader();
-        reader.onload = (e) => {
+        reader.onload = async (e) => {
             try {
                 const summary = Storage.importBackup(e.target.result);
                 state.studyMode = Storage.getStudyMode();
+                await global.MimiAppState.loadLevel(Storage.getSelectedLevel());
                 global.MimiHomeView.renderHome();
                 showBackupStatus(
                     `Khôi phục thành công! (${summary.masteredCount} từ đã nắm, ${summary.wrongCount} từ trong sổ tay, ${summary.batchCount} chặng).`,

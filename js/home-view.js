@@ -1,18 +1,121 @@
 (function (global) {
     const Storage = global.MimiStorage;
-    const { state, escapeHtml, showScreen } = global.MimiAppState;
+    const AppState = global.MimiAppState;
+    const { state, escapeHtml, showScreen } = AppState;
+
+    const LEVEL_STYLES = {
+        sky: {
+            badge: "bg-sky-600 text-white",
+            pill: "bg-sky-50 text-sky-700 border-sky-200",
+            activeBtn: "border-sky-500 bg-sky-50/90 text-sky-900 ring-2 ring-sky-500/20 shadow-xs",
+            codePill: "bg-sky-600 text-white"
+        },
+        indigo: {
+            badge: "bg-indigo-600 text-white",
+            pill: "bg-indigo-50 text-indigo-700 border-indigo-200",
+            activeBtn: "border-indigo-500 bg-indigo-50/90 text-indigo-900 ring-2 ring-indigo-500/20 shadow-xs",
+            codePill: "bg-indigo-600 text-white"
+        },
+        emerald: {
+            badge: "bg-emerald-600 text-white",
+            pill: "bg-emerald-50 text-emerald-700 border-emerald-200",
+            activeBtn: "border-emerald-500 bg-emerald-50/90 text-emerald-900 ring-2 ring-emerald-500/20 shadow-xs",
+            codePill: "bg-emerald-600 text-white"
+        }
+    };
+
+    function getLevelStyle(accent) {
+        return LEVEL_STYLES[accent] || LEVEL_STYLES.emerald;
+    }
 
     function setStudyMode(mode) {
         state.studyMode = Storage.setStudyMode(mode);
         renderModeSwitcher();
     }
 
+    function renderLoadingState(levelId) {
+        const container = document.getElementById("units-container");
+        if (container) {
+            const label = (levelId || state.currentLevel || "n3").toUpperCase();
+            container.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 border border-slate-200 text-center text-slate-500 text-sm">
+                    ⏳ Đang tải dữ liệu từ vựng <strong>JLPT ${escapeHtml(label)}</strong>...
+                </div>
+            `;
+        }
+    }
+
+    async function selectLevel(levelId) {
+        if (!levelId || state.isLoadingLevel) return;
+        if (levelId === state.currentLevel && AppState.getCurrentLevelUnits().length > 0) {
+            return;
+        }
+        renderLoadingState(levelId);
+        try {
+            await AppState.loadLevel(levelId);
+            renderHome();
+        } catch (err) {
+            const container = document.getElementById("units-container");
+            if (container) {
+                container.innerHTML = `
+                    <div class="bg-rose-50 rounded-2xl p-6 border border-rose-200 text-center text-rose-700 text-sm">
+                        ${escapeHtml(err.message || "Không thể tải dữ liệu cấp độ này.")}
+                    </div>
+                `;
+            }
+        }
+    }
+
     function renderHome() {
         showScreen("selection-screen");
+        renderLevelHeader();
+        renderLevelSwitcher();
         renderModeSwitcher();
         renderMistakeBanner();
         renderUnitsList();
         renderGlobalStats();
+    }
+
+    function renderLevelHeader() {
+        const meta = AppState.getCurrentLevelMeta();
+        const style = getLevelStyle(meta.accent);
+
+        const headerBadge = document.getElementById("header-level-badge");
+        if (headerBadge) {
+            headerBadge.textContent = meta.code;
+            headerBadge.className = `${style.badge} font-bold px-2.5 py-1 rounded-lg text-sm shadow-xs transition`;
+        }
+
+        const levelPill = document.getElementById("current-level-pill");
+        if (levelPill) {
+            levelPill.className = `inline-flex items-center space-x-2 text-xs font-bold px-3 py-1 rounded-full border ${style.pill}`;
+            levelPill.innerHTML = `<span>${escapeHtml(meta.name)}${meta.subtitle ? ` • ${escapeHtml(meta.subtitle)}` : ""}</span>`;
+        }
+    }
+
+    function renderLevelSwitcher() {
+        const container = document.getElementById("level-switcher");
+        if (!container) return;
+
+        container.innerHTML = state.levels.map((lvl) => {
+            const isActive = lvl.id === state.currentLevel;
+            const style = getLevelStyle(lvl.accent);
+            const btnClass = isActive
+                ? style.activeBtn
+                : "border-slate-200 bg-white text-slate-700 hover:border-slate-300 hover:bg-slate-50";
+            const unitCount = Array.isArray(lvl.units) ? lvl.units.length : 0;
+
+            return `
+                <button type="button" onclick="MimiApp.selectLevel('${escapeHtml(lvl.id)}')"
+                    class="p-3 rounded-xl border-2 text-left transition flex flex-col justify-between ${btnClass}">
+                    <div class="flex items-center justify-between gap-1">
+                        <span class="text-sm sm:text-base font-bold">${escapeHtml(lvl.code)}</span>
+                        ${isActive ? `<span class="text-[11px] font-bold px-2 py-0.5 rounded-full ${style.codePill}">Đang học</span>` : `<span class="text-[11px] text-slate-400 font-medium">${unitCount} bài</span>`}
+                    </div>
+                    <span class="text-xs text-slate-500 mt-1 line-clamp-1">${escapeHtml(lvl.subtitle || lvl.name)}</span>
+                </button>
+            `;
+        }).join("");
     }
 
     function renderModeSwitcher() {
@@ -33,8 +136,10 @@
     }
 
     function renderMistakeBanner() {
-        const wrongIds = Storage.getWrongIds().filter((id) => state.vocabById.has(id));
+        const levelVocabIds = new Set(AppState.getCurrentLevelVocab().map((v) => v.id));
+        const wrongIds = Storage.getWrongIds().filter((id) => levelVocabIds.has(id));
         const count = wrongIds.length;
+        const meta = AppState.getCurrentLevelMeta();
 
         const countEl = document.getElementById("mistake-banner-count");
         const descEl = document.getElementById("mistake-banner-desc");
@@ -46,17 +151,17 @@
 
         if (count > 0) {
             cardEl.className = "rounded-2xl p-5 sm:p-6 border-2 border-rose-200 bg-gradient-to-r from-rose-50 via-white to-amber-50/40 shadow-sm mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4";
-            countEl.textContent = `${count} từ cần ôn`;
+            countEl.textContent = `${count} từ (${meta.code})`;
             countEl.className = "text-xs font-bold px-2.5 py-1 rounded-full bg-rose-600 text-white";
-            descEl.textContent = "Tự động lưu các từ làm sai. Làm đúng lại trong Sổ tay để tự động xóa nợ!";
+            descEl.textContent = `Tự động lưu các từ làm sai của ${meta.name}. Làm đúng lại trong Sổ tay để tự động xóa nợ!`;
             startBtn.disabled = false;
             startBtn.className = "px-4 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-semibold rounded-xl text-sm shadow-sm transition flex items-center justify-center space-x-1.5";
             viewBtn.className = "px-4 py-2.5 bg-white hover:bg-rose-50 text-rose-700 border border-rose-200 font-semibold rounded-xl text-sm transition";
         } else {
             cardEl.className = "rounded-2xl p-5 sm:p-6 border border-emerald-200 bg-emerald-50/50 shadow-xs mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4";
-            countEl.textContent = "0 từ sai";
+            countEl.textContent = `0 từ sai (${meta.code})`;
             countEl.className = "text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-600 text-white";
-            descEl.textContent = "Tuyệt vời! Bạn chưa có từ nào bị sai hoặc đã xóa nợ hết toàn bộ.";
+            descEl.textContent = `Tuyệt vời! Bạn chưa có từ nào bị sai ở ${meta.name} hoặc đã xóa nợ hết toàn bộ.`;
             startBtn.disabled = true;
             startBtn.className = "px-4 py-2.5 bg-slate-200 text-slate-400 font-semibold rounded-xl text-sm cursor-not-allowed flex items-center justify-center space-x-1.5";
             viewBtn.className = "px-4 py-2.5 bg-white hover:bg-slate-50 text-slate-600 border border-slate-200 font-semibold rounded-xl text-sm transition";
@@ -64,11 +169,13 @@
     }
 
     function renderGlobalStats() {
+        const levelVocab = AppState.getCurrentLevelVocab();
         const masteredSet = new Set(Storage.getMasteredIds());
-        const masteredCount = state.allVocab.filter((v) => masteredSet.has(v.id)).length;
+        const masteredCount = levelVocab.filter((v) => masteredSet.has(v.id)).length;
+        const meta = AppState.getCurrentLevelMeta();
         const totalEl = document.getElementById("global-vocab-stats");
         if (totalEl) {
-            totalEl.textContent = `Tổng kho từ: ${state.allVocab.length} từ • Đã nắm: ${masteredCount}/${state.allVocab.length}`;
+            totalEl.textContent = `Kho ${meta.code}: ${levelVocab.length} từ • Đã nắm: ${masteredCount}/${levelVocab.length}`;
         }
     }
 
@@ -76,10 +183,23 @@
         const container = document.getElementById("units-container");
         if (!container) return;
 
+        const levelUnits = AppState.getCurrentLevelUnits();
+        const meta = AppState.getCurrentLevelMeta();
+        const style = getLevelStyle(meta.accent);
+
+        if (levelUnits.length === 0) {
+            container.innerHTML = `
+                <div class="bg-white rounded-2xl p-8 border border-dashed border-slate-300 text-center text-slate-500 text-sm">
+                    Chưa có bài học nào cho <strong>${escapeHtml(meta.name)}</strong>.
+                </div>
+            `;
+            return;
+        }
+
         const masteredSet = new Set(Storage.getMasteredIds());
         const completedBatches = Storage.getCompletedBatches();
 
-        container.innerHTML = state.units.map((unit) => {
+        container.innerHTML = levelUnits.map((unit) => {
             const totalItems = unit.items.length;
             const masteredInUnit = unit.items.filter((i) => masteredSet.has(i.id)).length;
             const masteryPct = totalItems > 0 ? Math.round((masteredInUnit / totalItems) * 100) : 0;
@@ -110,7 +230,7 @@
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
                         <div>
                             <div class="flex items-center space-x-2 mb-1">
-                                <span class="bg-emerald-600 text-white text-xs font-bold px-2.5 py-0.5 rounded-md">${escapeHtml(unit.code)}</span>
+                                <span class="${style.codePill} text-xs font-bold px-2.5 py-0.5 rounded-md">${escapeHtml(unit.code)}</span>
                                 <span class="text-xs font-mono text-slate-500">Từ ${escapeHtml(unit.range)} (${totalItems} từ)</span>
                             </div>
                             <h3 class="text-lg sm:text-xl font-bold text-slate-900 jp-text">${escapeHtml(unit.title)}</h3>
@@ -142,8 +262,12 @@
     }
 
     global.MimiHomeView = {
+        selectLevel,
         setStudyMode,
+        renderLoadingState,
         renderHome,
+        renderLevelHeader,
+        renderLevelSwitcher,
         renderModeSwitcher,
         renderMistakeBanner,
         renderGlobalStats,

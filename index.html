@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mimi Kara Oboeru N3 - Ôn Tập Từ Vựng JLPT N3</title>
+    <title>Mimi Kara Oboeru JLPT - Ôn Tập Từ Vựng N5 – N3</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,12 +16,12 @@
     <header class="bg-white border-b border-slate-200 sticky top-0 z-20 shadow-xs">
         <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
             <button type="button" onclick="MimiApp.backToMenu()" class="flex items-center space-x-2.5 text-left">
-                <div class="bg-emerald-600 text-white font-bold px-2.5 py-1 rounded-lg text-sm shadow-xs">
+                <div id="header-level-badge" class="bg-emerald-600 text-white font-bold px-2.5 py-1 rounded-lg text-sm shadow-xs transition">
                     N3
                 </div>
                 <div>
-                    <h1 class="font-bold text-slate-900 text-base sm:text-lg leading-tight">Mimi Kara Oboeru Goi</h1>
-                    <p class="text-xs text-slate-500 hidden sm:block">Chia chặng thông minh • Sổ tay từ sai</p>
+                    <h1 class="font-bold text-slate-900 text-base sm:text-lg leading-tight">Mimi Kara Oboeru JLPT</h1>
+                    <p class="text-xs text-slate-500 hidden sm:block">Từ vựng N5 – N3 • Chia chặng thông minh • Sổ tay từ sai</p>
                 </div>
             </button>
 
@@ -50,8 +50,16 @@
         <!-- Screen 1: Home / Unit & Batch Selection -->
         <section id="selection-screen" class="animate-fade-in space-y-6">
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xs border border-slate-200">
+                <!-- Level Switcher -->
+                <div class="mb-5 pb-5 border-b border-slate-100">
+                    <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2.5">Chọn cấp độ JLPT</div>
+                    <div id="level-switcher" class="grid grid-cols-3 gap-2.5">
+                        <!-- Dynamically rendered by js/home-view.js -->
+                    </div>
+                </div>
+
                 <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                    <span class="inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200">
+                    <span id="current-level-pill" class="inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 text-xs font-bold px-3 py-1 rounded-full border border-emerald-200">
                         <span>JLPT N3 • Mimi Kara Oboeru</span>
                     </span>
                     <span id="global-vocab-stats" class="text-xs font-medium text-slate-500">
@@ -404,15 +412,11 @@
 
     <!-- Footer -->
     <footer class="bg-white border-t border-slate-200 py-4 text-center text-xs text-slate-500">
-        Mimi Kara Oboeru N3 Goi • Static Web App sẵn sàng cho GitHub Pages
+        Mimi Kara Oboeru JLPT (N5 – N3) • Static Web App sẵn sàng cho Vercel & GitHub Pages
     </footer>
 
-    <!-- Data & App Scripts -->
+    <!-- Data Manifest (Units are lazy-loaded per level) & App Scripts -->
     <script src="data/manifest.js"></script>
-    <script src="data/n5/unit01.js"></script>
-    <script src="data/n4/unit01.js"></script>
-    <script src="data/n3/unit01.js"></script>
-    <script src="data/n3/unit02.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/quiz-engine.js"></script>
     <script src="js/state.js"></script>

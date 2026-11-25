@@ -1,0 +1,41 @@
+window.MIMI_UNITS = window.MIMI_UNITS || [];
+
+window.MIMI_UNITS.push({
+    id: "n4-bai26",
+    level: "n4",
+    code: "Bài 26",
+    title: "んです (Giải thích lý do & Nhờ vả)",
+    range: "Bài 26",
+    batchSize: 18,
+    items: [
+        { id: 42601, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "見ます", reading: "みます", pos: "Động từ (II)", meaning: "Xem xét, khám, kiểm tra", sentence: "ちょっと（　）てくださいませんか。", sentenceVi: "Anh xem giúp tôi một chút được không?", note: "診ます (khám bệnh) cũng đọc là みます." },
+        { id: 42602, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "探します", reading: "さがします", pos: "Động từ (I)", meaning: "Tìm, tìm kiếm", sentence: "日本語の先生を（　）ているんです。", sentenceVi: "Tôi đang tìm giáo viên tiếng Nhật.", note: "" },
+        { id: 42603, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "遅れます", reading: "おくれます", pos: "Động từ (II)", meaning: "Muộn, trễ (giờ, hẹn)", sentence: "時間に（　）てしまいました。", sentenceVi: "Tôi bị trễ giờ mất rồi.", note: "時間に遅れます (trễ giờ)." },
+        { id: 42604, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "間に合います", reading: "まにあいます", pos: "Động từ (I)", meaning: "Kịp (giờ, hẹn)", sentence: "9時の電車に（　）ました。", sentenceVi: "Tôi đã kịp chuyến tàu lúc 9 giờ.", note: "時間に間に合います." },
+        { id: 42605, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "やります", reading: "やります", pos: "Động từ (I)", meaning: "Làm", sentence: "あしたボランティアを（　）。", sentenceVi: "Ngày mai tôi làm tình nguyện.", note: "" },
+        { id: 42606, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "参加します", reading: "さんかします", pos: "Động từ (III)", meaning: "Tham gia", sentence: "パーティーに（　）たいんです。", sentenceVi: "Tôi muốn tham gia bữa tiệc.", note: "パーティーに参加します (dùng trợ từ に)." },
+        { id: 42607, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "申し込みます", reading: "もうしこみます", pos: "Động từ (I)", meaning: "Đăng ký", sentence: "日本語の試験を（　）ました。", sentenceVi: "Tôi đã đăng ký kỳ thi tiếng Nhật.", note: "" },
+        { id: 42608, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "都合がいい", reading: "つごうがいい", pos: "Cụm tính từ", meaning: "Thuận tiện, hợp (thời gian)", sentence: "土曜日なら（　）です。", sentenceVi: "Nếu là thứ bảy thì tôi tiện.", note: "Không tiện: 都合が悪い (つごうがわるい)." },
+        { id: 42609, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "気分がいい", reading: "きぶんがいい", pos: "Cụm tính từ", meaning: "Khỏe, cảm thấy dễ chịu", sentence: "薬を飲んで（　）くなりました。", sentenceVi: "Uống thuốc xong tôi thấy dễ chịu hơn.", note: "Khó chịu/không khỏe: 気分が悪い." },
+        { id: 42610, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "新聞社", reading: "しんぶんしゃ", pos: "Danh từ", meaning: "Tòa soạn báo, công ty báo chí", sentence: "父は（　）で働いています。", sentenceVi: "Bố tôi làm việc ở tòa soạn báo.", note: "" },
+        { id: 42611, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "柔道", reading: "じゅうどう", pos: "Danh từ", meaning: "Võ Judo", sentence: "大学で（　）を習っています。", sentenceVi: "Tôi đang học võ Judo ở đại học.", note: "" },
+        { id: 42612, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "運動会", reading: "うんどうかい", pos: "Danh từ", meaning: "Hội thao", sentence: "来週、学校の（　）があります。", sentenceVi: "Tuần sau trường có hội thao.", note: "" },
+        { id: 42613, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "場所", reading: "ばしょ", pos: "Danh từ", meaning: "Địa điểm, nơi chốn", sentence: "パーティーの（　）はどこですか。", sentenceVi: "Địa điểm tổ chức tiệc ở đâu?", note: "" },
+        { id: 42614, part: "Chặng 1", partTitle: "Động từ & Danh từ (1)", word: "ボランティア", reading: "ボランティア", pos: "Danh từ", meaning: "Tình nguyện, tình nguyện viên", sentence: "地域の（　）に参加します。", sentenceVi: "Tôi tham gia hoạt động tình nguyện địa phương.", note: "" },
+
+        { id: 42615, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "財布", reading: "さいふ", pos: "Danh từ", meaning: "Ví tiền", sentence: "（　）をなくしてしまったんです。", sentenceVi: "Tôi bị mất ví tiền rồi.", note: "" },
+        { id: 42616, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "ごみ", reading: "ごみ", pos: "Danh từ", meaning: "Rác", sentence: "（　）はどこに出したらいいですか。", sentenceVi: "Rác nên mang ra bỏ ở đâu ạ?", note: "燃えるごみ (rác cháy được), 燃えないごみ (rác không cháy được)." },
+        { id: 42617, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "国会議事堂", reading: "こっかいぎじどう", pos: "Danh từ", meaning: "Tòa nhà Quốc hội", sentence: "東京で（　）を見学しました。", sentenceVi: "Tôi đã tham quan tòa nhà Quốc hội ở Tokyo.", note: "" },
+        { id: 42618, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "平日", reading: "へいじつ", pos: "Danh từ", meaning: "Ngày thường (thứ 2 – thứ 6)", sentence: "（　）は忙しいですから、週末に会いましょう。", sentenceVi: "Ngày thường bận nên cuối tuần gặp nhau nhé.", note: "" },
+        { id: 42619, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "弁", reading: "べん", pos: "Hậu tố", meaning: "Tiếng địa phương, giọng vùng ~", sentence: "大阪（　）が少しわかります。", sentenceVi: "Tôi hiểu một chút tiếng địa phương Osaka.", note: "" },
+        { id: 42620, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "今度", reading: "こんど", pos: "Danh từ", meaning: "Lần tới, lần này", sentence: "（　）の日曜日に引越しをします。", sentenceVi: "Chủ nhật tới tôi sẽ chuyển nhà.", note: "" },
+        { id: 42621, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "ずいぶん", reading: "ずいぶん", pos: "Phó từ", meaning: "Khá, rất, nhiều", sentence: "日本語が（　）上手になりましたね。", sentenceVi: "Tiếng Nhật của bạn giỏi lên nhiều quá nhỉ.", note: "" },
+        { id: 42622, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "直接", reading: "ちょくせつ", pos: "Phó từ", meaning: "Trực tiếp", sentence: "受付へ（　）行ってください。", sentenceVi: "Hãy đi trực tiếp tới quầy lễ tân.", note: "" },
+        { id: 42623, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "いつでも", reading: "いつでも", pos: "Phó từ", meaning: "Bất cứ lúc nào", sentence: "（　）電話してください。", sentenceVi: "Bất cứ lúc nào cũng hãy gọi điện cho tôi.", note: "どこでも (bất cứ đâu), だれでも (bất cứ ai), 何でも (bất cứ cái gì)." },
+        { id: 42624, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "片付きます", reading: "かたづきます", pos: "Động từ (I)", meaning: "Được dọn dẹp gọn gàng", sentence: "荷物がやっと（　）ました。", sentenceVi: "Hành lý cuối cùng cũng đã được dọn gọn.", note: "" },
+        { id: 42625, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "置き場", reading: "おきば", pos: "Danh từ", meaning: "Nơi để (rác, xe đạp...)", sentence: "ごみ（　）はあそこです。", sentenceVi: "Chỗ bỏ rác ở đằng kia.", note: "" },
+        { id: 42626, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "横", reading: "よこ", pos: "Danh từ", meaning: "Bên cạnh, ngang", sentence: "駐車場の（　）にあります。", sentenceVi: "Nằm ở bên cạnh bãi đỗ xe.", note: "" },
+        { id: 42627, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "瓶", reading: "びん", pos: "Danh từ", meaning: "Chai, lọ (thủy tinh)", sentence: "（　）と缶は水曜日に出します。", sentenceVi: "Chai và lon bỏ vào thứ tư.", note: "缶 (かん - lon)." },
+        { id: 42628, part: "Chặng 2", partTitle: "Đời sống, Rác thải & Giao tiếp", word: "宇宙", reading: "うちゅう", pos: "Danh từ", meaning: "Vũ trụ", sentence: "（　）から地球を見たいです。", sentenceVi: "Tôi muốn nhìn Trái đất từ vũ trụ.", note: "" }
+    ]
+});
