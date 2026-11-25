@@ -32,7 +32,7 @@ mimikara-n3/
 ├── css/
 │   └── styles.css      # CSS tùy chỉnh & animation
 ├── data/
-│   ├── unit01.js       # Unit 01: Danh từ A (60 từ, 2 chặng)
+│   ├── unit01.js       # Unit 01: Danh từ A (120 từ, 4 chặng)
 │   └── unit02.js       # Unit 02: Động từ A (100 từ, 4 chặng)
 ├── js/
 │   ├── storage.js      # Quản lý localStorage & Export/Import JSON
