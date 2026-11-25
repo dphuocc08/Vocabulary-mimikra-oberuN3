@@ -2,6 +2,7 @@ window.MIMI_UNITS = window.MIMI_UNITS || [];
 
 window.MIMI_UNITS.push({
     id: "unit01",
+    level: "n3",
     code: "Unit 01",
     title: "名詞 A (Danh từ A)",
     range: "001 ~ 120",

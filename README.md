@@ -33,11 +33,18 @@ mimikara-n3/
 │   └── styles.css      # CSS tùy chỉnh & animation
 ├── data/
 │   ├── unit01.js       # Unit 01: Danh từ A (120 từ, 4 chặng)
-│   └── unit02.js       # Unit 02: Động từ A (100 từ, 4 chặng)
+│   └── unit02.js       # Unit 02: Động từ A (138 từ, 6 chặng)
 ├── js/
-│   ├── storage.js      # Quản lý localStorage & Export/Import JSON
-│   ├── quiz-engine.js  # Logic tạo đề, đáp án nhiễu & so sánh nghĩa tiếng Việt
-│   └── app.js          # Điều khiển giao diện & tương tác
+│   ├── storage.js          # Quản lý localStorage & Export/Import JSON
+│   ├── quiz-engine.js      # Logic tạo đề, đáp án nhiễu & so sánh nghĩa tiếng Việt
+│   ├── state.js            # Trạng thái dùng chung, nạp dữ liệu & chuyển màn hình
+│   ├── audio.js            # Phát âm Web Speech API & phím tắt bàn phím
+│   ├── home-view.js        # Hiển thị màn hình chính, chọn chế độ & danh sách Unit
+│   ├── quiz-controller.js  # Điều khiển phiên học, chấm điểm & hiển thị giải thích
+│   ├── summary-view.js     # Màn hình tổng kết sau buổi học & ôn lại câu sai
+│   ├── mistake-bank.js     # Giao diện quản lý & tìm kiếm Sổ tay từ sai
+│   ├── backup-modal.js     # Hộp thoại Sao lưu / Khôi phục tiến độ JSON
+│   └── app.js              # Điểm khởi chạy & ghép nối public API (window.MimiApp)
 └── README.md
 ```
 
