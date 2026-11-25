@@ -7,6 +7,8 @@
         currentLevel: "n3",
         loadedUnitsById: new Map(),
         isLoadingLevel: false,
+        allLevelsLoaded: false,
+        isLoadingAllLevels: false,
 
         units: [],
         allVocab: [],
@@ -95,6 +97,49 @@
         } finally {
             state.isLoadingLevel = false;
         }
+    }
+
+    let loadAllLevelsPromise = null;
+
+    async function loadAllLevels() {
+        if (state.allLevelsLoaded) {
+            return state.allVocab;
+        }
+        if (loadAllLevelsPromise) {
+            return loadAllLevelsPromise;
+        }
+
+        state.isLoadingAllLevels = true;
+        loadAllLevelsPromise = (async () => {
+            try {
+                await loadManifest();
+                const missingEntries = [];
+                for (const lvl of state.levels) {
+                    const entries = Array.isArray(lvl.units) ? lvl.units : [];
+                    for (const entry of entries) {
+                        if (entry && entry.id && !state.loadedUnitsById.has(entry.id)) {
+                            missingEntries.push(entry);
+                        }
+                    }
+                }
+
+                // Load in batches of 10 to keep mobile browsers responsive
+                const batchSize = 10;
+                for (let i = 0; i < missingEntries.length; i += batchSize) {
+                    const slice = missingEntries.slice(i, i + batchSize);
+                    await Promise.all(slice.map((entry) => loadUnitJsonOnce(entry)));
+                }
+
+                state.allLevelsLoaded = true;
+                initData();
+                return state.allVocab;
+            } finally {
+                state.isLoadingAllLevels = false;
+                loadAllLevelsPromise = null;
+            }
+        })();
+
+        return loadAllLevelsPromise;
     }
 
     function initData() {
@@ -191,6 +236,7 @@
         escapeHtml,
         initData,
         loadLevel,
+        loadAllLevels,
         getCurrentLevelMeta,
         getCurrentLevelUnits,
         getCurrentLevelVocab,

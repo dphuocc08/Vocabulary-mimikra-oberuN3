@@ -2,8 +2,29 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Mimi Kara Oboeru JLPT - Ôn Tập Từ Vựng N5 – N3</title>
+    <meta name="description" content="Ứng dụng ôn tập từ vựng tiếng Nhật JLPT N5, N4, N3 theo chặng thông minh, có phát âm, tra từ nhanh và học offline.">
+    <meta name="theme-color" content="#059669" id="theme-color-meta">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Mimi JLPT">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("mimi_theme");
+                var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+                if (saved === "dark" || (!saved && prefersDark)) {
+                    document.documentElement.classList.add("dark");
+                    var meta = document.getElementById("theme-color-meta");
+                    if (meta) meta.setAttribute("content", "#0f172a");
+                }
+            } catch (e) {}
+        })();
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,11 +46,25 @@
                 </div>
             </button>
 
-            <div class="flex items-center space-x-2.5">
+            <div class="flex items-center space-x-2">
+                <button id="pwa-install-btn" type="button" onclick="MimiApp.installPwa()"
+                    title="Cài ứng dụng ra màn hình chính để học offline"
+                    class="hidden px-2.5 py-1.5 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs sm:text-sm font-semibold transition flex items-center space-x-1">
+                    <span>📲</span>
+                    <span class="hidden sm:inline">Cài App</span>
+                </button>
+
+                <button id="theme-toggle-btn" type="button" onclick="MimiApp.toggleTheme()"
+                    title="Chuyển chế độ sáng / tối"
+                    class="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium transition flex items-center space-x-1">
+                    <span id="theme-toggle-icon">🌙</span>
+                    <span id="theme-toggle-label" class="hidden sm:inline">Tối</span>
+                </button>
+
                 <button id="open-backup-btn" type="button" onclick="MimiApp.openBackupModal()"
-                    class="px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium transition flex items-center space-x-1.5">
+                    class="px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium transition flex items-center space-x-1.5">
                     <span>💾</span>
-                    <span>Sao lưu</span>
+                    <span class="hidden xs:inline sm:inline">Sao lưu</span>
                 </button>
 
                 <!-- Score & Progress Pill -->
@@ -49,6 +84,29 @@
 
         <!-- Screen 1: Home / Unit & Batch Selection -->
         <section id="selection-screen" class="animate-fade-in space-y-6">
+            <!-- Global Vocabulary Search (N5 - N4 - N3) -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200">
+                <div class="relative flex items-center">
+                    <span class="absolute left-3.5 text-slate-400 pointer-events-none">🔍</span>
+                    <input id="global-search-input" type="search" autocomplete="off"
+                        placeholder="Tra nhanh từ vựng toàn kho N5 – N4 – N3 (Kanji, Hiragana hoặc nghĩa Việt)..."
+                        class="w-full pl-10 pr-10 py-2.5 sm:py-3 rounded-xl border border-slate-300 focus:border-emerald-600 focus:outline-none text-sm sm:text-base transition" />
+                    <button id="global-search-clear" type="button" onclick="MimiApp.clearGlobalSearch()"
+                        title="Xóa từ khóa"
+                        class="hidden absolute right-2.5 w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-xs font-bold transition">
+                        ✕
+                    </button>
+                </div>
+
+                <div id="global-search-panel" class="hidden mt-3.5 pt-3.5 border-t border-slate-100 space-y-3 animate-fade-in">
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <span id="global-search-status" class="text-xs font-medium text-slate-500"></span>
+                        <div id="global-search-filters" class="flex items-center gap-1.5"></div>
+                    </div>
+                    <div id="global-search-results" class="space-y-2.5 max-h-[55vh] overflow-y-auto custom-scrollbar pr-1"></div>
+                </div>
+            </div>
+
             <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-xs border border-slate-200">
                 <!-- Level Switcher -->
                 <div class="mb-5 pb-5 border-b border-slate-100">
@@ -420,6 +478,8 @@
     <script src="js/quiz-engine.js"></script>
     <script src="js/state.js"></script>
     <script src="js/audio.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/global-search.js"></script>
     <script src="js/home-view.js"></script>
     <script src="js/quiz-controller.js"></script>
     <script src="js/summary-view.js"></script>

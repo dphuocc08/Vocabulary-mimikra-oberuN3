@@ -2,6 +2,8 @@
     const Storage = global.MimiStorage;
     const AppState = global.MimiAppState;
     const Audio = global.MimiAudio;
+    const Theme = global.MimiTheme;
+    const GlobalSearch = global.MimiGlobalSearch;
     const HomeView = global.MimiHomeView;
     const Quiz = global.MimiQuizController;
     const Summary = global.MimiSummaryView;
@@ -9,6 +11,9 @@
     const Backup = global.MimiBackupModal;
 
     async function init() {
+        if (Theme && typeof Theme.init === "function") {
+            Theme.init();
+        }
         AppState.state.studyMode = Storage.getStudyMode();
         const savedLevel = Storage.getSelectedLevel();
         HomeView.renderLoadingState(savedLevel);
@@ -28,11 +33,22 @@
             }
         }
         Audio.setupKeyboardShortcuts();
+        if (GlobalSearch && typeof GlobalSearch.setupGlobalSearchListener === "function") {
+            GlobalSearch.setupGlobalSearchListener();
+        }
         MistakeBank.setupMistakeSearchListener();
         Backup.setupBackupListener();
     }
 
     global.MimiApp = {
+        // Theme & PWA
+        toggleTheme: Theme ? Theme.toggleTheme : function () {},
+        installPwa: Theme ? Theme.installPwa : function () {},
+
+        // Global Search
+        setGlobalSearchLevel: GlobalSearch ? GlobalSearch.setGlobalSearchLevel : function () {},
+        clearGlobalSearch: GlobalSearch ? GlobalSearch.clearGlobalSearch : function () {},
+
         // Home / Level / Mode
         selectLevel: HomeView.selectLevel,
         setStudyMode: HomeView.setStudyMode,

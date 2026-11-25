@@ -4,11 +4,13 @@
         MASTERED_IDS: "mimi_n3_mastered_ids",
         COMPLETED_BATCHES: "mimi_n3_completed_batches",
         STUDY_MODE: "mimi_n3_study_mode",
-        SELECTED_LEVEL: "mimi_selected_level"
+        SELECTED_LEVEL: "mimi_selected_level",
+        THEME: "mimi_theme"
     };
 
     const VALID_MODES = new Set(["two_step", "context_fill"]);
     const VALID_LEVELS = new Set(["n5", "n4", "n3", "n2"]);
+    const VALID_THEMES = new Set(["light", "dark"]);
 
     function safeGetItem(key) {
         try {
@@ -155,6 +157,17 @@
         return nextLevel;
     }
 
+    function getTheme() {
+        const saved = safeGetItem(KEYS.THEME);
+        return VALID_THEMES.has(saved) ? saved : null;
+    }
+
+    function setTheme(theme) {
+        const nextTheme = VALID_THEMES.has(theme) ? theme : "light";
+        safeSetItem(KEYS.THEME, nextTheme);
+        return nextTheme;
+    }
+
     function exportBackup() {
         const payload = {
             app: "mimi-kara-n3",
@@ -230,6 +243,8 @@
         setStudyMode,
         getSelectedLevel,
         setSelectedLevel,
+        getTheme,
+        setTheme,
         exportBackup,
         importBackup
     };
