@@ -1,6 +1,6 @@
 {
-  "name": "Mimi Kara Oboeru JLPT (N5 – N3)",
-  "short_name": "Mimi JLPT",
+  "name": "Ngọc 先生 - Ôn Tập Từ Vựng JLPT (N5 – N3)",
+  "short_name": "Ngọc 先生",
   "description": "Ứng dụng ôn tập từ vựng tiếng Nhật JLPT N5, N4, N3 theo chặng thông minh, có phát âm và học offline.",
   "start_url": "./",
   "scope": "./",
