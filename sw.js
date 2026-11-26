@@ -1,4 +1,4 @@
-const CACHE_NAME = "mimi-jlpt-v4";
+const CACHE_NAME = "mimi-jlpt-v5";
 
 const CORE_ASSETS = [
     "./",
@@ -107,7 +107,41 @@ self.addEventListener("fetch", (event) => {
 
     if (!isSameOrigin && !isAllowedCdn) return;
 
-    // Stale-while-revalidate: fast offline-first load + background refresh when online
+    // Network-First for HTML, CSS, JS, and webmanifest so updates appear immediately on reload
+    const isAppShell =
+        isSameOrigin &&
+        (req.mode === "navigate" ||
+            url.pathname.endsWith("/") ||
+            url.pathname.endsWith(".html") ||
+            url.pathname.endsWith(".css") ||
+            url.pathname.endsWith(".js") ||
+            url.pathname.endsWith(".webmanifest"));
+
+    if (isAppShell) {
+        event.respondWith(
+            (async () => {
+                const cache = await caches.open(CACHE_NAME);
+                try {
+                    const fresh = await fetch(req, { cache: "no-cache" });
+                    if (fresh && fresh.ok) {
+                        cache.put(req, fresh.clone());
+                    }
+                    return fresh;
+                } catch (err) {
+                    const cached = await cache.match(req, { ignoreSearch: true });
+                    if (cached) return cached;
+                    if (req.mode === "navigate") {
+                        const fallback = await cache.match("./index.html");
+                        if (fallback) return fallback;
+                    }
+                    return new Response("Offline", { status: 503, statusText: "Offline" });
+                }
+            })()
+        );
+        return;
+    }
+
+    // Stale-while-revalidate for JSON vocabulary data, icons, and CDN fonts/Tailwind
     event.respondWith(
         (async () => {
             const cache = await caches.open(CACHE_NAME);
@@ -129,12 +163,6 @@ self.addEventListener("fetch", (event) => {
 
             const networkRes = await networkPromise;
             if (networkRes) return networkRes;
-
-            // Fallback to index.html for navigation requests when offline
-            if (req.mode === "navigate") {
-                const fallback = await cache.match("./index.html");
-                if (fallback) return fallback;
-            }
 
             return new Response("Offline", { status: 503, statusText: "Offline" });
         })()
