@@ -112,6 +112,48 @@ input:focus-visible {
     scrollbar-width: none;
 }
 
+/* Footer social contact buttons (Zalo & Facebook) */
+.footer-social-btn {
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.footer-social-btn:hover {
+    transform: translateY(-1px);
+}
+
+.footer-social-zalo {
+    background-color: #eff6ff;
+    border-color: #bfdbfe;
+    color: #0068ff;
+}
+
+.footer-social-zalo:hover {
+    background-color: #0068ff;
+    border-color: #0068ff;
+    color: #ffffff;
+    box-shadow: 0 6px 16px -4px rgba(0, 104, 255, 0.35);
+}
+
+.footer-social-fb {
+    background-color: #eef2ff;
+    border-color: #c7d2fe;
+    color: #1877f2;
+}
+
+.footer-social-fb:hover {
+    background-color: #1877f2;
+    border-color: #1877f2;
+    color: #ffffff;
+    box-shadow: 0 6px 16px -4px rgba(24, 119, 242, 0.35);
+}
+
+.footer-social-btn:focus-visible {
+    outline: 2px solid #059669;
+    outline-offset: 2px;
+}
+
 /* Mobile & print polish */
 @media (max-width: 640px) {
     .option-btn {
@@ -390,8 +432,33 @@ html.dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #475569;
 }
 
+html.dark .footer-social-zalo {
+    background-color: rgba(0, 104, 255, 0.16);
+    border-color: rgba(56, 189, 248, 0.38);
+    color: #60a5fa;
+}
+
+html.dark .footer-social-zalo:hover {
+    background-color: #0068ff;
+    border-color: #0068ff;
+    color: #ffffff;
+}
+
+html.dark .footer-social-fb {
+    background-color: rgba(24, 119, 242, 0.16);
+    border-color: rgba(129, 140, 248, 0.38);
+    color: #93c5fd;
+}
+
+html.dark .footer-social-fb:hover {
+    background-color: #1877f2;
+    border-color: #1877f2;
+    color: #ffffff;
+}
+
 @media print {
     header,
+    footer,
     #stats-bar,
     .no-print {
         display: none !important;

@@ -1,4 +1,4 @@
-const CACHE_NAME = "mimi-jlpt-v5";
+const CACHE_NAME = "mimi-jlpt-v6";
 
 const CORE_ASSETS = [
     "./",
