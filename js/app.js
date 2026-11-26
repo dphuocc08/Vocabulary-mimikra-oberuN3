@@ -51,6 +51,10 @@
 
         // Home / Level / Mode
         selectLevel: HomeView.selectLevel,
+        selectLevelFromHeader: HomeView.selectLevelFromHeader,
+        focusGlobalSearch: HomeView.focusGlobalSearch,
+        scrollToUnit: HomeView.scrollToUnit,
+        refreshWordSpotlight: HomeView.refreshWordSpotlight,
         setStudyMode: HomeView.setStudyMode,
 
         // Quiz flow

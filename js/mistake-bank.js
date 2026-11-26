@@ -24,6 +24,11 @@
         const emptyEl = document.getElementById("mistake-bank-empty");
 
         countBadge.textContent = `${items.length} từ (${meta.code})`;
+        const headerMistakeCount = document.getElementById("header-mistake-count");
+        if (headerMistakeCount) {
+            headerMistakeCount.textContent = String(items.length);
+            headerMistakeCount.classList.toggle("hidden", items.length === 0);
+        }
         startAllBtn.disabled = items.length === 0;
         clearAllBtn.disabled = items.length === 0;
 
