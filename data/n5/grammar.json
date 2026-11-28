@@ -1,0 +1,604 @@
+{
+  "level": "n5",
+  "title": "Ngữ pháp Minna no Nihongo I (Sơ cấp 1)",
+  "lessons": [
+    {
+      "id": "n5-g-01",
+      "code": "Bài 1",
+      "topic": "Bài 1 · Giới thiệu bản thân",
+      "pattern": "N1 は N2 です",
+      "usage": "Dùng để giới thiệu tên, nghề nghiệp, quốc tịch hoặc khẳng định N1 là N2. Phủ định dùng じゃありません (hoặc ではありません), câu hỏi thêm か ở cuối câu, sở hữu/thuộc về dùng trợ từ の.",
+      "rule": "N1 は N2 です / じゃありません / ですか｜N1 の N2｜N も",
+      "points": [
+        { "pattern": "N1 は N2 です", "rule": "Khẳng định: N1 là N2 (は đọc là wa)." },
+        { "pattern": "N1 は N2 じゃありません", "rule": "Phủ định: N1 không phải là N2." },
+        { "pattern": "N1 は N2 ですか", "rule": "Nghi vấn: N1 có phải là N2 không?" },
+        { "pattern": "N1 も N2 です / N1 の N2", "rule": "も (cũng) thay cho は; の nối danh từ chỉ nơi làm việc, sở hữu." }
+      ],
+      "example": "わたしはマイク・ミラーです。IMCの社員です。",
+      "translation": "Tôi là Mike Miller. Tôi là nhân viên của công ty IMC.",
+      "examples": [
+        { "jp": "サントスさんは学生じゃありません。", "vi": "Anh Santos không phải là sinh viên." },
+        { "jp": "グプタさんも会社員ですか。", "vi": "Anh Gupta cũng là nhân viên công ty phải không?" }
+      ],
+      "question": "ミラーさんはIMC（　　　）社員です。",
+      "options": ["の", "は", "も"],
+      "correct": 0,
+      "explanation": "Trợ từ の nối hai danh từ IMC và 社員 để diễn tả 'nhân viên của công ty IMC'."
+    },
+    {
+      "id": "n5-g-02",
+      "code": "Bài 2",
+      "topic": "Bài 2 · Đồ vật & Sở hữu",
+      "pattern": "これ / それ / あれ は N です",
+      "usage": "Dùng để chỉ định đồ vật theo khoảng cách: これ (gần người nói), それ (gần người nghe), あれ (xa cả hai). Khi đi trực tiếp trước danh từ, đổi sang この / その / あの + N.",
+      "rule": "これ/それ/あれ は N です｜この/その/あの N は…｜N1 の N2 (sở hữu, nội dung)",
+      "points": [
+        { "pattern": "これ / それ / あれ", "rule": "Đứng độc lập làm chủ ngữ chỉ đồ vật." },
+        { "pattern": "この / その / あの + N", "rule": "Luôn đi kèm danh từ ngay phía sau." },
+        { "pattern": "S1 か、S2 か", "rule": "Câu hỏi lựa chọn: ... hay là ...?" },
+        { "pattern": "N1 の N2", "rule": "Chỉ chủ sở hữu (わたしの本) hoặc nội dung (日本語の本)." }
+      ],
+      "example": "これはコンピューターの本です。",
+      "translation": "Đây là quyển sách về máy tính.",
+      "examples": [
+        { "jp": "この傘はわたしのです。", "vi": "Chiếc ô này là của tôi." },
+        { "jp": "それは「9」ですか、「7」ですか。", "vi": "Đó là số 9 hay số 7 vậy?" }
+      ],
+      "question": "（　　　）かばんはミラーさんのです。",
+      "options": ["これ", "この", "ここ"],
+      "correct": 1,
+      "explanation": "Vì phía sau có danh từ かばん (cặp xách) nên phải dùng định từ この, không dùng これ."
+    },
+    {
+      "id": "n5-g-03",
+      "code": "Bài 3",
+      "topic": "Bài 3 · Địa điểm & Mua sắm",
+      "pattern": "ここ / そこ / あそこ は N です",
+      "usage": "Dùng để chỉ vị trí, địa điểm (cách nói lịch sự là こちら / そちら / あちら). Ngoài ra dùng N は [địa điểm] です để nói vị trí của người/vật và いくらですか để hỏi giá tiền.",
+      "rule": "ここ/そこ/あそこ は [Địa điểm] です｜N は [Địa điểm] です｜N は いくらですか",
+      "points": [
+        { "pattern": "ここ / そこ / あそこ", "rule": "Chỗ này / chỗ đó / chỗ kia (lịch sự: こちら / そちら / あちら)." },
+        { "pattern": "N1 は N2（địa điểm）です", "rule": "N1 ở tại N2 (ví dụ: お手洗いはあそこです)." },
+        { "pattern": "お国はどちらですか", "rule": "Hỏi quê quán/đất nước hoặc tên công ty một cách lịch sự." },
+        { "pattern": "このワインはいくらですか", "rule": "Hỏi giá tiền của món hàng." }
+      ],
+      "example": "ここは食堂です。エレベーターはあちらです。",
+      "translation": "Đây là nhà ăn. Thang máy ở đằng kia ạ.",
+      "examples": [
+        { "jp": "すみません、このネクタイはいくらですか。", "vi": "Xin lỗi, chiếc cà vạt này bao nhiêu tiền ạ?" },
+        { "jp": "それはイタリアの靴です。", "vi": "Đó là đôi giày của Ý." }
+      ],
+      "question": "すみません、お手洗いは（　　　）ですか。",
+      "options": ["どこ", "だれ", "いつ"],
+      "correct": 0,
+      "explanation": "どこ dùng để hỏi địa điểm ('nhà vệ sinh ở đâu?'). だれ hỏi người, いつ hỏi thời gian."
+    },
+    {
+      "id": "n5-g-04",
+      "code": "Bài 4",
+      "topic": "Bài 4 · Thời gian & Chia động từ ます",
+      "pattern": "Vます / Vません / Vました / Vませんでした",
+      "usage": "Giới thiệu cách nói giờ phút, thứ ngày và 4 dạng cơ bản của động từ lịch sự thể ます (hiện tại/tương lai, phủ định, quá khứ, quá khứ phủ định). Dùng に sau mốc thời gian cụ thể và から～まで cho khoảng thời gian.",
+      "rule": "[Thời gian] に Vます｜[Mốc 1] から [Mốc 2] まで",
+      "points": [
+        { "pattern": "今 ～時 ～分 です", "rule": "Nói giờ và phút hiện tại." },
+        { "pattern": "[Giờ/Thứ] に Vます", "rule": "Trợ từ に gắn sau mốc thời gian có số (không gắn sau きょう, あした, まいにち)." },
+        { "pattern": "N1 から N2 まで", "rule": "Từ ... đến ... (dùng cho cả thời gian và địa điểm)." },
+        { "pattern": "Vました / Vませんでした", "rule": "Diễn tả hành động đã xảy ra / đã không xảy ra trong quá khứ." }
+      ],
+      "example": "わたしは毎朝6時に起きます。",
+      "translation": "Mỗi sáng tôi thức dậy lúc 6 giờ.",
+      "examples": [
+        { "jp": "銀行は9時から3時までです。", "vi": "Ngân hàng mở cửa từ 9 giờ đến 3 giờ." },
+        { "jp": "きのう勉強しませんでした。", "vi": "Hôm qua tôi đã không học bài." }
+      ],
+      "question": "きのうの夜、11時（　　　）寝ました。",
+      "options": ["に", "から", "の"],
+      "correct": 0,
+      "explanation": "11時 là mốc thời gian cụ thể xảy ra hành động 寝ました (đi ngủ), nên dùng trợ từ に."
+    },
+    {
+      "id": "n5-g-05",
+      "code": "Bài 5",
+      "topic": "Bài 5 · Di chuyển & Ngày tháng",
+      "pattern": "[Địa điểm] へ 行きます / 来ます / 帰ります",
+      "usage": "Dùng trợ từ へ (đọc là e) để chỉ hướng di chuyển với 行きます (đi), 来ます (đến), 帰ります (về). Dùng で chỉ phương tiện đi lại và と chỉ người cùng đi.",
+      "rule": "[Nơi] へ 行きます｜[Phương tiện] で｜[Người] と｜いつ ～ますか",
+      "points": [
+        { "pattern": "[Địa điểm] へ 行きます/来ます/帰ります", "rule": "Chỉ hướng di chuyển; phủ định hoàn toàn dùng どこも行きません." },
+        { "pattern": "[Phương tiện] で 行きます", "rule": "Đi bằng phương tiện gì (đi bộ là 歩いて, không dùng で)." },
+        { "pattern": "[Người] と 行きます", "rule": "Đi cùng ai (đi một mình là 一人で, không dùng と)." },
+        { "pattern": "いつ 日本へ 来ましたか", "rule": "Hỏi thời điểm (không cần に sau いつ)." }
+      ],
+      "example": "わたしは電車で京都へ行きます。",
+      "translation": "Tôi đi Kyoto bằng tàu điện.",
+      "examples": [
+        { "jp": "家族と日本へ来ました。", "vi": "Tôi đã đến Nhật cùng với gia đình." },
+        { "jp": "日曜日はどこも行きませんでした。", "vi": "Chủ nhật tôi đã không đi đâu cả." }
+      ],
+      "question": "毎日バス（　　　）会社へ行きます。",
+      "options": ["へ", "で", "と"],
+      "correct": 1,
+      "explanation": "Trợ từ で đứng sau phương tiện giao thông (バス - xe buýt) để chỉ cách thức di chuyển."
+    },
+    {
+      "id": "n5-g-06",
+      "code": "Bài 6",
+      "topic": "Bài 6 · Hành động, Ăn uống & Rủ rê",
+      "pattern": "N を Vます｜[Nơi] で Vます",
+      "usage": "Trợ từ を đánh dấu tân ngữ trực tiếp của ngoại động từ; trợ từ で đánh dấu địa điểm diễn ra hành động. Dùng Vませんか để mời mọc lịch sự và Vましょう để đề nghị cùng làm.",
+      "rule": "N を Vます｜[Địa điểm] で Vます｜Vませんか / Vましょう",
+      "points": [
+        { "pattern": "N を Vます", "rule": "Tác động lên đối tượng N (パンを食べます, 本を読みます)." },
+        { "pattern": "[Địa điểm] で Vます", "rule": "Thực hiện hành động tại địa điểm nào đó (駅で新聞を買います)." },
+        { "pattern": "いっしょに Vませんか", "rule": "Lời mời lịch sự: Cùng làm ... với tôi không?" },
+        { "pattern": "Vましょう", "rule": "Đề nghị tích cực hoặc hưởng ứng lời mời: Chúng ta cùng ... nhé!" }
+      ],
+      "example": "わたしはデパートでシャツを買いました。",
+      "translation": "Tôi đã mua áo sơ mi ở trung tâm thương mại.",
+      "examples": [
+        { "jp": "いっしょに京都へ行きませんか。", "vi": "Bạn có muốn cùng đi Kyoto với tôi không?" },
+        { "jp": "ええ、行きましょう。", "vi": "Vâng, cùng đi thôi!" }
+      ],
+      "question": "毎朝レストラン（　　　）コーヒーを飲みます。",
+      "options": ["へ", "で", "を"],
+      "correct": 1,
+      "explanation": "レストラン là nơi diễn ra hành động uống cà phê (飲みます), nên dùng trợ từ で."
+    },
+    {
+      "id": "n5-g-07",
+      "code": "Bài 7",
+      "topic": "Bài 7 · Công cụ & Cho nhận",
+      "pattern": "[Công cụ] で Vます｜あげます / もらいます",
+      "usage": "Trợ từ で chỉ công cụ hoặc ngôn ngữ thực hiện hành động. あげます (tặng/cho) dùng に trước người nhận; もらいます (nhận) dùng に hoặc から trước người cho. もう Vました diễn tả 'đã xong rồi'.",
+      "rule": "[Công cụ/Ngôn ngữ] で Vます｜[Người] に あげます｜[Người] に/から もらいます",
+      "points": [
+        { "pattern": "[Công cụ/Ngôn ngữ] で Vます", "rule": "Làm bằng dụng cụ gì / ngôn ngữ nào (はしで食べます, 日本語で手紙を書きます)." },
+        { "pattern": "[Người] に N を あげます", "rule": "Tặng/cho ai cái gì (chủ ngữ là người cho)." },
+        { "pattern": "[Người] に/から N を もらいます", "rule": "Nhận cái gì từ ai (với cơ quan/trường học thường dùng から)." },
+        { "pattern": "もう Vましたか", "rule": "Đã làm ... chưa? Trả lời: はい、もう Vました / いいえ、まだです." }
+      ],
+      "example": "わたしは木村さんに花をあげました。",
+      "translation": "Tôi đã tặng hoa cho chị Kimura.",
+      "examples": [
+        { "jp": "日本語でレポートを書きます。", "vi": "Tôi viết báo cáo bằng tiếng Nhật." },
+        { "jp": "父に時計をもらいました。", "vi": "Tôi đã nhận được đồng hồ từ bố." }
+      ],
+      "question": "わたしははし（　　　）ごはんを食べます。",
+      "options": ["で", "に", "を"],
+      "correct": 0,
+      "explanation": "はし (đũa) là công cụ thực hiện hành động ăn, nên dùng trợ từ で."
+    },
+    {
+      "id": "n5-g-08",
+      "code": "Bài 8",
+      "topic": "Bài 8 · Tính từ đuôi い & đuôi な",
+      "pattern": "Aい です / Aくないです｜Aな です / Aじゃありません",
+      "usage": "Phân biệt cách chia phủ định và bổ nghĩa danh từ giữa tính từ đuôi い và tính từ đuôi な. Học thêm phó từ mức độ (とても, あまり) và cách nối hai vế đối lập bằng が.",
+      "rule": "Aい → Aくないです (いい → よくないです)｜Aな + N｜S1 が、S2",
+      "points": [
+        { "pattern": "Aな です / Aじゃありません", "rule": "Khi đứng trước danh từ giữ な (きれいな花), phủ định bỏ な thêm じゃありません." },
+        { "pattern": "Aい です / Aくないです", "rule": "Phủ định bỏ い thêm くないです (riêng いい đổi thành よくないです)." },
+        { "pattern": "とても / あまり～ない", "rule": "とても đi với khẳng định (rất); あまり đi với phủ định (không ... lắm)." },
+        { "pattern": "N は どうですか / どんな N ですか", "rule": "どうですか hỏi cảm tưởng; どんな N hỏi tính chất của danh từ." }
+      ],
+      "example": "桜はきれいです。そして、日本の食べ物はとてもおいしいです。",
+      "translation": "Hoa anh đào rất đẹp. Và đồ ăn Nhật Bản cũng rất ngon.",
+      "examples": [
+        { "jp": "この辞書はあまりよくないです。", "vi": "Cuốn từ điển này không tốt lắm." },
+        { "jp": "日本の食べ物は美味しいですが、高いです。", "vi": "Đồ ăn Nhật ngon nhưng mà đắt." }
+      ],
+      "question": "京都はとても（　　　）町です。",
+      "options": ["静か", "静かな", "静かい"],
+      "correct": 1,
+      "explanation": "静か là tính từ đuôi な nên khi bổ nghĩa trực tiếp cho danh từ 町 (thành phố) phải thêm な."
+    },
+    {
+      "id": "n5-g-09",
+      "code": "Bài 9",
+      "topic": "Bài 9 · Sở thích, Năng lực & Lý do",
+      "pattern": "N が 好きです / わかります / あります｜S1 から、S2",
+      "usage": "Với các tính từ/động từ chỉ sở thích (好き, 嫌い), năng lực (上手, 下手, わかります) và sở hữu (あります), đối tượng luôn đi với trợ từ が. Dùng から sau mệnh đề chỉ lý do.",
+      "rule": "N が わかります / あります / 好きです｜S1（lý do）から、S2",
+      "points": [
+        { "pattern": "N が 好きです / 上手です", "rule": "Đối tượng của cảm xúc, đánh giá năng lực dùng trợ từ が." },
+        { "pattern": "N が わかります / あります", "rule": "Hiểu cái gì / có cái gì đều dùng が (không dùng を)." },
+        { "pattern": "よく / だいたい / 少し / ぜんぜん～ない", "rule": "Phó từ chỉ mức độ hiểu hoặc số lượng." },
+        { "pattern": "S1 から、S2", "rule": "Vì S1 nên S2 (hỏi lý do bằng どうしてですか)." }
+      ],
+      "example": "わたしはイタリア料理が好きです。",
+      "translation": "Tôi thích món ăn Ý.",
+      "examples": [
+        { "jp": "時間がありませんから、新聞を読みません。", "vi": "Vì không có thời gian nên tôi không đọc báo." },
+        { "jp": "わたしはひらがなが少しわかります。", "vi": "Tôi hiểu một chút chữ Hiragana." }
+      ],
+      "question": "カリナさんは絵（　　　）とても上手です。",
+      "options": ["を", "が", "に"],
+      "correct": 1,
+      "explanation": "Tính từ chỉ năng lực 上手です (giỏi) luôn đi kèm trợ từ が trước đối tượng (絵 - vẽ tranh)."
+    },
+    {
+      "id": "n5-g-10",
+      "code": "Bài 10",
+      "topic": "Bài 10 · Tồn tại & Vị trí",
+      "pattern": "[Nơi] に N が あります / います",
+      "usage": "Diễn tả sự tồn tại: あります dùng cho đồ vật, cây cối; います dùng cho người và động vật. Dùng danh từ vị trí (上, 下, 前, うしろ, 中, 隣, 近く, 間) để mô tả chính xác nơi ở/vị trí.",
+      "rule": "[Nơi] に N が あります/います｜N1 は [Nơi] に あります/います｜N1 や N2 など",
+      "points": [
+        { "pattern": "あります vs います", "rule": "あります: vật vô tri, cây cối; います: người, động vật." },
+        { "pattern": "[Nơi] に N が あります/います", "rule": "Nhấn mạnh có vật/người nào đó ở địa điểm cụ thể." },
+        { "pattern": "N は [Nơi] に あります/います", "rule": "Nhấn mạnh vị trí của người/vật đã biết." },
+        { "pattern": "N1 の [vị trí] / N1 や N2 など", "rule": "Diễn tả vị trí tương đối; や～など liệt kê không hết." }
+      ],
+      "example": "あそこにコンビニがあります。テーブルの上に本があります。",
+      "translation": "Ở đằng kia có cửa hàng tiện lợi. Trên bàn có quyển sách.",
+      "examples": [
+        { "jp": "ミラーさんは事務所にいます。", "vi": "Anh Miller đang ở văn phòng." },
+        { "jp": "箱の中に手紙や写真などがあります。", "vi": "Trong hộp có thư, ảnh và nhiều thứ khác." }
+      ],
+      "question": "公園に男の子が（　　　）。",
+      "options": ["あります", "います", "です"],
+      "correct": 1,
+      "explanation": "男の子 (bé trai) là người nên bắt buộc dùng động từ tồn tại います, không dùng あります."
+    },
+    {
+      "id": "n5-g-11",
+      "code": "Bài 11",
+      "topic": "Bài 11 · Lượng từ & Tần suất",
+      "pattern": "[Số lượng từ] Vます｜[Thời gian] に [Số lần] Vます",
+      "usage": "Lượng từ (ひとつ, ひとり, まい, だい...) thường đặt ngay trước động từ và không kèm trợ từ. Dùng どのくらい để hỏi khoảng thời gian và [Khoảng thời gian] に [Số lần] để nói tần suất.",
+      "rule": "N を [Lượng từ] Vます｜[Khoảng thời gian] に [Số lần] Vます｜[Thời gian] かかります",
+      "points": [
+        { "pattern": "Cách đặt lượng từ", "rule": "りんごを4つ買いました (lượng từ đặt sau trợ từ を, trước động từ)." },
+        { "pattern": "どのくらいかかりますか", "rule": "Hỏi mất bao lâu thời gian hoặc bao nhiêu tiền." },
+        { "pattern": "[Khoảng thời gian] に [Số lần]", "rule": "Tần suất làm việc gì đó (1か月に2回映画を見ます)." },
+        { "pattern": "N だけ", "rule": "Chỉ ... (休みは日曜日だけです)." }
+      ],
+      "example": "りんごを4つ買いました。",
+      "translation": "Tôi đã mua 4 quả táo.",
+      "examples": [
+        { "jp": "1か月に2回映画を見ます。", "vi": "Một tháng tôi xem phim 2 lần." },
+        { "jp": "国で2か月ぐらい日本語を勉強しました。", "vi": "Ở nước nhà tôi đã học tiếng Nhật khoảng 2 tháng." }
+      ],
+      "question": "1週間（　　　）3回テニスをします。",
+      "options": ["に", "で", "を"],
+      "correct": 0,
+      "explanation": "Mẫu chỉ tần suất dùng trợ từ に sau khoảng thời gian: [Khoảng thời gian] に [Số lần] V."
+    },
+    {
+      "id": "n5-g-12",
+      "code": "Bài 12",
+      "topic": "Bài 12 · Quá khứ & So sánh",
+      "pattern": "N1 は N2 より A です｜N1 と N2 と どちらが A ですか",
+      "usage": "Học cách chia quá khứ của danh từ và tính từ (でした / かったです). Nắm 3 mẫu so sánh cơ bản: so sánh hơn (より), so sánh lựa chọn 2 đối tượng (どちらが) và so sánh nhất (いちばん).",
+      "rule": "Aい → Aかったです / Aくなかったです｜N1 は N2 より A｜N の中で ～が いちばん A",
+      "points": [
+        { "pattern": "Quá khứ N / Aな / Aい", "rule": "N/Aな: でした / じゃありませんでした; Aい: かったです / くなかったです." },
+        { "pattern": "N1 は N2 より A です", "rule": "N1 thì A hơn N2." },
+        { "pattern": "N1 と N2 と どちらが A ですか", "rule": "Giữa N1 và N2 cái nào A hơn? Trả lời: ～のほうが A です." },
+        { "pattern": "[Phạm vi] で 何/だれ/どこ/いつ が いちばん A ですか", "rule": "So sánh nhất trong một nhóm/phạm vi." }
+      ],
+      "example": "きのうは雨でした。北海道は九州より大きいです。",
+      "translation": "Hôm qua trời mưa. Hokkaido lớn hơn Kyushu.",
+      "examples": [
+        { "jp": "サッカーと野球とどちらが面白いですか。", "vi": "Giữa bóng đá và bóng chày môn nào thú vị hơn?" },
+        { "jp": "季節の中で春がいちばん好きです。", "vi": "Trong các mùa tôi thích mùa xuân nhất." }
+      ],
+      "question": "東京は大阪（　　　）人が多いです。",
+      "options": ["より", "ほど", "から"],
+      "correct": 0,
+      "explanation": "Mẫu so sánh hơn dùng N1 は N2 より A です ('Tokyo đông người hơn Osaka')."
+    },
+    {
+      "id": "n5-g-13",
+      "code": "Bài 13",
+      "topic": "Bài 13 · Mong muốn & Mục đích di chuyển",
+      "pattern": "N が 欲しいです｜Vます-stem たいです｜Vます-stem に 行きます",
+      "usage": "Diễn tả mong muốn của bản thân: 欲しいです (muốn có vật) và Vたいです (muốn làm hành động). Dùng Vます-stem / N + に 行きます/来ます/帰ります để nói mục đích của việc di chuyển.",
+      "rule": "N が 欲しいです｜N が/を Vたいです｜[Nơi] へ [Vます-stem / N] に 行きます",
+      "points": [
+        { "pattern": "N が 欲しいです", "rule": "Muốn có một đồ vật/người nào đó (chia như tính từ đuôi い)." },
+        { "pattern": "Vたいです", "rule": "Bỏ ます thêm たいです (chia như tính từ い; đối tượng có thể dùng が hoặc を)." },
+        { "pattern": "[Nơi] へ Vます-stem / N に 行きます", "rule": "Đi đến đâu để làm gì (神戸へ映画を見に行きます)." },
+        { "pattern": "何か / どこか", "rule": "Cái gì đó / nơi nào đó (không cần を/へ ngay sau か)." }
+      ],
+      "example": "わたしは車が欲しいです。日本へ経済の勉強に来ました。",
+      "translation": "Tôi muốn có một chiếc ô tô. Tôi đến Nhật để học kinh tế.",
+      "examples": [
+        { "jp": "わたしはてんぷらを食べたいです。", "vi": "Tôi muốn ăn tempura." },
+        { "jp": "デパートへ靴を買いに行きます。", "vi": "Tôi đi trung tâm thương mại để mua giày." }
+      ],
+      "question": "京都へお寺を見（　　　）行きます。",
+      "options": ["を", "に", "で"],
+      "correct": 1,
+      "explanation": "Mẫu chỉ mục đích của hành động di chuyển là [V bỏ ます] + に + 行きます/来ます/帰ります."
+    },
+    {
+      "id": "n5-g-14",
+      "code": "Bài 14",
+      "topic": "Bài 14 · Thể て, Yêu cầu & Đang diễn ra",
+      "pattern": "Vてください｜Vています｜Vましょうか",
+      "usage": "Nắm cách chia động từ sang thể て theo 3 nhóm. Dùng Vてください để nhờ vả/yêu cầu lịch sự, Vています diễn tả hành động đang diễn ra ngay lúc nói, và Vましょうか để đề nghị giúp đỡ.",
+      "rule": "Vてください (hãy...)｜Vています (đang...)｜Vましょうか (để tôi ... nhé)",
+      "points": [
+        { "pattern": "Vてください", "rule": "Yêu cầu, nhờ vả hoặc chỉ dẫn một cách lịch sự." },
+        { "pattern": "Vています", "rule": "Diễn tả hành động đang tiến hành tại thời điểm nói (今雨が降っています)." },
+        { "pattern": "Vましょうか", "rule": "Người nói đề nghị làm giúp người nghe việc gì đó." },
+        { "pattern": "S1 が、S2 (mào đầu)", "rule": "Mở lời lịch sự trước khi yêu cầu (すみませんが、塩を取ってください)." }
+      ],
+      "example": "ちょっと待ってください。今、雨が降っています。",
+      "translation": "Xin vui lòng đợi một chút. Bây giờ trời đang mưa.",
+      "examples": [
+        { "jp": "荷物を持ちましょうか。", "vi": "Để tôi xách hành lý giúp bạn nhé?" },
+        { "jp": "ここに住所と名前を書いてください。", "vi": "Hãy viết địa chỉ và tên vào đây." }
+      ],
+      "question": "暑いですね。窓を開け（　　　）。",
+      "options": ["ましょうか", "てください", "ています"],
+      "correct": 0,
+      "explanation": "Vましょうか dùng để chủ động đề nghị làm giúp ('Trời nóng nhỉ, để tôi mở cửa sổ nhé?')."
+    },
+    {
+      "id": "n5-g-15",
+      "code": "Bài 15",
+      "topic": "Bài 15 · Xin phép, Cấm đoán & Trạng thái",
+      "pattern": "Vてもいいですか｜Vてはいけません｜Vています (trạng thái)",
+      "usage": "Dùng Vてもいいですか để xin phép và Vてはいけません để diễn tả sự cấm đoán. Mở rộng ý nghĩa thứ hai của Vています: chỉ trạng thái kéo dài, nghề nghiệp hoặc thói quen (結婚しています, 住んでいます, 知っています).",
+      "rule": "Vてもいいですか｜Vてはいけません｜Vています (nghề nghiệp, nơi ở, kết quả)",
+      "points": [
+        { "pattern": "Vてもいいですか", "rule": "Xin phép: Làm ... có được không?" },
+        { "pattern": "Vてはいけません", "rule": "Cấm đoán: Không được phép làm ... (không dùng với bề trên)." },
+        { "pattern": "Vています (trạng thái)", "rule": "Diễn tả trạng thái kết quả đang tiếp diễn (結婚しています, 大阪に住んでいます)." },
+        { "pattern": "知っています / 知りません", "rule": "Phủ định của 知っています là 知りません (không dùng 知っていません)." }
+      ],
+      "example": "ここで写真を撮ってもいいですか。いいえ、撮ってはいけません。",
+      "translation": "Tôi chụp ảnh ở đây có được không? Không, không được phép chụp.",
+      "examples": [
+        { "jp": "ミラーさんはIMCで働いています。", "vi": "Anh Miller đang làm việc tại công ty IMC." },
+        { "jp": "市役所の電話番号を知っていますか。いいえ、知りません。", "vi": "Bạn có biết số điện thoại tòa thị chính không? Không, tôi không biết." }
+      ],
+      "question": "ここでたばこを吸って（　　　）。",
+      "options": ["はいけません", "もいいです", "ください"],
+      "correct": 0,
+      "explanation": "Vてはいけません diễn tả sự cấm đoán ('Không được hút thuốc ở đây')."
+    },
+    {
+      "id": "n5-g-16",
+      "code": "Bài 16",
+      "topic": "Bài 16 · Nối câu bằng thể て & Đặc điểm",
+      "pattern": "V1て、V2て、V3｜V1てから、V2｜N1 は N2 が A です",
+      "usage": "Dùng thể て để liệt kê chuỗi hành động theo thứ tự thời gian, nối hai tính từ/danh từ (Aい → Aくて; Aな/N → で). Dùng V1てから、V2 nhấn mạnh sau khi làm xong V1 mới làm V2, và N1 は N2 が A để tả bộ phận/đặc điểm.",
+      "rule": "V1て、V2｜V1てから、V2｜Aくて / Aなで / Nで｜N1 は N2 が A です",
+      "points": [
+        { "pattern": "V1て、V2", "rule": "Nối các hành động xảy ra lần lượt; thì của cả câu do động từ cuối quyết định." },
+        { "pattern": "V1てから、V2", "rule": "Nhấn mạnh trình tự: Sau khi làm V1 thì làm V2." },
+        { "pattern": "Aい → Aくて｜Aな/N → で", "rule": "Nối hai tính từ hoặc danh từ cùng chiều ý nghĩa." },
+        { "pattern": "N1 は N2 が A です", "rule": "Mô tả đặc điểm bộ phận (マリアさんは髪が長いです)." }
+      ],
+      "example": "朝ジョギングをして、シャワーを浴びて、会社へ行きます。",
+      "translation": "Buổi sáng tôi chạy bộ, tắm vòi sen rồi đi làm.",
+      "examples": [
+        { "jp": "仕事が終わってから、飲みに行きます。", "vi": "Sau khi xong việc tôi sẽ đi uống." },
+        { "jp": "大阪は食べ物が美味しくて、にぎやかな町です。", "vi": "Osaka là thành phố có đồ ăn ngon và nhộn nhịp." }
+      ],
+      "question": "コンサートが終わって（　　　）、レストランで食事しました。",
+      "options": ["から", "まで", "より"],
+      "correct": 0,
+      "explanation": "Vてから diễn tả trình tự 'sau khi buổi hòa nhạc kết thúc thì đi ăn ở nhà hàng'."
+    },
+    {
+      "id": "n5-g-17",
+      "code": "Bài 17",
+      "topic": "Bài 17 · Thể ない, Nghĩa vụ & Miễn trừ",
+      "pattern": "Vないでください｜Vなければなりません｜Vなくてもいいです",
+      "usage": "Học cách chia động từ sang thể ない. Dùng Vないでください để yêu cầu đừng làm, Vなければなりません để diễn tả nghĩa vụ bắt buộc phải làm, và Vなくてもいいです để nói không cần làm cũng được.",
+      "rule": "Vないでください｜Vなければなりません｜Vなくてもいいです｜N（hạn chót）までに",
+      "points": [
+        { "pattern": "Vないでください", "rule": "Xin đừng làm ... (ここで写真を撮らないでください)." },
+        { "pattern": "Vなければなりません", "rule": "Phải làm ... (bỏ い ở thể ない thêm ければなりません)." },
+        { "pattern": "Vなくてもいいです", "rule": "Không làm ... cũng được (bỏ い thêm くてもいいです)." },
+        { "pattern": "[Hạn chót] までに V", "rule": "Phải hoàn thành trước thời hạn (土曜日までに本を返さなければなりません)." }
+      ],
+      "example": "薬を飲まなければなりません。",
+      "translation": "Tôi phải uống thuốc.",
+      "examples": [
+        { "jp": "あした来なくてもいいです。", "vi": "Ngày mai bạn không cần đến cũng được." },
+        { "jp": "パスポートを忘れないでください。", "vi": "Xin đừng quên hộ chiếu." }
+      ],
+      "question": "あしたは休みですから、早く起き（　　　）。",
+      "options": ["なければなりません", "なくてもいいです", "ないでください"],
+      "correct": 1,
+      "explanation": "Vì ngày mai là ngày nghỉ nên 'không cần dậy sớm cũng được' → dùng Vなくてもいいです."
+    },
+    {
+      "id": "n5-g-18",
+      "code": "Bài 18",
+      "topic": "Bài 18 · Thể từ điển, Khả năng & Sở thích",
+      "pattern": "Vる ことができます｜趣味は Vる ことです",
+      "usage": "Học cách chia động từ sang thể từ điển (辞書形). Dùng Vる ことができます để diễn tả khả năng hoặc điều kiện cho phép; dùng 趣味は Vる ことです để nói sở thích; dùng V1る まえに、V2 để nói 'trước khi làm V1 thì làm V2'.",
+      "rule": "N / Vる ことができます｜わたしの趣味は N / Vる ことです｜V1る / Nの / [Thời gian] まえに",
+      "points": [
+        { "pattern": "N / Vる ことができます", "rule": "Có thể làm gì (khả năng bản thân hoặc điều kiện tại nơi chốn)." },
+        { "pattern": "趣味は Vる ことです", "rule": "Biến động từ thành cụm danh từ với こと để nêu sở thích." },
+        { "pattern": "V1る / Nの まえに、V2", "rule": "Trước khi làm V1 / trước N thì làm V2 (V1 luôn ở thể từ điển)." },
+        { "pattern": "なかなか～ない / ぜひ", "rule": "なかなか + phủ định: mãi mà không...; ぜひ: nhất định." }
+      ],
+      "example": "ミラーさんは漢字を読むことができます。",
+      "translation": "Anh Miller có thể đọc được chữ Hán.",
+      "examples": [
+        { "jp": "わたしの趣味は映画を見ることです。", "vi": "Sở thích của tôi là xem phim." },
+        { "jp": "寝るまえに、日記を書きます。", "vi": "Trước khi ngủ tôi viết nhật ký." }
+      ],
+      "question": "食事の（　　　）、手を洗います。",
+      "options": ["まえに", "あとで", "ながら"],
+      "correct": 0,
+      "explanation": "Nのまえに diễn tả 'trước bữa ăn thì rửa tay'."
+    },
+    {
+      "id": "n5-g-19",
+      "code": "Bài 19",
+      "topic": "Bài 19 · Thể た, Kinh nghiệm & Biến đổi",
+      "pattern": "Vた ことがあります｜Vたり、Vたり します｜なります",
+      "usage": "Học cách chia động từ sang thể た. Dùng Vた ことがあります để nói kinh nghiệm từng trải qua, Vたり Vたりします để liệt kê vài hành động tiêu biểu, và なります diễn tả sự biến đổi trạng thái.",
+      "rule": "Vた ことがあります｜V1たり、V2たり します｜Aい→Aく / Aな・N→に なります",
+      "points": [
+        { "pattern": "Vた ことがあります", "rule": "Đã từng làm ... (nhấn mạnh trải nghiệm trong đời, không dùng cho việc mới hôm qua)." },
+        { "pattern": "V1たり、V2たり します", "rule": "Liệt kê một số hành động tiêu biểu (lúc thì..., lúc thì...)." },
+        { "pattern": "Aく / Aなに / Nに なります", "rule": "Trở nên / trở thành (寒くなります, 元気になります, 25歳になります)." }
+      ],
+      "example": "わたしは相撲を見たことがあります。",
+      "translation": "Tôi đã từng xem đấu vật Sumo.",
+      "examples": [
+        { "jp": "日曜日はテニスをしたり、映画を見たりします。", "vi": "Chủ nhật tôi chơi tennis, xem phim và làm nhiều việc khác." },
+        { "jp": "だんだん暖かくなりました。", "vi": "Trời dần dần trở nên ấm áp rồi." }
+      ],
+      "question": "北海道へ行った（　　　）がありますか。",
+      "options": ["こと", "もの", "とき"],
+      "correct": 0,
+      "explanation": "Mẫu diễn tả kinh nghiệm đã từng trải qua là Vたことがあります."
+    },
+    {
+      "id": "n5-g-20",
+      "code": "Bài 20",
+      "topic": "Bài 20 · Thể thông thường (普通体)",
+      "pattern": "Thể lịch sự (丁寧体) ⇔ Thể thông thường (普通体)",
+      "usage": "Chuyển đổi câu từ thể lịch sự (です/ます) sang thể thông thường để giao tiếp thân mật với bạn bè, gia đình và làm nền tảng cho các mệnh đề phụ ở bài 21–25.",
+      "rule": "Vます → Vる / Vない / Vた / Vなかった｜Aい → bỏ です｜N/Aな → だ / じゃない / だった",
+      "points": [
+        { "pattern": "Động từ thể thông thường", "rule": "食べます→食べる, 食べません→食べない, 食べました→食べた, 食べませんでした→食べなかった." },
+        { "pattern": "Tính từ い thể thông thường", "rule": "Chỉ cần bỏ です (おいしい, おいしくない, おいしかった, おいしくなかった)." },
+        { "pattern": "Danh từ & Tính từ な", "rule": "です→だ, じゃありません→じゃない, でした→だった, じゃありませんでした→じゃなかった." },
+        { "pattern": "Câu hỏi thân mật", "rule": "Bỏ か và lên giọng cuối câu (コーヒー飲む？); với N/Aな bỏ cả だ (あした休み？)." }
+      ],
+      "example": "あした東京へ行く？ ― うん、行く。",
+      "translation": "Ngày mai cậu có đi Tokyo không? — Ừ, đi chứ.",
+      "examples": [
+        { "jp": "きのうの試験は難しかった？ ― ううん、あまり難しくなかった。", "vi": "Bài thi hôm qua có khó không? — Không, không khó lắm." },
+        { "jp": "今晩暇？ ― うん、暇だよ。", "vi": "Tối nay rảnh không? — Ừ, rảnh đấy." }
+      ],
+      "question": "きのうパーティーへ（　　　）？ ― ううん、行かなかった。",
+      "options": ["行った", "行きます", "行く"],
+      "correct": 0,
+      "explanation": "Hỏi chuyện quá khứ (きのう) bằng thể thông thường dùng thể た: 行った？"
+    },
+    {
+      "id": "n5-g-21",
+      "code": "Bài 21",
+      "topic": "Bài 21 · Suy nghĩ, Trích dẫn & Xác nhận",
+      "pattern": "[Thể thông thường] と 思います｜と 言いました｜でしょう？",
+      "usage": "Dùng ～と思います để nêu suy đoán hoặc ý kiến cá nhân, ～と言いました để trích dẫn trực tiếp hoặc gián tiếp lời nói, và [Thể thông thường] でしょう？ để tìm sự đồng tình của người nghe.",
+      "rule": "[Thể thông thường] と 思います / と 言いました｜[Thể thông thường (N/Aな bỏ だ)] でしょう？",
+      "points": [
+        { "pattern": "[Thể thông thường] と 思います", "rule": "Tôi nghĩ là / đoán là... (với N/Aな hiện tại phải có だ trước と)." },
+        { "pattern": "「～」と 言いました / [Thể TT] と 言いました", "rule": "Trích dẫn trực tiếp (trong ngoặc 「」) hoặc gián tiếp lời ai đó nói." },
+        { "pattern": "でしょう？ (lên giọng)", "rule": "Xác nhận sự đồng tình: ... đúng không / phải không?" },
+        { "pattern": "[Nơi] で [Sự kiện] が あります", "rule": "Sự kiện (tiệc, lễ hội, trận đấu) được tổ chức tại đâu dùng trợ từ で." }
+      ],
+      "example": "あした雨が降ると思います。",
+      "translation": "Tôi nghĩ ngày mai trời sẽ mưa.",
+      "examples": [
+        { "jp": "ミラーさんは来週大阪へ出張すると言いました。", "vi": "Anh Miller nói là tuần sau sẽ đi công tác Osaka." },
+        { "jp": "あしたパーティーに行くでしょう？", "vi": "Ngày mai cậu sẽ đi tiệc phải không?" }
+      ],
+      "question": "日本は物価が高い（　　　）思います。",
+      "options": ["と", "に", "が"],
+      "correct": 0,
+      "explanation": "Trợ từ と đứng trước 思います để dẫn nội dung suy nghĩ/ý kiến."
+    },
+    {
+      "id": "n5-g-22",
+      "code": "Bài 22",
+      "topic": "Bài 22 · Mệnh đề bổ nghĩa danh từ",
+      "pattern": "[Mệnh đề thể thông thường] + Danh từ",
+      "usage": "Đặt cả một mệnh đề ở thể thông thường ngay phía trước để giải thích, bổ nghĩa chi tiết cho danh từ. Lưu ý: chủ ngữ bên trong mệnh đề bổ nghĩa dùng trợ từ が (không dùng は), và Aな giữ な, N thêm の.",
+      "rule": "[V thông thường / Aい / Aな + な / N + の] + Danh từ (chủ ngữ phụ dùng が)",
+      "points": [
+        { "pattern": "V thể thông thường + N", "rule": "ミラーさんが作ったケーキ (chiếc bánh do anh Miller làm)." },
+        { "pattern": "Chủ ngữ trong mệnh đề phụ dùng が", "rule": "Không dùng は trong mệnh đề bổ nghĩa danh từ." },
+        { "pattern": "Vる 時間 / 約束 / 用事", "rule": "Thời gian / cuộc hẹn / việc bận để làm gì (朝ごはんを食べる時間がありません)." }
+      ],
+      "example": "これはミラーさんが作ったケーキです。",
+      "translation": "Đây là chiếc bánh ngọt mà anh Miller đã làm.",
+      "examples": [
+        { "jp": "あそこにいる人はミラーさんです。", "vi": "Người đang đứng ở đằng kia là anh Miller." },
+        { "jp": "わたしは朝ごはんを食べる時間がありません。", "vi": "Tôi không có thời gian ăn sáng." }
+      ],
+      "question": "これはわたし（　　　）京都で撮った写真です。",
+      "options": ["は", "が", "を"],
+      "correct": 1,
+      "explanation": "Trong mệnh đề bổ nghĩa danh từ (わたしが京都で撮った写真), chủ ngữ đi với trợ từ が."
+    },
+    {
+      "id": "n5-g-23",
+      "code": "Bài 23",
+      "topic": "Bài 23 · Khi ~ & Điều kiện tự nhiên ～と",
+      "pattern": "[Vる / Vない / Vた / A / Nの] とき｜Vる と、S2",
+      "usage": "Dùng とき diễn tả thời điểm 'khi ...' (phân biệt Vる とき chưa làm/sắp làm và Vた とき đã làm xong). Dùng Vる と để diễn tả kết quả tất yếu xảy ra khi làm một thao tác (bấm nút, rẽ góc đường...).",
+      "rule": "Vる/Vない/Vた / Aい / Aなな / Nの とき｜Vる と、[Kết quả tất yếu]",
+      "points": [
+        { "pattern": "Vる とき vs Vた とき", "rule": "国へ帰るとき (trước/trên đường về nước) vs 国へ帰ったとき (khi đã về đến nước)." },
+        { "pattern": "Aい / Aなな / Nの とき", "rule": "眠いとき (khi buồn ngủ), 暇なとき (khi rảnh), 子どものとき (khi còn nhỏ)." },
+        { "pattern": "Vる と、S2", "rule": "Hễ làm V thì tất yếu xảy ra S2 (không dùng câu ý chí/mệnh lệnh ở S2)." },
+        { "pattern": "[Địa điểm] を 歩きます / 渡ります", "rule": "Dùng trợ từ を chỉ nơi đi qua, băng qua (橋を渡ります)." }
+      ],
+      "example": "図書館で本を借りるとき、カードが要ります。",
+      "translation": "Khi mượn sách ở thư viện thì cần phải có thẻ.",
+      "examples": [
+        { "jp": "このボタンを押すと、お釣りが出ます。", "vi": "Hễ bấm nút này thì tiền thừa sẽ chạy ra." },
+        { "jp": "右へ曲がると、郵便局があります。", "vi": "Rẽ phải là thấy bưu điện." }
+      ],
+      "question": "このつまみを右へ回す（　　　）、音が大きくなります。",
+      "options": ["と", "とき", "ながら"],
+      "correct": 0,
+      "explanation": "Vる と diễn tả kết quả tất yếu của thao tác máy móc ('Hễ vặn núm sang phải thì âm thanh to lên')."
+    },
+    {
+      "id": "n5-g-24",
+      "code": "Bài 24",
+      "topic": "Bài 24 · Cho nhận hành vi (てあげます・てもらいます・てくれます)",
+      "pattern": "Vてあげます / Vてもらいます / Vてくれます",
+      "usage": "Mở rộng mẫu cho nhận sang hành động mang lại lợi ích. くれます / Vてくれます dùng khi người khác cho hoặc làm giúp cho tôi (hoặc người nhà tôi), thể hiện sự biết ơn.",
+      "rule": "くれます (ai đó cho tôi)｜Vてあげます (làm cho ai)｜Vてもらいます (nhờ/được ai làm)｜Vてくれます (ai làm cho tôi)",
+      "points": [
+        { "pattern": "[Người] は わたしに N を くれます", "rule": "Người khác tặng cho tôi (佐藤さんはわたしにクリスマスカードをくれました)." },
+        { "pattern": "Vてあげます", "rule": "Làm giúp ai việc gì (tránh dùng trực tiếp với người trên)." },
+        { "pattern": "Vてもらいます", "rule": "Chủ ngữ là người nhận: được/nhờ ai đó làm giúp việc gì." },
+        { "pattern": "Vてくれます", "rule": "Chủ ngữ là người làm: ai đó tốt bụng làm giúp cho tôi." }
+      ],
+      "example": "佐藤さんはわたしに日本語を教えてくれました。",
+      "translation": "Chị Sato đã dạy tiếng Nhật cho tôi.",
+      "examples": [
+        { "jp": "わたしは木村さんに本を貸してあげました。", "vi": "Tôi đã cho chị Kimura mượn sách." },
+        { "jp": "わたしは山田さんに図書館の電話番号を教えてもらいました。", "vi": "Tôi đã được anh Yamada chỉ cho số điện thoại thư viện." }
+      ],
+      "question": "母は誕生日にわたしにセーターを送って（　　　）。",
+      "options": ["あげました", "くれました", "もらいました"],
+      "correct": 1,
+      "explanation": "Chủ ngữ là 母 (mẹ) làm cho わたし (tôi), nên phải dùng Vてくれました."
+    },
+    {
+      "id": "n5-g-25",
+      "code": "Bài 25",
+      "topic": "Bài 25 · Điều kiện ～たら & Nhượng bộ ～ても",
+      "pattern": "Vたら (Nếu / Sau khi)｜Vても (Dù ... vẫn ...)",
+      "usage": "Dùng thể điều kiện たら (thể た + ら) cho cả giả định 'nếu ...' và thời điểm 'sau khi ... xong thì ...'. Dùng ても (thể て + も) để diễn tả sự nhượng bộ 'cho dù ... thì vẫn ...'.",
+      "rule": "[Vた / Aかった / Aな・Nだった] + ら｜[Vて / Aくて / Aな・Nで] + も",
+      "points": [
+        { "pattern": "～たら (điều kiện giả định)", "rule": "Nếu ... thì ... (お金があったら、旅行します). Vế sau dùng được cả yêu cầu, rủ rê." },
+        { "pattern": "～たら (thời điểm chắc chắn)", "rule": "Khi / sau khi làm xong việc gì (10時になったら、出かけましょう)." },
+        { "pattern": "～ても / ～でも", "rule": "Cho dù ... cũng ... (雨が降っても、洗濯します; いくら高くても買います)." },
+        { "pattern": "もし～たら / いくら～ても", "rule": "もし nhấn mạnh giả định; いくら nhấn mạnh mức độ nhượng bộ." }
+      ],
+      "example": "雨が降ったら、出かけません。",
+      "translation": "Nếu trời mưa thì tôi sẽ không ra ngoài.",
+      "examples": [
+        { "jp": "駅に着いたら、電話をください。", "vi": "Khi đến ga rồi thì hãy gọi điện cho tôi nhé." },
+        { "jp": "雨が降っても、サッカーの試合はあります。", "vi": "Dù trời có mưa thì trận bóng đá vẫn diễn ra." }
+      ],
+      "question": "スイッチを押して（　　　）、機械が動きません。",
+      "options": ["たら", "も", "から"],
+      "correct": 1,
+      "explanation": "Vế trước (đã bấm công tắc) và vế sau (máy không chạy) trái ngược nhau nên dùng nhượng bộ Vても ('Dù đã bấm công tắc nhưng máy vẫn không chạy')."
+    }
+  ]
+}

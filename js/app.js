@@ -4,6 +4,7 @@
     const Audio = global.MimiAudio;
     const Theme = global.MimiTheme;
     const GlobalSearch = global.MimiGlobalSearch;
+    const GrammarView = global.MimiGrammarView;
     const HomeView = global.MimiHomeView;
     const BatchPreview = global.MimiBatchPreview;
     const Quiz = global.MimiQuizController;
@@ -34,6 +35,9 @@
             }
         }
         Audio.setupKeyboardShortcuts();
+        if (HomeView && typeof HomeView.setupN3TabKeyboard === "function") {
+            HomeView.setupN3TabKeyboard();
+        }
         if (Quiz && typeof Quiz.setupPersistenceListeners === "function") {
             Quiz.setupPersistenceListeners();
         }
@@ -53,13 +57,16 @@
         setGlobalSearchLevel: GlobalSearch ? GlobalSearch.setGlobalSearchLevel : function () {},
         clearGlobalSearch: GlobalSearch ? GlobalSearch.clearGlobalSearch : function () {},
 
-        // Home / Level / Mode
+        // Home / Library / Level / Mode / Grammar
         selectLevel: HomeView.selectLevel,
         selectLevelFromHeader: HomeView.selectLevelFromHeader,
+        selectN3Tab: HomeView.selectN3Tab,
+        jumpToLibrarySection: HomeView.jumpToLibrarySection,
         focusGlobalSearch: HomeView.focusGlobalSearch,
         scrollToUnit: HomeView.scrollToUnit,
-        refreshWordSpotlight: HomeView.refreshWordSpotlight,
         setStudyMode: HomeView.setStudyMode,
+        openGrammarLesson: GrammarView ? GrammarView.openGrammarLesson : function () {},
+        selectGrammarChoice: GrammarView ? GrammarView.selectGrammarChoice : function () {},
 
         // Batch preview
         openBatchPreview: BatchPreview ? BatchPreview.openBatchPreview : function () {},

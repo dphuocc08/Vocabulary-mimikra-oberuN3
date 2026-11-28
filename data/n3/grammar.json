@@ -1,0 +1,38 @@
+{
+  "level": "n3",
+  "title": "Ngữ pháp JLPT N3",
+  "lessons": [
+    {
+      "id": "n3-you-ni-naru",
+      "topic": "Sự thay đổi",
+      "pattern": "～ようになる",
+      "usage": "Dùng khi một người dần có được khả năng mới. Trong ví dụ này, trước đây người nói chưa đọc được báo tiếng Nhật, giờ thì đã đọc được.",
+      "rule": "Động từ thể khả năng + ようになる",
+      "example": "日本語の新聞が読めるようになりました。",
+      "translation": "Giờ tôi đã có thể đọc báo tiếng Nhật.",
+      "question": "毎日練習して、漢字が書ける（　　　　）。",
+      "options": [
+        "ようにしています",
+        "ようになりました"
+      ],
+      "correct": 1,
+      "explanation": "書ける diễn tả khả năng viết. ようになりました cho biết khả năng này có được sau một thời gian luyện tập."
+    },
+    {
+      "id": "n3-you-ni-suru",
+      "topic": "Nỗ lực tạo thói quen",
+      "pattern": "～ようにする",
+      "usage": "Dùng khi người nói chủ động cố gắng làm hoặc tránh làm một việc. Dạng ～ようにしています thường nói về một thói quen đang duy trì.",
+      "rule": "Động từ thể từ điển hoặc thể ない + ようにする",
+      "example": "寝る前に日本語を読むようにしています。",
+      "translation": "Tôi cố gắng duy trì thói quen đọc tiếng Nhật trước khi ngủ.",
+      "question": "健康のために、できるだけ階段を使う（　　　　）。",
+      "options": [
+        "ようにしています",
+        "ことがあります"
+      ],
+      "correct": 0,
+      "explanation": "ようにしています nhấn mạnh việc chủ động dùng cầu thang khi có thể. ことがあります chỉ nói rằng việc đó đôi khi xảy ra."
+    }
+  ]
+}

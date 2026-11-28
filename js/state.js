@@ -40,6 +40,7 @@
         },
         previewBatch: null,
         nextBatchAfterSummary: null,
+        n3SubjectTab: "vocab", // 'vocab' | 'grammar'
         currentAudioReading: "",
         mistakeSearchQuery: ""
     };
@@ -326,16 +327,11 @@
 
         const homeNavBtn = document.getElementById("nav-btn-home");
         const mistakesNavBtn = document.getElementById("nav-btn-mistakes");
-        const activeTabCls = "header-nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-1.5 bg-emerald-600 text-white shadow-xs";
-        const inactiveHomeCls = "header-nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-1.5 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200";
-        const activeMistakeCls = "header-nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-1.5 bg-rose-600 text-white shadow-xs";
-        const inactiveMistakeCls = "header-nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-1.5 bg-white hover:bg-rose-50 text-slate-700 border border-slate-200";
-
         if (homeNavBtn) {
-            homeNavBtn.className = screenId === "selection-screen" ? activeTabCls : inactiveHomeCls;
+            homeNavBtn.classList.toggle("is-active", screenId === "selection-screen");
         }
         if (mistakesNavBtn) {
-            mistakesNavBtn.className = screenId === "mistake-bank-screen" ? activeMistakeCls : inactiveMistakeCls;
+            mistakesNavBtn.classList.toggle("is-active", screenId === "mistake-bank-screen");
         }
     }
 

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Ngọc 先生 - Ôn Tập Từ Vựng JLPT N5 – N3</title>
-    <meta name="description" content="Ứng dụng ôn tập từ vựng tiếng Nhật JLPT N5, N4, N3 theo chặng thông minh, có phát âm, tra từ nhanh và học offline.">
-    <meta name="theme-color" content="#059669" id="theme-color-meta">
+    <title>Ngọc 先生 — Thư viện tiếng Nhật (JLPT N5 – N3)</title>
+    <meta name="description" content="Thư viện tiếng Nhật Ngọc 先生: từ vựng Minna no Nihongo N5–N4, Mimi Kara Oboeru N3, ngữ pháp N3, phát âm và học offline.">
+    <meta name="theme-color" content="#8f382d" id="theme-color-meta">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="Ngọc 先生">
@@ -20,7 +20,7 @@
                 if (saved === "dark" || (!saved && prefersDark)) {
                     document.documentElement.classList.add("dark");
                     var meta = document.getElementById("theme-color-meta");
-                    if (meta) meta.setAttribute("content", "#0f172a");
+                    if (meta) meta.setAttribute("content", "#252621");
                 }
             } catch (e) {}
         })();
@@ -28,47 +28,43 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="text-slate-800 min-h-screen flex flex-col">
+<body class="lib-body min-h-screen flex flex-col">
 
     <!-- Header -->
-    <header class="glass-header bg-white/90 border-b border-slate-200/90 sticky top-0 z-30 shadow-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
-            <button type="button" onclick="MimiApp.backToMenu()" class="flex items-center space-x-2.5 text-left group">
-                <div id="header-level-badge" class="bg-emerald-600 text-white font-bold px-2.5 py-1 rounded-xl text-sm shadow-xs transition group-hover:scale-105">
-                    N3
-                </div>
-                <div>
-                    <h1 class="jp-text font-bold text-slate-900 text-base sm:text-lg leading-tight tracking-tight">Ngọc 先生</h1>
-                    <p class="text-xs text-slate-500 hidden sm:block">Từ vựng N5 – N3 • Chia chặng thông minh • Học Offline</p>
-                </div>
+    <header class="lib-site-header sticky top-0 z-30">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-3">
+            <button type="button" onclick="MimiApp.backToMenu()" class="lib-brand text-left group">
+                <span class="lib-stamp" aria-hidden="true">学</span>
+                <span class="lib-brand-name">Ngọc <span lang="ja">先生</span></span>
+                <span id="header-level-pill" class="lib-level-chip">N3</span>
             </button>
 
-            <div class="flex items-center space-x-2">
+            <div class="flex items-center gap-1.5 sm:gap-2">
                 <button id="pwa-install-btn" type="button" onclick="MimiApp.installPwa()"
                     title="Cài ứng dụng ra màn hình chính để học offline"
-                    class="hidden px-2.5 py-1.5 rounded-lg border border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs sm:text-sm font-semibold transition flex items-center space-x-1">
+                    class="hidden lib-util-btn is-accent">
                     <span>📲</span>
                     <span class="hidden sm:inline">Cài App</span>
                 </button>
 
                 <button id="theme-toggle-btn" type="button" onclick="MimiApp.toggleTheme()"
                     title="Chuyển chế độ sáng / tối"
-                    class="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium transition flex items-center space-x-1">
+                    class="lib-util-btn">
                     <span id="theme-toggle-icon">🌙</span>
                     <span id="theme-toggle-label" class="hidden sm:inline">Tối</span>
                 </button>
 
                 <button id="open-backup-btn" type="button" onclick="MimiApp.openBackupModal()"
-                    class="px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs sm:text-sm font-medium transition flex items-center space-x-1.5">
+                    class="lib-util-btn">
                     <span>💾</span>
-                    <span class="hidden xs:inline sm:inline">Sao lưu</span>
+                    <span class="hidden sm:inline">Sao lưu</span>
                 </button>
 
-                <!-- Score & Progress Pill -->
-                <div id="stats-bar" class="hidden flex items-center space-x-3 bg-slate-100 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium">
+                <!-- Score & Progress Pill (Quiz Screen Only) -->
+                <div id="stats-bar" class="hidden flex items-center space-x-2.5 bg-slate-100 px-3 py-1.5 rounded-full text-xs sm:text-sm font-medium">
                     <span class="text-emerald-600 font-bold" id="score-correct">✓ 0</span>
                     <span class="text-slate-300">|</span>
                     <span class="text-rose-500 font-bold" id="score-wrong">✕ 0</span>
@@ -78,50 +74,31 @@
             </div>
         </div>
 
-        <!-- Header Navigation Bar -->
-        <nav id="header-nav" aria-label="Điều hướng chính" class="border-t border-slate-100 bg-slate-50/70">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between gap-2 overflow-x-auto no-scrollbar">
-                <div class="flex items-center gap-1.5 shrink-0">
-                    <button id="nav-btn-home" type="button" onclick="MimiApp.backToMenu()"
-                        class="header-nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-1.5 bg-emerald-600 text-white shadow-xs">
-                        <span>🏠</span>
-                        <span>Trang chủ</span>
+        <!-- Secondary Library Navigation Bar -->
+        <nav id="header-nav" aria-label="Điều hướng thư viện" class="lib-subnav">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 py-2 flex items-center justify-between gap-3 overflow-x-auto no-scrollbar">
+                <div class="flex items-center gap-3 sm:gap-4 shrink-0">
+                    <button id="nav-btn-home" type="button" onclick="MimiApp.backToMenu()" class="lib-nav-link is-active">
+                        Trang chủ
                     </button>
-
-                    <div class="flex items-center bg-slate-100 border border-slate-200 rounded-lg p-0.5 gap-0.5">
-                        <button type="button" data-header-level="n5" onclick="MimiApp.selectLevelFromHeader('n5')"
-                            class="px-2.5 py-1 rounded-md text-xs font-bold transition text-slate-600 hover:text-slate-900">
-                            N5
-                        </button>
-                        <button type="button" data-header-level="n4" onclick="MimiApp.selectLevelFromHeader('n4')"
-                            class="px-2.5 py-1 rounded-md text-xs font-bold transition text-slate-600 hover:text-slate-900">
-                            N4
-                        </button>
-                        <button type="button" data-header-level="n3" onclick="MimiApp.selectLevelFromHeader('n3')"
-                            class="px-2.5 py-1 rounded-md text-xs font-bold transition bg-emerald-600 text-white shadow-xs">
-                            N3
-                        </button>
-                    </div>
+                    <button type="button" onclick="MimiApp.jumpToLibrarySection('lib-shelf')" class="lib-nav-link">
+                        Giáo trình
+                    </button>
+                    <button type="button" onclick="MimiApp.jumpToLibrarySection('lib-contents')" class="lib-nav-link">
+                        Mục lục
+                    </button>
                 </div>
 
-                <div class="flex items-center gap-1.5 shrink-0">
-                    <button id="nav-btn-search" type="button" onclick="MimiApp.focusGlobalSearch()"
-                        class="header-nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-1.5 bg-white hover:bg-slate-100 text-slate-700 border border-slate-200">
-                        <span>🔍</span>
-                        <span>Tra từ</span>
+                <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+                    <button id="nav-btn-search" type="button" onclick="MimiApp.focusGlobalSearch()" class="lib-nav-link">
+                        🔍 Tra từ
                     </button>
-
-                    <button id="nav-btn-mistakes" type="button" onclick="MimiApp.openMistakeBank()"
-                        class="header-nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-1.5 bg-white hover:bg-rose-50 text-slate-700 border border-slate-200">
-                        <span>📕</span>
-                        <span>Sổ tay</span>
-                        <span id="header-mistake-count" class="hidden text-[11px] font-bold px-1.5 py-0.2 rounded-full bg-rose-600 text-white">0</span>
+                    <button id="nav-btn-mistakes" type="button" onclick="MimiApp.openMistakeBank()" class="lib-nav-link">
+                        <span>📕 Sổ tay</span>
+                        <span id="header-mistake-count" class="hidden lib-nav-badge">0</span>
                     </button>
-
-                    <button id="nav-btn-random" type="button" onclick="MimiApp.startGlobalRandomQuiz(20)"
-                        class="header-nav-btn px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition flex items-center space-x-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200">
-                        <span>⚡</span>
-                        <span>Ôn nhanh</span>
+                    <button id="nav-btn-random" type="button" onclick="MimiApp.startGlobalRandomQuiz(20)" class="lib-nav-link is-rust">
+                        ⚡ Ôn nhanh
                     </button>
                 </div>
             </div>
@@ -129,267 +106,162 @@
     </header>
 
     <!-- Main Container -->
-    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 py-6 sm:py-8">
+    <main class="flex-grow max-w-5xl w-full mx-auto px-3 sm:px-6 py-4 sm:py-7">
 
-        <!-- Screen 1: Home / 3-Column Dashboard -->
+        <!-- Screen 1: Home / Thư viện tiếng Nhật -->
         <section id="selection-screen" class="animate-fade-in">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+            <div id="ngoc-library" aria-label="Trang chủ thư viện Ngọc 先生">
+                <!-- Cover: Title + Continue CTA + Mount Fuji Photo -->
+                <div class="lib-cover">
+                    <div class="lib-intro">
+                        <p class="lib-folio" lang="ja">日本語の図書室</p>
+                        <h1 class="lib-title">Thư viện<br>tiếng Nhật</h1>
+                        <p class="lib-subtitle">Minna no Nihongo &amp; Mimi Kara Oboeru</p>
 
-                <!-- LEFT SIDEBAR: Mastery Progress & Quick Unit Jump -->
-                <aside class="lg:col-span-3 lg:sticky lg:top-32 space-y-5 order-2 lg:order-1">
-                    <!-- Mastery Ring Card -->
-                    <div class="dashboard-card bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Tiến độ cấp độ</h3>
-                            <span id="sidebar-level-tag" class="text-[11px] font-bold px-2 py-0.5 rounded-md bg-emerald-600 text-white">N3</span>
-                        </div>
+                        <!-- Continue Learning CTA (Real Saved Progress) -->
+                        <div id="continue-learning-card"></div>
 
-                        <div class="flex items-center gap-4">
-                            <div class="relative w-20 h-20 shrink-0">
-                                <svg class="w-20 h-20 -rotate-90" viewBox="0 0 80 80">
-                                    <circle cx="40" cy="40" r="32" fill="none" stroke="currentColor" stroke-width="7" class="text-slate-100"></circle>
-                                    <circle id="sidebar-ring-circle" cx="40" cy="40" r="32" fill="none" stroke="currentColor" stroke-width="7"
-                                        stroke-linecap="round" stroke-dasharray="201.06" stroke-dashoffset="201.06"
-                                        class="text-emerald-500 transition-all duration-500"></circle>
-                                </svg>
-                                <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                    <span id="sidebar-mastery-pct" class="text-base font-bold text-slate-900">0%</span>
-                                    <span class="text-[10px] text-slate-400">đã nắm</span>
-                                </div>
-                            </div>
-
-                            <div class="space-y-1.5 text-xs flex-grow min-w-0">
-                                <div class="flex items-center justify-between">
-                                    <span class="text-slate-500">Đã thuộc</span>
-                                    <span id="sidebar-mastered-count" class="font-bold text-emerald-700">0</span>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-slate-500">Tổng từ</span>
-                                    <span id="sidebar-total-count" class="font-bold text-slate-800">0</span>
-                                </div>
-                                <div class="flex items-center justify-between">
-                                    <span class="text-slate-500">Chặng xong</span>
-                                    <span id="sidebar-batches-count" class="font-bold text-indigo-700">0/0</span>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Live Level Mastery Summary -->
+                        <p id="lib-progress-summary" class="lib-progress-note">Đang tải dữ liệu...</p>
                     </div>
 
-                    <!-- Quick Unit Navigation -->
-                    <div class="dashboard-card bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
-                        <div class="flex items-center justify-between mb-3">
-                            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Mục lục bài học</h3>
-                            <span id="sidebar-unit-count" class="text-[11px] font-medium text-slate-400">0 bài</span>
-                        </div>
-                        <div id="sidebar-unit-nav" class="space-y-1.5 max-h-[46vh] overflow-y-auto custom-scrollbar pr-1">
-                            <!-- Dynamically rendered by js/home-view.js -->
-                        </div>
-                    </div>
-                </aside>
-
-                <!-- CENTER MAIN COLUMN -->
-                <div class="lg:col-span-6 space-y-6 order-1 lg:order-2 min-w-0">
-                    <!-- Continue Learning / Next Batch CTA -->
-                    <div id="continue-learning-card" class="hidden"></div>
-
-                    <!-- Hero Banner -->
-                    <div id="hero-banner" class="hero-card relative overflow-hidden rounded-3xl p-6 sm:p-7 text-white shadow-md bg-gradient-to-br from-emerald-600 via-emerald-700 to-teal-800">
-                        <div class="hero-watermark jp-text select-none pointer-events-none" aria-hidden="true">耳</div>
-                        <div class="relative z-10">
-                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
-                                <span id="current-level-pill" class="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-xs text-white text-xs font-bold px-3 py-1 rounded-full border border-white/25">
-                                    <span>JLPT N3 • Mimi Kara Oboeru</span>
-                                </span>
-                                <span id="global-vocab-stats" class="text-xs font-medium text-white/85">
-                                    Đang tải dữ liệu...
-                                </span>
-                            </div>
-
-                            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-2">Chinh phục từ vựng JLPT mỗi ngày</h2>
-                            <p class="text-white/85 text-xs sm:text-sm leading-relaxed mb-5 max-w-xl">
-                                Chia chặng 25–30 từ thông minh, tự động ghi nhớ từ sai vào sổ tay và phát âm chuẩn tiếng Nhật ngay trên trình duyệt.
-                            </p>
-
-                            <div class="flex flex-wrap items-center gap-2.5">
-                                <button type="button" onclick="MimiApp.startGlobalRandomQuiz(20)"
-                                    class="px-5 py-2.5 bg-white text-slate-900 hover:bg-slate-100 font-bold rounded-xl text-sm shadow-sm transition flex items-center space-x-2">
-                                    <span>⚡ Ôn ngẫu nhiên 20 câu</span>
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
-                                </button>
-                                <button type="button" onclick="MimiApp.openMistakeBank()"
-                                    class="px-4 py-2.5 bg-white/15 hover:bg-white/25 text-white border border-white/25 font-semibold rounded-xl text-sm transition">
-                                    📕 Sổ tay từ sai
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Global Vocabulary Search (N5 - N4 - N3) -->
-                    <div class="dashboard-card bg-white rounded-2xl p-4 sm:p-5 shadow-xs border border-slate-200">
-                        <div class="relative flex items-center">
-                            <span class="absolute left-3.5 text-slate-400 pointer-events-none">🔍</span>
-                            <input id="global-search-input" type="search" autocomplete="off"
-                                placeholder="Tra nhanh từ vựng toàn kho N5 – N4 – N3 (Kanji, Hiragana, nghĩa Việt)..."
-                                class="w-full pl-10 pr-10 py-2.5 sm:py-3 rounded-xl border border-slate-300 focus:border-emerald-600 focus:outline-none text-sm sm:text-base transition" />
-                            <button id="global-search-clear" type="button" onclick="MimiApp.clearGlobalSearch()"
-                                title="Xóa từ khóa"
-                                class="hidden absolute right-2.5 w-7 h-7 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-xs font-bold transition">
-                                ✕
-                            </button>
-                        </div>
-
-                        <div id="global-search-panel" class="hidden mt-3.5 pt-3.5 border-t border-slate-100 space-y-3 animate-fade-in">
-                            <div class="flex flex-wrap items-center justify-between gap-2">
-                                <span id="global-search-status" class="text-xs font-medium text-slate-500"></span>
-                                <div id="global-search-filters" class="flex items-center gap-1.5"></div>
-                            </div>
-                            <div id="global-search-results" class="space-y-2.5 max-h-[55vh] overflow-y-auto custom-scrollbar pr-1"></div>
-                        </div>
-                    </div>
-
-                    <!-- Level & Mode Selector Card -->
-                    <div class="dashboard-card bg-white rounded-2xl p-5 sm:p-6 shadow-xs border border-slate-200">
-                        <!-- Level Switcher -->
-                        <div class="mb-5 pb-5 border-b border-slate-100">
-                            <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Chọn cấp độ JLPT</div>
-                            <div id="level-switcher" class="grid grid-cols-3 gap-2.5">
-                                <!-- Dynamically rendered by js/home-view.js -->
-                            </div>
-                        </div>
-
-                        <div class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2.5">Chọn chế độ học tập</div>
-                        <!-- Mode Switcher -->
-                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                            <button id="mode-btn-two_step" type="button" onclick="MimiApp.setStudyMode('two_step')"
-                                class="p-4 rounded-xl border-2 border-emerald-500 bg-emerald-50/80 text-left transition flex flex-col justify-between">
-                                <div class="flex flex-wrap items-center justify-between gap-1.5 mb-1.5">
-                                    <span class="font-bold text-slate-900 text-sm">1. Luyện từ vựng (2 Bước)</span>
-                                    <span id="mode-badge-two_step" class="text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-600 text-white">Đang chọn</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed">Nhìn Kanji → chọn Hiragana → gõ nghĩa tiếng Việt theo câu ví dụ.</p>
-                            </button>
-
-                            <button id="mode-btn-context_fill" type="button" onclick="MimiApp.setStudyMode('context_fill')"
-                                class="p-4 rounded-xl border-2 border-slate-200 bg-white text-left transition flex flex-col justify-between">
-                                <div class="flex flex-wrap items-center justify-between gap-1.5 mb-1.5">
-                                    <span class="font-bold text-slate-900 text-sm">2. Điền từ theo ngữ cảnh</span>
-                                    <span id="mode-badge-context_fill" class="hidden text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-600 text-white">Đang chọn</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed">Đọc câu ví dụ có chỗ trống + gợi ý tiếng Việt → chọn từ đúng nhất.</p>
-                            </button>
-
-                            <button id="mode-btn-listen_meaning" type="button" onclick="MimiApp.setStudyMode('listen_meaning')"
-                                class="p-4 rounded-xl border-2 border-slate-200 bg-white text-left transition flex flex-col justify-between">
-                                <div class="flex flex-wrap items-center justify-between gap-1.5 mb-1.5">
-                                    <span class="font-bold text-slate-900 text-sm">3. Nghe và chọn nghĩa</span>
-                                    <span id="mode-badge-listen_meaning" class="hidden text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-600 text-white">Đang chọn</span>
-                                </div>
-                                <p class="text-xs text-slate-600 leading-relaxed">Nghe phát âm tiếng Nhật (thường / chậm) → chọn nghĩa tiếng Việt đúng.</p>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Mistake Bank Banner (Mobile/Tablet view; desktop shows in Right Sidebar) -->
-                    <div id="mistake-banner-card" class="lg:hidden rounded-2xl p-5 sm:p-6 border border-rose-200 bg-rose-50/50 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                        <div>
-                            <div class="flex items-center space-x-2 mb-1">
-                                <span class="text-lg">📕</span>
-                                <h3 class="font-bold text-slate-900 text-base sm:text-lg">Sổ tay từ sai</h3>
-                                <span id="mistake-banner-count" class="text-xs font-bold px-2.5 py-1 rounded-full bg-rose-600 text-white">0 từ</span>
-                            </div>
-                            <p id="mistake-banner-desc" class="text-xs sm:text-sm text-slate-600">
-                                Tự động lưu các từ làm sai để bạn ôn dứt điểm.
-                            </p>
-                        </div>
-                        <div class="flex items-center space-x-2.5 shrink-0">
-                            <button id="mistake-banner-view-btn" type="button" onclick="MimiApp.openMistakeBank()"
-                                class="px-4 py-2.5 bg-white hover:bg-rose-50 text-rose-700 border border-rose-200 font-semibold rounded-xl text-sm transition">
-                                Xem sổ tay
-                            </button>
-                            <button id="mistake-banner-start-btn" type="button" onclick="MimiApp.startMistakeBankQuiz()"
-                                class="px-4 py-2.5 bg-rose-600 hover:bg-rose-700 text-white font-semibold rounded-xl text-sm shadow-xs transition">
-                                Ôn ngay
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Units Container -->
-                    <div id="units-container" class="space-y-5">
-                        <!-- Dynamically injected by js/home-view.js -->
-                    </div>
+                    <figure class="lib-figure">
+                        <img src="images/fuji-cover.jpg" alt="Núi Phú Sĩ lúc chạng vạng" loading="eager" decoding="async" />
+                    </figure>
                 </div>
 
-                <!-- RIGHT SIDEBAR: Word Spotlight, Mistake Bank & Shortcuts -->
-                <aside class="lg:col-span-3 lg:sticky lg:top-32 space-y-5 order-3">
-                    <!-- Word Spotlight ("Từ vựng gợi ý") -->
-                    <div class="dashboard-card bg-white rounded-2xl p-5 shadow-xs border border-slate-200">
-                        <div class="flex items-center justify-between mb-3">
-                            <div class="flex items-center space-x-1.5">
-                                <span>✨</span>
-                                <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">Từ vựng gợi ý</h3>
+                <!-- Bookshelf: 3 JLPT Volumes (N5 / N4 / N3) -->
+                <section id="lib-shelf" class="lib-collection" aria-labelledby="shelf-heading">
+                    <div class="lib-sectitle">
+                        <h2 id="shelf-heading">Kệ giáo trình</h2>
+                        <small>Chọn cấp độ để xem bài</small>
+                    </div>
+                    <div id="level-switcher" class="lib-books">
+                        <!-- Dynamically rendered by js/home-view.js -->
+                    </div>
+                </section>
+
+                <!-- Catalog of Selected Level -->
+                <section id="lib-contents" class="lib-catalog" aria-labelledby="catalog-heading">
+                    <div class="lib-sectitle">
+                        <h2 id="catalog-heading">Mục lục N3</h2>
+                        <small id="catalog-count">Đang tải...</small>
+                    </div>
+
+                    <!-- N3 Subject Tabs (shown only when N3 is selected) -->
+                    <div id="n3-subject-tabs" class="lib-subjects" role="tablist" aria-label="Nội dung N3">
+                        <button type="button" role="tab" id="n3-tab-vocab" aria-controls="lib-vocab-panel" aria-selected="true" tabindex="0"
+                            onclick="MimiApp.selectN3Tab('vocab')">
+                            Từ vựng
+                        </button>
+                        <button type="button" role="tab" id="n3-tab-grammar" aria-controls="lib-grammar-panel" aria-selected="false" tabindex="-1"
+                            onclick="MimiApp.selectN3Tab('grammar')">
+                            Ngữ pháp
+                        </button>
+                    </div>
+
+                    <!-- Vocabulary Tab Panel (N5, N4, and N3 Từ vựng) -->
+                    <div id="lib-vocab-panel" role="tabpanel" aria-labelledby="n3-tab-vocab">
+                        <!-- Study Controls Bar: Search, Study Modes, Mistake Bank -->
+                        <div class="lib-study-tools">
+                            <!-- Global Vocabulary Search (N5 - N4 - N3) -->
+                            <div class="lib-search-box">
+                                <div class="relative flex items-center">
+                                    <span class="absolute left-3 text-xs pointer-events-none opacity-65">🔍</span>
+                                    <input id="global-search-input" type="search" autocomplete="off"
+                                        placeholder="Tra nhanh từ vựng toàn kho N5 – N4 – N3 (Kanji, Hiragana, nghĩa Việt)..."
+                                        class="lib-search-input" />
+                                    <button id="global-search-clear" type="button" onclick="MimiApp.clearGlobalSearch()"
+                                        title="Xóa từ khóa"
+                                        class="hidden absolute right-2 w-7 h-7 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center text-xs font-bold transition">
+                                        ✕
+                                    </button>
+                                </div>
+
+                                <div id="global-search-panel" class="hidden mt-3 pt-3 border-t border-slate-200 space-y-2.5 animate-fade-in">
+                                    <div class="flex flex-wrap items-center justify-between gap-2">
+                                        <span id="global-search-status" class="text-xs font-medium text-slate-500"></span>
+                                        <div id="global-search-filters" class="flex items-center gap-1.5"></div>
+                                    </div>
+                                    <div id="global-search-results" class="space-y-2 max-h-[50vh] overflow-y-auto custom-scrollbar pr-1"></div>
+                                </div>
                             </div>
-                            <button type="button" onclick="MimiApp.refreshWordSpotlight()" title="Đổi từ khác"
-                                class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 px-2 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 transition">
-                                🔄 Đổi từ
-                            </button>
+
+                            <!-- Study Mode Switcher (3 Real Modes) -->
+                            <div class="lib-mode-block">
+                                <div class="lib-tool-label">Chế độ làm bài</div>
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                                    <button id="mode-btn-two_step" type="button" onclick="MimiApp.setStudyMode('two_step')"
+                                        class="lib-mode-btn is-selected">
+                                        <div class="flex items-center justify-between gap-1.5 mb-1">
+                                            <span class="lib-mode-title">1. Luyện từ vựng (2 Bước)</span>
+                                            <span id="mode-badge-two_step" class="lib-mode-pill">Đang chọn</span>
+                                        </div>
+                                        <p class="lib-mode-desc">Nhìn Kanji → chọn Hiragana → gõ nghĩa tiếng Việt.</p>
+                                    </button>
+
+                                    <button id="mode-btn-context_fill" type="button" onclick="MimiApp.setStudyMode('context_fill')"
+                                        class="lib-mode-btn">
+                                        <div class="flex items-center justify-between gap-1.5 mb-1">
+                                            <span class="lib-mode-title">2. Điền từ theo ngữ cảnh</span>
+                                            <span id="mode-badge-context_fill" class="hidden lib-mode-pill">Đang chọn</span>
+                                        </div>
+                                        <p class="lib-mode-desc">Đọc câu ví dụ có chỗ trống + gợi ý → chọn từ đúng.</p>
+                                    </button>
+
+                                    <button id="mode-btn-listen_meaning" type="button" onclick="MimiApp.setStudyMode('listen_meaning')"
+                                        class="lib-mode-btn">
+                                        <div class="flex items-center justify-between gap-1.5 mb-1">
+                                            <span class="lib-mode-title">3. Nghe và chọn nghĩa</span>
+                                            <span id="mode-badge-listen_meaning" class="hidden lib-mode-pill">Đang chọn</span>
+                                        </div>
+                                        <p class="lib-mode-desc">Nghe phát âm tiếng Nhật (thường / chậm) → chọn nghĩa.</p>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Mistake Bank Compact Strip -->
+                            <div id="mistake-banner-card" class="lib-mistake-strip">
+                                <div class="min-w-0">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <span class="font-bold text-sm">📕 Sổ tay từ sai</span>
+                                        <span id="mistake-banner-count" class="lib-mistake-pill">0 từ</span>
+                                    </div>
+                                    <p id="mistake-banner-desc" class="lib-mistake-desc">
+                                        Tự động lưu các từ làm sai để bạn ôn dứt điểm.
+                                    </p>
+                                </div>
+                                <div class="flex items-center gap-2 shrink-0">
+                                    <button id="mistake-banner-view-btn" type="button" onclick="MimiApp.openMistakeBank()"
+                                        class="lib-btn-outline">
+                                        Xem sổ tay
+                                    </button>
+                                    <button id="mistake-banner-start-btn" type="button" onclick="MimiApp.startMistakeBankQuiz()"
+                                        class="lib-btn-rust">
+                                        Ôn ngay
+                                    </button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div id="word-spotlight-body" class="space-y-2.5">
-                            <div class="text-xs text-slate-400 py-4 text-center">Đang tải từ vựng...</div>
+                        <!-- Units Catalog (Real Units & Batches) -->
+                        <div id="units-container" class="lib-units-list">
+                            <!-- Dynamically injected by js/home-view.js -->
                         </div>
                     </div>
 
-                    <!-- Desktop Mistake Bank Card -->
-                    <div id="sidebar-mistake-card" class="hidden lg:block dashboard-card rounded-2xl p-5 border border-rose-200 bg-rose-50/50 shadow-xs space-y-3">
-                        <div class="flex items-center justify-between gap-2">
-                            <div class="flex items-center space-x-1.5">
-                                <span>📕</span>
-                                <h3 class="font-bold text-slate-900 text-sm">Sổ tay từ sai</h3>
+                    <!-- N3 Grammar Tab Panel -->
+                    <div id="lib-grammar-panel" class="hidden" role="tabpanel" aria-labelledby="n3-tab-grammar" hidden>
+                        <div class="lib-grammar-layout">
+                            <div id="grammar-lesson-nav" class="lib-lesson-nav" aria-label="Chọn bài ngữ pháp">
+                                <!-- Dynamically rendered by js/grammar-view.js -->
                             </div>
-                            <span id="sidebar-mistake-count" class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-rose-600 text-white">0 từ</span>
-                        </div>
-                        <p id="sidebar-mistake-desc" class="text-xs text-slate-600 leading-relaxed">
-                            Tự động lưu các từ làm sai để bạn ôn dứt điểm.
-                        </p>
-                        <div class="grid grid-cols-2 gap-2">
-                            <button id="sidebar-mistake-view-btn" type="button" onclick="MimiApp.openMistakeBank()"
-                                class="px-3 py-2 bg-white hover:bg-rose-50 text-rose-700 border border-rose-200 font-semibold rounded-xl text-xs transition">
-                                Xem sổ tay
-                            </button>
-                            <button id="sidebar-mistake-start-btn" type="button" onclick="MimiApp.startMistakeBankQuiz()"
-                                class="px-3 py-2 bg-rose-600 hover:bg-rose-700 text-white font-semibold rounded-xl text-xs shadow-xs transition">
-                                Ôn ngay
-                            </button>
+                            <article id="grammar-lesson-body" class="lib-grammar-lesson" aria-label="Nội dung bài ngữ pháp">
+                                <!-- Dynamically rendered by js/grammar-view.js -->
+                            </article>
                         </div>
                     </div>
-
-                    <!-- Keyboard Shortcuts & Backup Tip -->
-                    <div class="dashboard-card bg-white rounded-2xl p-5 shadow-xs border border-slate-200 space-y-3">
-                        <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500">⌨️ Phím tắt làm bài</h3>
-                        <div class="space-y-2 text-xs text-slate-600">
-                            <div class="flex items-center justify-between">
-                                <span>Chọn đáp án nhanh</span>
-                                <span><kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-700 font-mono">1</kbd> – <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-700 font-mono">4</kbd></span>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Nghe lại phát âm</span>
-                                <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-700 font-mono">R</kbd>
-                            </div>
-                            <div class="flex items-center justify-between">
-                                <span>Kiểm tra / Tiếp theo</span>
-                                <kbd class="px-1.5 py-0.5 bg-slate-100 border border-slate-300 rounded text-slate-700 font-mono">Enter</kbd>
-                            </div>
-                        </div>
-                        <div class="pt-3 border-t border-slate-100">
-                            <button type="button" onclick="MimiApp.openBackupModal()"
-                                class="w-full py-2 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-semibold transition flex items-center justify-center space-x-1.5">
-                                <span>💾</span>
-                                <span>Sao lưu / Chuyển sang điện thoại</span>
-                            </button>
-                        </div>
-                    </div>
-                </aside>
-
+                </section>
             </div>
         </section>
 
@@ -813,18 +685,16 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 mt-auto">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
+    <footer class="lib-site-footer mt-auto">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-10">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
 
                 <!-- Column 1: Brand & Intro -->
                 <div class="md:col-span-5 space-y-3">
                     <div class="flex items-center space-x-2.5">
-                        <div class="bg-emerald-600 text-white font-bold px-2.5 py-1 rounded-xl text-xs shadow-xs jp-text">
-                            耳
-                        </div>
-                        <span class="jp-text font-bold text-slate-900 text-base sm:text-lg tracking-tight">Ngọc 先生</span>
-                        <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        <span class="lib-stamp is-sm" aria-hidden="true">学</span>
+                        <span class="lib-brand-name text-base sm:text-lg">Ngọc <span lang="ja">先生</span></span>
+                        <span class="lib-level-chip">
                             JLPT N5 – N3
                         </span>
                     </div>
@@ -922,6 +792,7 @@
     <script src="js/audio.js"></script>
     <script src="js/theme.js"></script>
     <script src="js/global-search.js"></script>
+    <script src="js/grammar-view.js"></script>
     <script src="js/home-view.js"></script>
     <script src="js/batch-preview.js"></script>
     <script src="js/quiz-controller.js"></script>

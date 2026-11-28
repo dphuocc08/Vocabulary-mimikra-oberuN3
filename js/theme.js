@@ -17,7 +17,7 @@
 
         const themeMeta = document.getElementById("theme-color-meta");
         if (themeMeta) {
-            themeMeta.setAttribute("content", isDark ? "#0f172a" : "#059669");
+            themeMeta.setAttribute("content", isDark ? "#252621" : "#8f382d");
         }
 
         const iconEl = document.getElementById("theme-toggle-icon");

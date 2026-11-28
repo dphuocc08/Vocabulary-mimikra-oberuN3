@@ -1,10 +1,11 @@
-const CACHE_NAME = "mimi-jlpt-v9";
+const CACHE_NAME = "mimi-jlpt-v12";
 
 const CORE_ASSETS = [
     "./",
     "./index.html",
     "./manifest.webmanifest",
     "./css/styles.css",
+    "./images/fuji-cover.jpg",
     "./icons/icon.svg",
     "./icons/icon-192.png",
     "./icons/icon-512.png",
@@ -14,6 +15,7 @@ const CORE_ASSETS = [
     "./js/audio.js",
     "./js/theme.js",
     "./js/global-search.js",
+    "./js/grammar-view.js",
     "./js/home-view.js",
     "./js/batch-preview.js",
     "./js/quiz-controller.js",
@@ -21,7 +23,10 @@ const CORE_ASSETS = [
     "./js/mistake-bank.js",
     "./js/backup-modal.js",
     "./js/app.js",
-    "./data/manifest.json"
+    "./data/manifest.json",
+    "./data/n5/grammar.json",
+    "./data/n4/grammar.json",
+    "./data/n3/grammar.json"
 ];
 
 async function cacheAllVocabData(cache) {
