@@ -16,7 +16,8 @@
         "ようになりました"
       ],
       "correct": 1,
-      "explanation": "書ける diễn tả khả năng viết. ようになりました cho biết khả năng này có được sau một thời gian luyện tập."
+      "explanation": "書ける diễn tả khả năng viết. ようになりました cho biết khả năng này có được sau một thời gian luyện tập.",
+      "code": "Nổi bật 1"
     },
     {
       "id": "n3-you-ni-suru",
@@ -32,7 +33,3836 @@
         "ことがあります"
       ],
       "correct": 0,
-      "explanation": "ようにしています nhấn mạnh việc chủ động dùng cầu thang khi có thể. ことがあります chỉ nói rằng việc đó đôi khi xảy ra."
+      "explanation": "ようにしています nhấn mạnh việc chủ động dùng cầu thang khi có thể. ことがあります chỉ nói rằng việc đó đôi khi xảy ra.",
+      "code": "Nổi bật 2"
+    },
+    {
+      "id": "n3-hb-001",
+      "code": "Mẫu 1",
+      "topic": "Mẫu 1 · Hơn nữa, ngoài ra",
+      "pattern": "A その上 B",
+      "romaji": "A sono ue B",
+      "usage": "Dùng để nối hai mệnh đề cùng chiều, bổ sung thêm thông tin, ưu điểm hoặc lý do (hơn nữa, thêm vào đó, ngoài ra).",
+      "rule": "A [mệnh đề] + その上 + B [mệnh đề]",
+      "example": "彼は頭が良い。その上、スポーツも得意だ。",
+      "exampleRomaji": "Kare wa atama ga ii. Sono ue, supootsu mo tokui da.",
+      "translation": "He is smart. In addition, he is also good at sports.",
+      "examples": [
+        {
+          "jp": "このカフェは雰囲気がいい。その上、料理も美味しい。",
+          "romaji": "Kono kafe wa fun'iki ga ii. Sono ue, ryouri mo oishii.",
+          "vi": "This cafe has a nice atmosphere. Besides, the food is delicious."
+        },
+        {
+          "jp": "このアパートは駅に近い。その上、家賃も安い。",
+          "romaji": "Kono apaato wa eki ni chikai. Sono ue, yachin mo yasui.",
+          "vi": "This apartment is close to the station. Furthermore, the rent is also cheap."
+        },
+        {
+          "jp": "彼女は仕事ができる。その上、誰とでも仲良くなれる。",
+          "romaji": "Kanojo wa shigoto ga dekiru. Sono ue, dare to demo nakayoku nareru.",
+          "vi": "She is competent at work. In addition, she can get along with anyone."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-002",
+      "code": "Mẫu 2",
+      "topic": "Mẫu 2 · Trong lúc, trước khi",
+      "pattern": "～うちに",
+      "romaji": "〜uchi ni",
+      "usage": "Diễn tả việc làm một hành động trong lúc trạng thái hiện tại vẫn còn duy trì hoặc trước khi tình huống thay đổi.",
+      "rule": "Động từ thể て + いる + うちに, Tính từ い + い + うちに, Tính từ な + な + うちに",
+      "example": "若いうちに、いろいろな経験をしておくことが大切です。",
+      "exampleRomaji": "Wakai uchi ni, iroiro na keiken wo shite oku koto ga taisetsu desu.",
+      "translation": "It is important to have various experiences while you are young.",
+      "examples": [
+        {
+          "jp": "雨が降っていないうちに、買い物に行こう。",
+          "romaji": "Ame ga futte inai uchi ni, kaimono ni ikou.",
+          "vi": "Let's go shopping before it starts raining."
+        },
+        {
+          "jp": "料理が熱いうちに食べましょう。",
+          "romaji": "Ryouri ga atsui uchi ni tabemashou.",
+          "vi": "Let's eat while the food is still hot."
+        },
+        {
+          "jp": "休みのうちに、旅行の計画を立てたいです。",
+          "romaji": "Yasumi no uchi ni, ryokou no keikaku wo tatetai desu.",
+          "vi": "I want to plan a trip during the holidays."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-003",
+      "code": "Mẫu 3",
+      "topic": "Mẫu 3 · Định làm thì...",
+      "pattern": "～うとした",
+      "romaji": "〜uto shita",
+      "usage": "Diễn tả ý định hoặc nỗ lực sắp làm một việc gì đó (thường kèm kết quả chưa thành hoặc bị gián đoạn).",
+      "rule": "Động từ-う stem + とした",
+      "example": "電話に出ようとしたが、相手は切ってしまった。",
+      "exampleRomaji": "Denwa ni deyou to shita ga, aite wa kitte shimatta.",
+      "translation": "I tried to answer the phone, but the other person hung up.",
+      "examples": [
+        {
+          "jp": "彼は大声で話そうとしたが、言葉が出なかった。",
+          "romaji": "Kare wa oogoe de hanasou to shita ga, kotoba ga denakatta.",
+          "vi": "He tried to speak loudly, but no words came out."
+        },
+        {
+          "jp": "ケーキを作ろうとしたが、材料が足りなかった。",
+          "romaji": "Keeki wo tsukurou to shita ga, zairyou ga tarinakatta.",
+          "vi": "I tried to make a cake, but I didn't have enough ingredients."
+        },
+        {
+          "jp": "彼女は泳ごうとしたが、怖くて水に入れなかった。",
+          "romaji": "Kanojo wa oyogou to shita ga, kowakute mizu ni irenakatta.",
+          "vi": "She tried to swim, but she was scared and couldn't get in the water."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-004",
+      "code": "Mẫu 4",
+      "topic": "Mẫu 4 · Nhờ có, nhờ vào",
+      "pattern": "～おかげで",
+      "romaji": "〜okagede",
+      "usage": "Chỉ nguyên nhân mang lại kết quả tích cực, tốt đẹp (nhờ có ai/cái gì mà...).",
+      "rule": "Động từ-casual + おかげで, Tính từ い + おかげで, Tính từ な + だおかげで, Danh từ + のおかげで",
+      "example": "お母さんのおかげで、私は元気になりました。",
+      "exampleRomaji": "Okaasan no okagede, watashi wa genki ni narimashita.",
+      "translation": "Thanks to my mother, I became healthy.",
+      "examples": [
+        {
+          "jp": "先生の助けのおかげで、試験に合格しました。",
+          "romaji": "Sensei no tasuke no okagede, shiken ni goukaku shimashita.",
+          "vi": "Thanks to the teacher's help, I passed the exam."
+        },
+        {
+          "jp": "日本語の勉強のおかげで、この映画が理解できました。",
+          "romaji": "Nihongo no benkyou no okagede, kono eiga ga rikai dekimashita.",
+          "vi": "Thanks to studying Japanese, I was able to understand this movie."
+        },
+        {
+          "jp": "晴れた天気のおかげで、ピクニックが楽しかったです。",
+          "romaji": "Hareta tenki no okagede, pikunikku ga tanoshikatta desu.",
+          "vi": "Thanks to the sunny weather, the picnic was enjoyable."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-005",
+      "code": "Mẫu 5",
+      "topic": "Mẫu 5 · Đang dở dang, sắp sửa",
+      "pattern": "～かけ",
+      "romaji": "〜kake",
+      "usage": "Diễn tả hành động đang làm dở giữa chừng (đọc dở, ăn dở) hoặc trạng thái sắp xảy ra.",
+      "rule": "Động từ-ますstem + かけ",
+      "example": "彼は食事を食べかけです。",
+      "exampleRomaji": "Kare wa shokuji wo tabekake desu.",
+      "translation": "He is in the middle of eating his meal.",
+      "examples": [
+        {
+          "jp": "この本は読みかけで、まだ終わっていません。",
+          "romaji": "Kono hon wa yomikake de, mada owatteimasen.",
+          "vi": "This book is partway read, and it is not yet finished."
+        },
+        {
+          "jp": "この部屋は掃除しかけで、まだ片づいていません。",
+          "romaji": "Kono heya wa soujishikake de, mada kataduiteimasen.",
+          "vi": "This room is partway cleaned, and it's not yet tidied up."
+        },
+        {
+          "jp": "プロジェクトは進行しかけで、来週には完了する予定です。",
+          "romaji": "Purojekuto wa shinkoushikake de, raishuu ni wa kanryou suru yotei desu.",
+          "vi": "The project is in progress and is scheduled to be completed next week."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-006",
+      "code": "Mẫu 6",
+      "topic": "Mẫu 6 · Không biết có... không nhỉ",
+      "pattern": "～かなあ",
+      "romaji": "〜kanaa",
+      "usage": "Diễn tả sự băn khoăn, tự hỏi hoặc mong ước nhẹ nhàng của người nói (không biết liệu...).",
+      "rule": "Động từ-casual + かなあ, Tính từ い + かなあ, Tính từ な + だかなあ, Danh từ + だかなあ",
+      "example": "明日晴れるかなあ。",
+      "exampleRomaji": "Ashita hareru kanaa.",
+      "translation": "I wonder if it will be sunny tomorrow.",
+      "examples": [
+        {
+          "jp": "このスープ、辛いかなあ。",
+          "romaji": "Kono suupu, karai kanaa.",
+          "vi": "I wonder if this soup is spicy."
+        },
+        {
+          "jp": "彼は静かだかなあ。",
+          "romaji": "Kare wa shizuka da kanaa.",
+          "vi": "I wonder if he is quiet."
+        },
+        {
+          "jp": "彼女は医者だかなあ。",
+          "romaji": "Kanojo wa isha da kanaa.",
+          "vi": "I wonder if she is a doctor."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-007",
+      "code": "Mẫu 7",
+      "topic": "Mẫu 7 · Mà không làm...",
+      "pattern": "～ないで",
+      "romaji": "〜naide",
+      "usage": "Làm hành động vế sau trong trạng thái không làm hành động vế trước (hoặc làm vế sau thay vì vế trước).",
+      "rule": "Động từ-ない-form + で",
+      "example": "会わないでその電話をかけました。",
+      "exampleRomaji": "Awanai de sono denwa wo kakemashita.",
+      "translation": "I made the phone call without meeting them.",
+      "examples": [
+        {
+          "jp": "雨が降るのを待たないで、家を出ました。",
+          "romaji": "Ame ga furu no wo matanai de, ie wo demashita.",
+          "vi": "I left the house without waiting for it to rain."
+        },
+        {
+          "jp": "誰にも聞かないで、その秘密を知りました。",
+          "romaji": "Dare ni mo kikanai de, sono himitsu wo shirimashita.",
+          "vi": "I found out the secret without asking anyone."
+        },
+        {
+          "jp": "遅れることを知らないで、駅に向かいました。",
+          "romaji": "Okureru koto wo shiranai de, eki ni mukaimashita.",
+          "vi": "I headed to the station without knowing I was late."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-008",
+      "code": "Mẫu 8",
+      "topic": "Mẫu 8 · Từ... kéo dài đến...",
+      "pattern": "～から～にかけて",
+      "romaji": "〜kara 〜ni kakete",
+      "usage": "Chỉ khoảng không gian hoặc thời gian ước lượng kéo dài từ điểm đầu đến điểm cuối (từ... cho đến...).",
+      "rule": "Danh từ (time, place, or measure) + から + Danh từ (time, place or measure) + にかけて",
+      "example": "午前８時から午後５時にかけて働いています。",
+      "exampleRomaji": "Gozen hachiji kara gogo goji ni kakete hataraiteru.",
+      "translation": "I work from 8 am to 5 pm.",
+      "examples": [
+        {
+          "jp": "この地域は、北から南にかけて狭いです。",
+          "romaji": "Kono chiiki wa, kita kara minami ni kakete semai desu.",
+          "vi": "This area is narrow from north to south."
+        },
+        {
+          "jp": "１０歳から２０歳にかけて成長が早いです。",
+          "romaji": "Jussai kara nijussai ni kakete seichou ga hayai desu.",
+          "vi": "Growth is rapid from 10 to 20 years of age."
+        },
+        {
+          "jp": "今年の夏は、６月から８月にかけて雨が多かった。",
+          "romaji": "Kotoshi no natsu wa, roku gatsu kara hachi gatsu ni kakete ame ga ookatta.",
+          "vi": "This summer, there was a lot of rain from June to August."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-009",
+      "code": "Mẫu 9",
+      "topic": "Mẫu 9 · Thay cho, bù lại",
+      "pattern": "～かわりに",
+      "romaji": "〜kawari ni",
+      "usage": "Dùng để diễn tả sự thay thế (thay cho việc/người nào đó) hoặc sự đánh đổi, bù trừ giữa hai vế.",
+      "rule": "Động từ-casual + かわりに, Tính từ い + かわりに, Tính từ な + だかわりに, Danh từ + だかわりに",
+      "example": "映画を見るかわりに、本を読んだ。",
+      "exampleRomaji": "Eiga wo miru kawari ni, hon wo yonda.",
+      "translation": "Instead of watching a movie, I read a book.",
+      "examples": [
+        {
+          "jp": "お酒を飲むかわりに、水を飲んでください。",
+          "romaji": "Osake wo nomu kawari ni, mizu wo nonde kudasai.",
+          "vi": "Please drink water instead of alcohol."
+        },
+        {
+          "jp": "犬のかわりに、猫を飼いたいです。",
+          "romaji": "Inu no kawari ni, neko wo kaitai desu.",
+          "vi": "I want to keep a cat instead of a dog."
+        },
+        {
+          "jp": "電車を使わないかわりに、自転車で行くことにしました。",
+          "romaji": "Densha wo tsukawanai kawari ni, jitensha de iku koto ni shimashita.",
+          "vi": "I decided to go by bicycle instead of using the train."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-010",
+      "code": "Mẫu 10",
+      "topic": "Mẫu 10 · Kể từ sau khi... (thì không nữa)",
+      "pattern": "～きり",
+      "romaji": "〜kiri",
+      "usage": "Diễn tả trạng thái kéo dài không thay đổi kể từ một sự việc trong quá khứ (từ lần đó đến giờ không gặp/không làm nữa).",
+      "rule": "Động từ-past + きり, Động từ thể て + きり (less common), Danh từ + きり",
+      "example": "彼は出かけたきり帰ってきません。",
+      "exampleRomaji": "Kare wa dekaketa kiri kaette kimasen.",
+      "translation": "He went out and hasn't come back since.",
+      "examples": [
+        {
+          "jp": "昨日コーヒーを飲んだきり、何も飲まなかった。",
+          "romaji": "Kinou koohii wo nonda kiri, nani mo nomanakatta.",
+          "vi": "I haven't had anything to drink since the coffee I had yesterday."
+        },
+        {
+          "jp": "卒業したきり、彼女に会っていません。",
+          "romaji": "Sotsugyou shita kiri, kanojo ni atte imasen.",
+          "vi": "I haven't seen her since we graduated."
+        },
+        {
+          "jp": "その映画を見たきり、もう一度見たいと思っています。",
+          "romaji": "Sono eiga wo mita kiri, mou ichido mitai to omotteimasu.",
+          "vi": "I've wanted to watch that movie again ever since I saw it."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-011",
+      "code": "Mẫu 11",
+      "topic": "Mẫu 11 · Mặc dù... thế mà lại (trách móc)",
+      "pattern": "～くせに",
+      "romaji": "〜kuse ni",
+      "usage": "Nối hai vế tương phản kèm sắc thái phê phán, khó chịu hoặc mỉa mai người khác.",
+      "rule": "Động từ-casual + くせに, Tính từ い + くせに, Tính từ な + な/のくせに, Danh từ + のくせに",
+      "example": "彼はお金持ちのくせに、ケチです。",
+      "exampleRomaji": "Kare wa okanemochi no kuse ni, kechi desu.",
+      "translation": "Even though he's rich, he's stingy.",
+      "examples": [
+        {
+          "jp": "この部屋が汚いくせに、文句を言うな。",
+          "romaji": "Kono heya ga kitanai kuse ni, monku wo iu na.",
+          "vi": "Don't complain even though this room is dirty. (criticizing)"
+        },
+        {
+          "jp": "彼は暇なくせに、手伝ってくれません。",
+          "romaji": "Kare wa hima na kuse ni, tetsudatte kuremasen.",
+          "vi": "Even though he's free, he won't help me."
+        },
+        {
+          "jp": "彼女は美人なくせに、デートが続かない。",
+          "romaji": "Kanojo wa bijin na kuse ni, deeto ga tsudzukanai.",
+          "vi": "Even though she's beautiful, she can't keep a date going."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-012",
+      "code": "Mẫu 12",
+      "topic": "Mẫu 12 · Khoảng, đến mức",
+      "pattern": "～くらい",
+      "romaji": "〜kurai",
+      "usage": "Diễn tả mức độ hoặc lượng ước chừng (khoảng chừng, ít nhất cỡ này, đến mức như thế).",
+      "rule": "Động từ-casual + くらい, Tính từ い + くらい, Tính từ な + くらい, Danh từ + くらい",
+      "example": "１０分くらい待ちましょう。",
+      "exampleRomaji": "Juppun kurai machimashou.",
+      "translation": "Let's wait for about 10 minutes.",
+      "examples": [
+        {
+          "jp": "彼女はその映画を５回くらい見ました。",
+          "romaji": "Kanojo wa sono eiga wo go-kai kurai mimashita.",
+          "vi": "She watched that movie about five times."
+        },
+        {
+          "jp": "その本は面白いくらい難しいです。",
+          "romaji": "Sono hon wa omoshiroi kurai muzukashii desu.",
+          "vi": "That book is so difficult that it’s interesting."
+        },
+        {
+          "jp": "この部屋はきれいなくらい広いです。",
+          "romaji": "Kono heya wa kirei na kurai hiroi desu.",
+          "vi": "This room is spacious to the extent of being beautiful."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-013",
+      "code": "Mẫu 13",
+      "topic": "Mẫu 13 · Không có gì... bằng / đến mức như",
+      "pattern": "～くらい～は～ない",
+      "romaji": "〜kurai 〜wa 〜nai",
+      "usage": "Nhấn mạnh mức độ cao nhất bằng cách so sánh phủ định: không có ai/cái gì... như N.",
+      "rule": "Động từ-casual (non-past) + くらい + は + Động từ-casual (negative), Tính từ (non-past) + くらい + は + Tính từ (negative)",
+      "example": "週に一度くらいはジムに行かないと。",
+      "exampleRomaji": "Shuu ni ichido kurai wa jimu ni ikanai to.",
+      "translation": "I have to go to the gym at least once a week.",
+      "examples": [
+        {
+          "jp": "毎日くらいは歯を磨かないと。",
+          "romaji": "Mainichi kurai wa ha wo migakanai to.",
+          "vi": "I have to brush my teeth at least every day."
+        },
+        {
+          "jp": "この問題くらいは解決しないと。",
+          "romaji": "Kono mondai kurai wa kaiketsu shinai to.",
+          "vi": "I have to solve at least this problem."
+        },
+        {
+          "jp": "彼女が泣いているくらいなら慰めないと。",
+          "romaji": "Kanojo ga naite iru kurai nara nagusamenai to.",
+          "vi": "If she is crying that much, I should at least try to comfort her."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-014",
+      "code": "Mẫu 14",
+      "topic": "Mẫu 14 · Chính là... (nhấn mạnh)",
+      "pattern": "～こそ",
+      "romaji": "〜koso",
+      "usage": "Nhấn mạnh mạnh mẽ danh từ hoặc lý do đứng trước (chính là điều này, chính vì thế).",
+      "rule": "Danh từ + こそ, (Động từ-て + こそ)",
+      "example": "今日こそ勉強しなければなりません。",
+      "exampleRomaji": "Kyou koso benkyou shinakereba narimasen.",
+      "translation": "Today, of all days, I must study.",
+      "examples": [
+        {
+          "jp": "あなたこそ私の一番の友達です。",
+          "romaji": "Anata koso watashi no ichiban no tomodachi desu.",
+          "vi": "You are precisely my best friend."
+        },
+        {
+          "jp": "お金がないことこそ幸せの秘訣ではないか。",
+          "romaji": "O-kane ga nai koto koso shiawase no hiketsu de wa nai ka.",
+          "vi": "Isn't not having money exactly the key to happiness?"
+        },
+        {
+          "jp": "彼こそまさにプロの歌手のように歌える。",
+          "romaji": "Kare koso masani puro no kashu no you ni utaeru.",
+          "vi": "He can sing precisely like a professional singer."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-015",
+      "code": "Mẫu 15",
+      "topic": "Mẫu 15 · Hãy / Đừng... (quy định, lời nhắn)",
+      "pattern": "～こと",
+      "romaji": "〜koto",
+      "usage": "Dùng cuối câu (Vる/Vない + こと) để nêu quy định, chỉ thị hoặc lời khuyên ngắn gọn bằng văn viết.",
+      "rule": "Động từ-Thể thông thường + こと, Động từ-phrase in Thể thông thường + こと",
+      "example": "日本語を話すことができます。",
+      "exampleRomaji": "Nihongo wo hanasu koto ga dekimasu.",
+      "translation": "I can speak Japanese.",
+      "examples": [
+        {
+          "jp": "毎日運動することは健康に良いです。",
+          "romaji": "Mainichi undou suru koto wa kenkou ni ii desu.",
+          "vi": "Exercising every day is good for your health."
+        },
+        {
+          "jp": "彼はピアノを弾くことが大好きです。",
+          "romaji": "Kare wa piano wo hiku koto ga daisuki desu.",
+          "vi": "He loves to play the piano."
+        },
+        {
+          "jp": "映画を見ることに時間を使いたくない。",
+          "romaji": "Eiga wo miru koto ni jikan wo tsukai takunai.",
+          "vi": "I don't want to spend time watching movies."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-016",
+      "code": "Mẫu 16",
+      "topic": "Mẫu 16 · Nên / Không nên (lời khuyên)",
+      "pattern": "～ことだ",
+      "romaji": "〜koto da",
+      "usage": "Đưa ra lời khuyên hoặc nhấn mạnh điều quan trọng cần làm / cần tránh (Vる/Vない + ことだ).",
+      "rule": "Động từ-ますstem + ことだ, Tính từ い + ことだ, Tính từ な + なことだ, Danh từ + のことだ",
+      "example": "毎日運動することだ。",
+      "exampleRomaji": "Mainichi undou suru koto da.",
+      "translation": "You should exercise every day.",
+      "examples": [
+        {
+          "jp": "健康のために、野菜をたくさん食べることだ。",
+          "romaji": "Kenkou no tame ni, yasai wo takusan taberu koto da.",
+          "vi": "For your health, you should eat lots of vegetables."
+        },
+        {
+          "jp": "勉強しているとき、静かな場所を選ぶことだ。",
+          "romaji": "Benkyou shiteiru toki, shizuka na basho wo erabu koto da.",
+          "vi": "When studying, you should choose a quiet place."
+        },
+        {
+          "jp": "辞書を使って、新しい言葉を覚えることだ。",
+          "romaji": "Jisho wo tsukatte, atarashii kotoba wo oboeru koto da.",
+          "vi": "You should use a dictionary to learn new words."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-017",
+      "code": "Mẫu 17",
+      "topic": "Mẫu 17 · Duy trì thói quen, tự quy định",
+      "pattern": "～ことにしている",
+      "romaji": "〜koto ni shite iru",
+      "usage": "Diễn tả thói quen cá nhân mà người nói tự đặt ra và kiên trì thực hiện đều đặn.",
+      "rule": "Động từ-casual + ことにしている",
+      "example": "毎日運動することにしている。",
+      "exampleRomaji": "Mainichi undou suru koto ni shite iru.",
+      "translation": "I make it a rule to exercise every day.",
+      "examples": [
+        {
+          "jp": "夜遅くまで働かないことにしている。",
+          "romaji": "Yoru osoku made hatarakanai koto ni shite iru.",
+          "vi": "I make it a rule not to work late into the night."
+        },
+        {
+          "jp": "食事の後、歯を磨くことにしている。",
+          "romaji": "Shokuji no ato, ha wo migaku koto ni shite iru.",
+          "vi": "I always make sure to brush my teeth after meals."
+        },
+        {
+          "jp": "会議には必ず10分前に着くことにしている。",
+          "romaji": "Kaigi ni wa kanarazu juppun mae ni tsuku koto ni shite iru.",
+          "vi": "I always make sure to arrive 10 minutes early for meetings."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-018",
+      "code": "Mẫu 18",
+      "topic": "Mẫu 18 · Theo quy định / đã được quyết định",
+      "pattern": "～ことになっている",
+      "romaji": "〜koto ni natte iru",
+      "usage": "Diễn tả nội quy, luật lệ, lịch trình hoặc thông lệ khách quan đã được quyết định sẵn.",
+      "rule": "Động từ-Thể từ điển + ことになっている",
+      "example": "この会社では、20時には仕事を終えることになっている。",
+      "exampleRomaji": "Kono kaisha de wa, 20-ji ni shigoto o oeru koto ni natte iru.",
+      "translation": "In this company, it is decided that work will end at 8 pm.",
+      "examples": [
+        {
+          "jp": "日本では、18歳以上の人が選挙に投票することになっている。",
+          "romaji": "Nihon de wa, 18-sai ijou no hito ga senkyo ni touhyou suru koto ni natte iru.",
+          "vi": "In Japan, it is decided that people 18 years old and above will vote in elections."
+        },
+        {
+          "jp": "学校では、制服を着ることになっている。",
+          "romaji": "Gakkou de wa, seifuku o kiru koto ni natte iru.",
+          "vi": "At school, it is decided that students will wear uniforms."
+        },
+        {
+          "jp": "田中さんが今回のプロジェクトリーダーになることになっている。",
+          "romaji": "Tanaka-san ga konkai no purojekuto riidaa ni naru koto ni natte iru.",
+          "vi": "It is decided that Tanaka will be the project leader this time."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-019",
+      "code": "Mẫu 19",
+      "topic": "Mẫu 19 · Đúng là có... nhưng mà...",
+      "pattern": "～ことは…が",
+      "romaji": "～koto wa... ga",
+      "usage": "Thừa nhận một phần sự thật ở vế trước nhưng nhấn mạnh ý đối lập hoặc hạn chế ở vế sau.",
+      "rule": "Động từ-casual + ことは + が, Tính từ い + ことは + が, Tính từ な + だ + ことは + が, Danh từ + だ + ことは + が",
+      "example": "この映画は面白いことは面白いが、ちょっと長すぎる。",
+      "exampleRomaji": "Kono eiga wa omoshiroi koto wa omoshiroi ga, chotto naga-sugiru.",
+      "translation": "This movie may be interesting, but it is a bit too long.",
+      "examples": [
+        {
+          "jp": "彼は親切なことは親切だが、少し無口だ。",
+          "romaji": "Kare wa shinsetsu na koto wa shinsetsu da ga, sukoshi mukuchi da.",
+          "vi": "He may be kind, but he is a bit quiet."
+        },
+        {
+          "jp": "このゲームは難しいことは難しいが、やめられない。",
+          "romaji": "Kono geemu wa muzukashii koto wa muzukashii ga, yamerarenai.",
+          "vi": "This game may be difficult, but I can't stop playing."
+        },
+        {
+          "jp": "彼女は美しいことは美しいが、ちょっと高飛車だ。",
+          "romaji": "Kanojo wa utsukushii koto wa utsukushii ga, chotto koubisha da.",
+          "vi": "She may be beautiful, but she is a bit arrogant."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-020",
+      "code": "Mẫu 20",
+      "topic": "Mẫu 20 · Không cần thiết phải...",
+      "pattern": "～ことはない",
+      "romaji": "〜koto wa nai",
+      "usage": "Diễn tả rằng không nhất thiết, không cần phải làm việc gì đó.",
+      "rule": "Động từ-Thể từ điển + ことはない, Tính từ い + ことはない, Tính từ な + であることはない, Danh từ + であることはない",
+      "example": "お金があるから、無理に貯金することはない。",
+      "exampleRomaji": "Okane ga aru kara, muri ni chokin suru koto wa nai.",
+      "translation": "Since I have enough money, there's no need to force myself to save.",
+      "examples": [
+        {
+          "jp": "この本は簡単だから、辞書を使うことはない。",
+          "romaji": "Kono hon wa kantan dakara, jisho wo tsukau koto wa nai.",
+          "vi": "Since this book is easy, there's no need to use a dictionary."
+        },
+        {
+          "jp": "彼女は海外旅行に行きたくなければ、行くことはない。",
+          "romaji": "Kanojo wa kaigai ryokou ni ikitakunakereba, iku koto wa nai.",
+          "vi": "If she doesn't want to go on an overseas trip, she doesn't have to go."
+        },
+        {
+          "jp": "寒くなければ、コートを着ることはない。",
+          "romaji": "Samukunakereba, kooto wo kiru koto wa nai.",
+          "vi": "If it's not cold, there's no need to wear a coat."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-021",
+      "code": "Mẫu 21",
+      "topic": "Mẫu 21 · Danh từ hóa tính từ (độ...)",
+      "pattern": "～さ",
+      "romaji": "〜sa",
+      "usage": "Biến tính từ đuôi い/な thành danh từ chỉ mức độ đo đếm được (độ cao, độ nặng, độ dài...).",
+      "rule": "Tính từ い (drop い) + さ, Tính từ な + さ",
+      "example": "この料理は辛さが強い。",
+      "exampleRomaji": "Kono ryouri wa karasa ga tsuyoi.",
+      "translation": "The spiciness of this dish is strong.",
+      "examples": [
+        {
+          "jp": "彼女の美しさは皆に憧れられる。",
+          "romaji": "Kanojo no utsukushisa wa mina ni akogarerareru.",
+          "vi": "Her beauty is admired by everyone."
+        },
+        {
+          "jp": "山田さんの親切さで、困っている人を助けてくれる。",
+          "romaji": "Yamada-san no shinsetsusa de, komatte iru hito wo tasukete kureru.",
+          "vi": "Yamada-san's kindness helps people in trouble."
+        },
+        {
+          "jp": "この部屋の広さは十分だと思う。",
+          "romaji": "Kono heya no hirosa wa juubun da to omou.",
+          "vi": "I think the size of this room is enough."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-022",
+      "code": "Mẫu 22",
+      "topic": "Mẫu 22 · Ngay cả, đến cả...",
+      "pattern": "～さえ",
+      "romaji": "～sae",
+      "usage": "Đưa ra ví dụ cực đoan để nhấn mạnh (ngay cả... cũng...; chỉ cần... thôi là đủ).",
+      "rule": "Danh từ + さえ, Động từ-casual + さえ, Tính từ い + さえ, Tính từ な + でさえ",
+      "example": "お金さえあれば、世界中を旅行できる。",
+      "exampleRomaji": "Okane sae areba, sekaijuu wo ryokou dekiru.",
+      "translation": "If only I have money, I can travel around the world.",
+      "examples": [
+        {
+          "jp": "彼は英語さえ話せれば、その仕事ができるだろう。",
+          "romaji": "Kare wa eigo sae hanasereba, sono shigoto ga dekiru darou.",
+          "vi": "As long as he can speak English, he can do that job."
+        },
+        {
+          "jp": "彼女は頭がいいだけでなく、運動も上手だ。テニスさえできる。",
+          "romaji": "Kanojo wa atama ga ii dake denaku, undou mo jouzu da. Tenisu sae dekiru.",
+          "vi": "Not only is she smart, she is also good at sports. She can even play tennis."
+        },
+        {
+          "jp": "明るい場所で本を読むのが好きだ。部屋の電気さえつけなくても大丈夫だ。",
+          "romaji": "Akarui basho de hon wo yomu no ga suki da. Heya no denki sae tsukenakute mo daijoubu da.",
+          "vi": "I like reading books in bright places. I'm fine even if I don't turn on the room light."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-023",
+      "code": "Mẫu 23",
+      "topic": "Mẫu 23 · Chỉ còn cách, đành phải",
+      "pattern": "～しかない",
+      "romaji": "〜shika nai",
+      "usage": "Diễn tả không còn lựa chọn nào khác ngoài việc phải làm hành động đó.",
+      "rule": "Động từ-casual + しかない, Tính từ い + しかない, Tính từ な + しかない, Danh từ + しかない",
+      "example": "この問題を解決する方法は一つしかない。",
+      "exampleRomaji": "Kono mondai wo kaiketsu suru houhou wa hitotsu shika nai.",
+      "translation": "There is only one way to solve this problem.",
+      "examples": [
+        {
+          "jp": "彼が出て行ったら、泣くしかない。",
+          "romaji": "Kare ga dete ittara, naku shika nai.",
+          "vi": "If he leaves, there's nothing else to do but cry."
+        },
+        {
+          "jp": "彼女にはあと一月しかない。",
+          "romaji": "Kanojo ni wa ato ichigatsu shika nai.",
+          "vi": "She has only one month left."
+        },
+        {
+          "jp": "僕には君を信じるしかない。",
+          "romaji": "Boku ni wa kimi wo shinjiru shika nai.",
+          "vi": "I have no choice but to trust you."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-024",
+      "code": "Mẫu 24",
+      "topic": "Mẫu 24 · Một chút cũng không",
+      "pattern": "すこしも〜ない",
+      "romaji": "sukoshimo~nai",
+      "usage": "Phó từ đi kèm thể phủ định để phủ nhận hoàn toàn (hoàn toàn không một chút nào).",
+      "rule": "すこしも + Động từ-negative",
+      "example": "彼はすこしも悲しそうに見えません。",
+      "exampleRomaji": "Kare wa sukoshimo kanashisou ni miemasen.",
+      "translation": "He doesn't look sad at all.",
+      "examples": [
+        {
+          "jp": "この部屋はすこしも寒くない。",
+          "romaji": "Kono heya wa sukoshimo samukunai.",
+          "vi": "This room is not cold at all."
+        },
+        {
+          "jp": "彼女はすこしも心配していない。",
+          "romaji": "Kanojo wa sukoshimo shinpai shite inai.",
+          "vi": "She is not worried at all."
+        },
+        {
+          "jp": "まったく知らない人と話すのは怖い。",
+          "romaji": "Mattaku shiranai hito to hanasu no wa kowai.",
+          "vi": "It's scary to talk to someone I don't know at all."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-025",
+      "code": "Mẫu 25",
+      "topic": "Mẫu 25 · Mà không làm... (trang trọng)",
+      "pattern": "～ずに",
+      "romaji": "〜zu ni",
+      "usage": "Cách nói trang trọng, văn viết của ～ないで (làm vế sau mà không làm vế trước).",
+      "rule": "Động từ-ない form (Remove ない) + ずに",
+      "example": "彼は笑わずに話を聞いていました。",
+      "exampleRomaji": "Kare wa warawazu ni hanashi wo kiiteimashita.",
+      "translation": "He was listening to the story without laughing.",
+      "examples": [
+        {
+          "jp": "食べずに寝るのは良くないです。",
+          "romaji": "Tabezu ni neru no wa yokunai desu.",
+          "vi": "It's not good to go to bed without eating."
+        },
+        {
+          "jp": "コーヒーを飲まずに仕事を始めました。",
+          "romaji": "Koohii wo nomazu ni shigoto wo hajimemashita.",
+          "vi": "I started working without drinking coffee."
+        },
+        {
+          "jp": "誰にも言わずに出かけました。",
+          "romaji": "Dare ni mo iwazu ni dekakemashita.",
+          "vi": "I went out without telling anyone."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-026",
+      "code": "Mẫu 26",
+      "topic": "Mẫu 26 · Tại vì, do lỗi của...",
+      "pattern": "～せいで",
+      "romaji": "〜sei de",
+      "usage": "Chỉ nguyên nhân dẫn đến kết quả tiêu cực, không mong muốn (tại vì... nên mới...).",
+      "rule": "Động từ-casual + せいで, Tính từ い + せいで, Tính từ な + なせいで, Danh từ + のせいで",
+      "example": "雨のせいで試合が中止になりました。",
+      "exampleRomaji": "Ame no sei de shiai ga chuushi ni narimashita.",
+      "translation": "The game was cancelled because of the rain.",
+      "examples": [
+        {
+          "jp": "彼の遅刻のせいで、みんな待たされました。",
+          "romaji": "Kare no chikoku no sei de, minna matasaremashita.",
+          "vi": "Everyone had to wait because of his lateness."
+        },
+        {
+          "jp": "病気のせいで休日が台無しになった。",
+          "romaji": "Byouki no sei de kyuujitsu ga dainashi ni natta.",
+          "vi": "My holiday was ruined due to illness."
+        },
+        {
+          "jp": "仕事が忙しくて寝不足なせいで、集中できない。",
+          "romaji": "Shigoto ga isogashikute nebusoku na sei de, shuuchuu dekinai.",
+          "vi": "I can't concentrate because I'm sleep-deprived due to busy work."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-027",
+      "code": "Mẫu 27",
+      "topic": "Mẫu 27 · Xin hãy cho phép tôi...",
+      "pattern": "～せてください",
+      "romaji": "〜sete kudasai",
+      "usage": "Cấu trúc sai khiến + てください để xin phép một cách lịch sự (hãy để tôi làm...).",
+      "rule": "Động từ-causative (させ) + て + ください",
+      "example": "もう一度説明させてください。",
+      "exampleRomaji": "Mou ichido setsumei sasete kudasai.",
+      "translation": "Please let me explain it once more.",
+      "examples": [
+        {
+          "jp": "帰らせてください。",
+          "romaji": "Kaerasete kudasai.",
+          "vi": "Please let me go home."
+        },
+        {
+          "jp": "その本を見せてください。",
+          "romaji": "Sono hon o misete kudasai.",
+          "vi": "Please let me see that book."
+        },
+        {
+          "jp": "ここで待たせてください。",
+          "romaji": "Koko de matasete kudasai.",
+          "vi": "Please let me wait here."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-028",
+      "code": "Mẫu 28",
+      "topic": "Mẫu 28 · Vì mục đích đó / Do đó",
+      "pattern": "～そのために",
+      "romaji": "〜sono tame ni",
+      "usage": "Từ nối câu chỉ mục đích hoặc nguyên nhân dựa trên câu đã nêu ngay trước đó.",
+      "rule": "câu/phrase 1 + そのために + câu/phrase 2",
+      "example": "試験に合格するために、毎日勉強しています。そのために、早く寝て早く起きるようにしています。",
+      "exampleRomaji": "Shiken ni goukaku suru tame ni, mainichi benkyou shiteimasu. Sono tame ni, hayaku nete hayaku okiru you ni shiteimasu.",
+      "translation": "I study every day to pass the exam. For that reason, I go to bed early and wake up early.",
+      "examples": [
+        {
+          "jp": "健康的な生活を送りたい。そのために、ジムに通って運動しています。",
+          "romaji": "Kenkouteki na seikatsu wo okuritai. Sono tame ni, jimu ni kayotte undou shiteimasu.",
+          "vi": "I want to lead a healthy lifestyle. For that reason, I go to the gym and exercise."
+        },
+        {
+          "jp": "環境を守るために、リサイクルに取り組んでいます。そのために、ゴミを分別して捨てています。",
+          "romaji": "Kankyou wo mamoru tame ni, risaikuru ni torikundeimasu. Sono tame ni, gomi wo bunbetsu shite suteteimasu.",
+          "vi": "I'm working on recycling to protect the environment. Therefore, I separate and dispose of trash properly."
+        },
+        {
+          "jp": "新しい仕事を見つけたい。そのために、履歴書を書いて応募しています。",
+          "romaji": "Atarashii shigoto wo mitsuketai. Sono tame ni, rirekisho wo kaite oubo shiteimasu.",
+          "vi": "I want to find a new job. So, I'm writing my resume and applying."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-029",
+      "code": "Mẫu 29",
+      "topic": "Mẫu 29 · Kết quả là...",
+      "pattern": "～その結果",
+      "romaji": "〜sono kekka",
+      "usage": "Từ nối nêu kết quả đạt được sau quá trình hay nguyên nhân ở câu trước.",
+      "rule": "Situation/ACTION 1 + その結果 + RESULT",
+      "example": "彼女は毎日練習した。その結果、試合に勝った。",
+      "exampleRomaji": "Kanojo wa mainichi renshuu shita. Sono kekka, shiai ni katta.",
+      "translation": "She practiced every day. As a result, she won the match.",
+      "examples": [
+        {
+          "jp": "会社が倒産した。その結果、彼は仕事を失った。",
+          "romaji": "Kaisha ga tousan shita. Sono kekka, kare wa shigoto wo ushinatta.",
+          "vi": "The company went bankrupt. As a result, he lost his job."
+        },
+        {
+          "jp": "私たちは遅刻した。その結果、電車に乗れなかった。",
+          "romaji": "Watashitachi wa chikoku shita. Sono kekka, densha ni norenakatta.",
+          "vi": "We were late. As a result, we couldn't catch the train."
+        },
+        {
+          "jp": "彼は勉強を怠った。その結果、試験に落ちた。",
+          "romaji": "Kare wa benkyou wo okotatta. Sono kekka, shiken ni ochita.",
+          "vi": "He neglected his studies. As a result, he failed the exam."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-030",
+      "code": "Mẫu 30",
+      "topic": "Mẫu 30 · Và, cùng với đó là...",
+      "pattern": "～それと～",
+      "romaji": "〜sore to〜",
+      "usage": "Từ nối bổ sung thêm một sự vật hoặc thông tin nữa vào nội dung vừa nói.",
+      "rule": "Item1 + それと + Item2",
+      "example": "買い物に行くつもりです。それと、郵便局にも行かなくては。",
+      "exampleRomaji": "Kaimono ni iku tsumori desu. Sore to, yuubinkyoku ni mo ikanakute wa.",
+      "translation": "I plan to go shopping, and I also have to go to the post office.",
+      "examples": [
+        {
+          "jp": "今日はタコスを作りました。それと、サラダも作りました。",
+          "romaji": "Kyou wa takosu wo tsukurimashita. Sore to, sarada mo tsukurimashita.",
+          "vi": "Today, I made tacos, and I also made a salad."
+        },
+        {
+          "jp": "出かける前に、部屋を掃除してください。それと、ゴミを捨ててください。",
+          "romaji": "Dekakeru mae ni, heya wo souji shite kudasai. Sore to, gomi wo sutete kudasai.",
+          "vi": "Please clean the room before you go out, and also throw away the trash."
+        },
+        {
+          "jp": "彼はフランス語が話せます。それと、スペイン語も話せます。",
+          "romaji": "Kare wa furansugo ga hanasemasu. Sore to, supeingo mo hanasemasu.",
+          "vi": "He can speak French, and he can also speak Spanish."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-031",
+      "code": "Mẫu 31",
+      "topic": "Mẫu 31 · Hay là...?",
+      "pattern": "～？それとも～？",
+      "romaji": "～? sore tomo ～?",
+      "usage": "Dùng để nối hai phương án lựa chọn trong câu hỏi (A hay là B?).",
+      "rule": "Động từ-casual + ？それとも + Động từ-casual + ？, etc.",
+      "example": "コーヒーを飲む？それとも紅茶を飲む？",
+      "exampleRomaji": "Koohii o nomu? Sore tomo koucha o nomu?",
+      "translation": "Do you want to drink coffee? Or tea?",
+      "examples": [
+        {
+          "jp": "この映画は面白い？それともつまらない？",
+          "romaji": "Kono eiga wa omoshiroi? Sore tomo tsumaranai?",
+          "vi": "Is this movie interesting? Or is it boring?"
+        },
+        {
+          "jp": "彼は日本人だ？それとも外国人だ？",
+          "romaji": "Kare wa nihonjin da? Sore tomo gaikokujin da?",
+          "vi": "Is he Japanese? Or is he a foreigner?"
+        },
+        {
+          "jp": "寿司を食べに行く？それともラーメンを食べに行く？",
+          "romaji": "Sushi o tabe ni iku? Sore tomo raamen o tabe ni iku?",
+          "vi": "Are we going to eat sushi? Or are we going to eat ramen?"
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-032",
+      "code": "Mẫu 32",
+      "topic": "Mẫu 32 · Chỉ duy nhất... (phủ định)",
+      "pattern": "～だけしか",
+      "romaji": "～dake shika",
+      "usage": "Nhấn mạnh mạnh hơn しか + phủ định: chỉ có duy nhất một lượng/đối tượng ít ỏi.",
+      "rule": "Danh từ/Quantity + だけ + しか + Negative Động từ",
+      "example": "今日は1時間だけしか勉強できなかった。",
+      "exampleRomaji": "Kyou wa ichijikan dake shika benkyou dekinakatta.",
+      "translation": "Today, I could study for only one hour.",
+      "examples": [
+        {
+          "jp": "彼はカレーだけしか食べない。",
+          "romaji": "Kare wa karee dake shika tabenai.",
+          "vi": "He eats only curry."
+        },
+        {
+          "jp": "田中さんは5人だけしか招待しなかった。",
+          "romaji": "Tanaka-san wa gonin dake shika shoutai shinakatta.",
+          "vi": "Tanaka only invited five people."
+        },
+        {
+          "jp": "あのレストランでは野菜だけしか売っていない。",
+          "romaji": "Ano resutoran de wa yasai dake shika utte inai.",
+          "vi": "That restaurant sells only vegetables."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-033",
+      "code": "Mẫu 33",
+      "topic": "Mẫu 33 · Nhưng mà, tuy nhiên (khẩu ngữ)",
+      "pattern": "だけど",
+      "romaji": "dakedo",
+      "usage": "Từ nối đối lập thân mật trong hội thoại hàng ngày, tương đương が / けれども.",
+      "rule": "câu 1 + だけど + câu 2, or câu 1 + 。だけど、câu 2",
+      "example": "試験に合格したけど、まだ勉強しなければならない。",
+      "exampleRomaji": "Shiken ni goukaku shita kedo, mada benkyou shinakereba naranai.",
+      "translation": "I passed the exam, but I still have to study.",
+      "examples": [
+        {
+          "jp": "この部屋は広いけど、家賃が高いです。",
+          "romaji": "Kono heya wa hiroi kedo, yachin ga takai desu.",
+          "vi": "This room is spacious, but the rent is high."
+        },
+        {
+          "jp": "彼は優しいけど、時々厳しいです。",
+          "romaji": "Kare wa yasashii kedo, tokidoki kibishii desu.",
+          "vi": "He is kind, but sometimes strict."
+        },
+        {
+          "jp": "朝ごはんは作りたいけど、時間がない。",
+          "romaji": "Asagohan wa tsukuritai kedo, jikan ga nai.",
+          "vi": "I want to make breakfast, but there's no time."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-034",
+      "code": "Mẫu 34",
+      "topic": "Mẫu 34 · Vừa mới xong (còn tươi mới)",
+      "pattern": "～たて",
+      "romaji": "～tate",
+      "usage": "Gắn sau động từ bỏ ます để diễn tả trạng thái vừa mới làm xong, vẫn giữ nguyên sự tươi mới (mới nướng, mới ra lò...).",
+      "rule": "Động từ-stem + たて",
+      "example": "このパンは焼きたてで、まだ温かいです。",
+      "exampleRomaji": "Kono pan wa yakitate de, mada atatakai desu.",
+      "translation": "This bread is freshly baked and still warm.",
+      "examples": [
+        {
+          "jp": "作りたてのお弁当が美味しい。",
+          "romaji": "Tsukuritate no obentou ga oishii.",
+          "vi": "A freshly made bento is delicious."
+        },
+        {
+          "jp": "洗いたてのシャツはいい匂いがする。",
+          "romaji": "Araitate no shatsu wa ii nioi ga suru.",
+          "vi": "Freshly washed shirts smell nice."
+        },
+        {
+          "jp": "彼女は切りたての野菜をサラダに入れました。",
+          "romaji": "Kanojo wa kiritate no yasai wo sarada ni iremashita.",
+          "vi": "She added freshly cut vegetables to the salad."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-035",
+      "code": "Mẫu 35",
+      "topic": "Mẫu 35 · Cho dù... đi nữa thì vẫn...",
+      "pattern": "～たとえ～ても",
+      "romaji": "〜tatoe〜temo",
+      "usage": "Giả định tình huống cực đoan nhất với たとえ～ても để nhấn mạnh kết quả không đổi.",
+      "rule": "たとえ + Động từ-casual + ても, たとえ + Tính từ い + くても, たとえ + Tính từ な + であっても, たとえ + Danh từ + であっても",
+      "example": "たとえ雨が降っても、出かけましょう。",
+      "exampleRomaji": "Tatoe ame ga futte mo, dekakemashou.",
+      "translation": "Even if it rains, let's go out.",
+      "examples": [
+        {
+          "jp": "たとえ彼が怒っても、本当のことを言いましょう。",
+          "romaji": "Tatoe kare ga okotte mo, hontou no koto wo iimashou.",
+          "vi": "Even if he gets angry, let's tell the truth."
+        },
+        {
+          "jp": "たとえ寒くても、散歩に行きたい。",
+          "romaji": "Tatoe samukute mo, sanpo ni ikitai.",
+          "vi": "Even if it's cold, I want to go for a walk."
+        },
+        {
+          "jp": "たとえ彼が有名であっても、彼には興味がありません。",
+          "romaji": "Tatoe kare ga yuumei de attemo, kare ni wa kyoumi ga arimasen.",
+          "vi": "Even if he's famous, I'm not interested in him."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-036",
+      "code": "Mẫu 36",
+      "topic": "Mẫu 36 · Khi vừa thử làm thì phát hiện...",
+      "pattern": "～たところ",
+      "romaji": "〜ta tokoro",
+      "usage": "Vた + ところ diễn tả sau khi thực hiện một hành động thì nhận được kết quả/phát hiện nào đó.",
+      "rule": "Động từ-た form + ところ",
+      "example": "宿題をしたところ、先生からもう一つ課題が出された。",
+      "exampleRomaji": "Shukudai wo shita tokoro, sensei kara mou hitotsu kadai ga dasareta.",
+      "translation": "Just when I finished my homework, the teacher gave us another assignment.",
+      "examples": [
+        {
+          "jp": "友達に会ったところ、彼が海外に行くと言った。",
+          "romaji": "Tomodachi ni atta tokoro, kare ga kaigai ni iku to itta.",
+          "vi": "Upon meeting my friend, he told me he's going abroad."
+        },
+        {
+          "jp": "食事を食べ終わったところ、電話がかかってきた。",
+          "romaji": "Shokuji wo tabeowatta tokoro, denwa ga kakatte kita.",
+          "vi": "Just when I finished eating, I got a phone call."
+        },
+        {
+          "jp": "机を整理したところ、忘れていたメモが見つかった。",
+          "romaji": "Tsukue wo seiri shita tokoro, wasureteita memo ga mitsukatta.",
+          "vi": "After organizing my desk, I found a memo I had forgotten about."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-037",
+      "code": "Mẫu 37",
+      "topic": "Mẫu 37 · Ngay khoảnh khắc vừa...",
+      "pattern": "～たとたん",
+      "romaji": "〜ta totan",
+      "usage": "Vた + とたん diễn tả ngay lập tức sau khi hành động trước xảy ra thì sự việc bất ngờ phía sau ập tới.",
+      "rule": "Động từ-た form + とたん",
+      "example": "ドアを開けたとたん、猫が逃げ出した。",
+      "exampleRomaji": "Doa wo aketa totan, neko ga nigedashita.",
+      "translation": "As soon as I opened the door, the cat ran away.",
+      "examples": [
+        {
+          "jp": "電話をかけたとたん、電池が切れた。",
+          "romaji": "Denwa wo kaketa totan, denchi ga kireta.",
+          "vi": "The moment I made the phone call, the battery died."
+        },
+        {
+          "jp": "雨が降り始めたとたん、みんなが傘をさした。",
+          "romaji": "Ame ga furihajimeta totan, minna ga kasa wo sashita.",
+          "vi": "The instant it started raining, everyone put up their umbrellas."
+        },
+        {
+          "jp": "彼に会ったとたん、彼の笑顔が消えた。",
+          "romaji": "Kare ni atta totan, kare no egao ga kieta.",
+          "vi": "As soon as he met me, his smile disappeared."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-038",
+      "code": "Mẫu 38",
+      "topic": "Mẫu 38 · Mỗi khi, cứ mỗi lần...",
+      "pattern": "～たびに",
+      "romaji": "〜tabi ni",
+      "usage": "Diễn tả sự việc lặp đi lặp lại mỗi lần hành động/sự kiện trước diễn ra.",
+      "rule": "Động từ-Thể từ điển + たびに, Danh từ + のたびに",
+      "example": "彼女に会うたびに、心が弾む。",
+      "exampleRomaji": "Kanojo ni au tabi ni, kokoro ga hazumu.",
+      "translation": "Every time I meet her, my heart leaps.",
+      "examples": [
+        {
+          "jp": "雨が降るたびに、懐かしい思い出がよみがえる。",
+          "romaji": "Ame ga furu tabi ni, natsukashii omoide ga yomigaeru.",
+          "vi": "Whenever it rains, nostalgic memories come back."
+        },
+        {
+          "jp": "この歌を聴くたびに、幸せな気分になる。",
+          "romaji": "Kono uta wo kiku tabi ni, shiawase na kibun ni naru.",
+          "vi": "Every time I listen to this song, I feel happy."
+        },
+        {
+          "jp": "家に帰るたびに、猫が出迎えてくれる。",
+          "romaji": "Ie ni kaeru tabi ni, neko ga demukaete kureru.",
+          "vi": "Every time I return home, the cat greets me."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-039",
+      "code": "Mẫu 39",
+      "topic": "Mẫu 39 · Bởi vì / Cảm thán hoài niệm",
+      "pattern": "～だものだ",
+      "romaji": "〜da mono da",
+      "usage": "Dùng cuối câu để bày tỏ cảm xúc sâu sắc, sự thật hiển nhiên hoặc giải thích thân mật.",
+      "rule": "Động từ-casual + んだものだ, Tính từ い + んだものだ, Tính từ な + なんだものだ, Danh từ + なんだものだ (often with から as んだものだから)",
+      "example": "疲れたんだものだから、休みたい。",
+      "exampleRomaji": "Tsukareta n da mono da kara, yasumitai.",
+      "translation": "I want to rest because I'm tired.",
+      "examples": [
+        {
+          "jp": "お腹が空いたんだものだから、何か食べたい。",
+          "romaji": "Onaka ga suita n da mono da kara, nanika tabetai.",
+          "vi": "I want to eat something because I'm hungry."
+        },
+        {
+          "jp": "忙しいんだものだから、来られない。",
+          "romaji": "Isogashii n da mono da kara, korarenai.",
+          "vi": "I can't come because I'm busy."
+        },
+        {
+          "jp": "彼は親切なんだものだから、誰も彼が好きだ。",
+          "romaji": "Kare wa shinsetsu na n da mono da kara, dare mo kare ga suki da.",
+          "vi": "Everyone likes him because he is kind."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-040",
+      "code": "Mẫu 40",
+      "topic": "Mẫu 40 · Lỡ làm mất rồi / Xong hết rồi (khẩu ngữ)",
+      "pattern": "～ちゃった",
+      "romaji": "〜chatta",
+      "usage": "Dạng rút gọn thân mật của ～てしまった trong hội thoại (lỡ mất rồi / đã xong xuôi).",
+      "rule": "Động từ-て/で form → ちゃった/じゃった (e.g. 食べてしまった → 食べちゃった)",
+      "example": "忘れ物をしちゃった。",
+      "exampleRomaji": "Wasuremono o shichatta.",
+      "translation": "I accidentally left something behind.",
+      "examples": [
+        {
+          "jp": "寝坊して遅刻しちゃった。",
+          "romaji": "Nebou shite chikoku shichatta.",
+          "vi": "I overslept and ended up being late."
+        },
+        {
+          "jp": "ケーキを全部食べちゃった。",
+          "romaji": "Keeki o zenbu tabechatta.",
+          "vi": "I ended up eating the whole cake."
+        },
+        {
+          "jp": "言わないつもりだったけど、言っちゃった。",
+          "romaji": "Iwanai tsumori datta kedo, icchatta.",
+          "vi": "I wasn't planning to say it, but I ended up saying it."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-041",
+      "code": "Mẫu 41",
+      "topic": "Mẫu 41 · Nhân tiện, tiện thể",
+      "pattern": "～ついでに",
+      "romaji": "〜tsuide ni",
+      "usage": "Làm thêm một việc phụ nhân lúc đang đi đâu đó hoặc đang làm việc chính.",
+      "rule": "Động từ (dictionary or た-form) + ついでに, Danh từ + の + ついでに, or Động từ-て form + いる + ついでに",
+      "example": "買い物に行くついでに、郵便局で手紙を出しましょう。",
+      "exampleRomaji": "Kaimono ni iku tsuide ni, yuubinkyoku de tegami wo dashimashou.",
+      "translation": "Let's drop off a letter at the post office while going shopping.",
+      "examples": [
+        {
+          "jp": "図書館で本を借りたついでに、友達に会いました。",
+          "romaji": "Toshokan de hon wo karita tsuide ni, tomodachi ni aimashita.",
+          "vi": "I met my friend while borrowing a book from the library."
+        },
+        {
+          "jp": "日本に来たついでに、有名な観光地を訪れたいです。",
+          "romaji": "Nihon ni kita tsuide ni, yuumei na kankouchi wo otozuretai desu.",
+          "vi": "While visiting Japan, I'd like to see some famous tourist spots."
+        },
+        {
+          "jp": "映画館に行ったついでに、新作のポスターを見ました。",
+          "romaji": "Eigakan ni itta tsuide ni, shinsaku no posutaa wo mimashita.",
+          "vi": "While going to the movie theater, I saw a poster for a new film."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-042",
+      "code": "Mẫu 42",
+      "topic": "Mẫu 42 · Hình như là... phải không nhỉ?",
+      "pattern": "～っけ？",
+      "romaji": "〜kke?",
+      "usage": "Đuôi câu khẩu ngữ dùng khi muốn xác nhận lại điều mình nhớ mang máng.",
+      "rule": "Động từ-casual + っけ?, Tính từ い + かったっけ?, Tính từ な/Danh từ + だっけ?",
+      "example": "彼は何時に来るっけ？",
+      "exampleRomaji": "Kare wa nanji ni kuru kke?",
+      "translation": "What time is he coming again?",
+      "examples": [
+        {
+          "jp": "この映画、面白かったっけ？",
+          "romaji": "Kono eiga, omoshirokatta kke?",
+          "vi": "Was this movie interesting?"
+        },
+        {
+          "jp": "彼女は学生だっけ？",
+          "romaji": "Kanojo wa gakusei dakke?",
+          "vi": "She was a student, right?"
+        },
+        {
+          "jp": "すし屋はどこだっけ？",
+          "romaji": "Sushiya wa doko dakke?",
+          "vi": "Where was the sushi place again?"
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-043",
+      "code": "Mẫu 43",
+      "topic": "Mẫu 43 · Có vẻ, đậm tính chất... (hậu tố)",
+      "pattern": "～っぱい",
+      "romaji": "〜ppai",
+      "usage": "Hậu tố gắn sau danh từ/gốc từ diễn tả cảm giác mang nhiều đặc tính đó (dễ quên, trẻ con, đậm vị...).",
+      "rule": "Danh từ + で + いっぱい (Note: written as いっぱい, read as 'ippai')",
+      "example": "部屋が荷物でいっぱいです。",
+      "exampleRomaji": "Heya ga nimotsu de ippai desu.",
+      "translation": "The room is full of luggage.",
+      "examples": [
+        {
+          "jp": "彼女は笑顔でいっぱいでした。",
+          "romaji": "Kanojo wa egao de ippai deshita.",
+          "vi": "She was full of smiles."
+        },
+        {
+          "jp": "彼は仕事でいっぱいです。",
+          "romaji": "Kare wa shigoto de ippai desu.",
+          "vi": "He is completely busy with work."
+        },
+        {
+          "jp": "公園は花でいっぱいです。",
+          "romaji": "Kouen wa hana de ippai desu.",
+          "vi": "The park is filled with flowers."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-044",
+      "code": "Mẫu 44",
+      "topic": "Mẫu 44 · Cứ để nguyên trạng thái đó",
+      "pattern": "～っぱなし",
+      "romaji": "〜ppanashi",
+      "usage": "V(bỏ ます) + っぱなし diễn tả bỏ mặc một trạng thái kéo dài không xử lý (để đèn sáng, mở cửa suốt...).",
+      "rule": "Động từ-ますstem + っぱなし",
+      "example": "窓を開けっぱなしにすると、虫が入ってくる。",
+      "exampleRomaji": "Mado o akeppanashi ni suru to, mushi ga haitte kuru.",
+      "translation": "If you leave the window open, bugs will come in.",
+      "examples": [
+        {
+          "jp": "洗濯物を干しっぱなしで、雨に濡れた。",
+          "romaji": "Sentakumono o hoshippanashi de, ame ni nureta.",
+          "vi": "I left the laundry hanging out, and it got wet in the rain."
+        },
+        {
+          "jp": "彼はドアを開けっぱなしにして出かけた。",
+          "romaji": "Kare wa doa o akeppanashi ni shite dekaketa.",
+          "vi": "He went out leaving the door open."
+        },
+        {
+          "jp": "テレビをつけっぱなしにして寝てしまった。",
+          "romaji": "Terebi o tsukeppanashi ni shite nete shimatta.",
+          "vi": "I fell asleep with the TV left on."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-045",
+      "code": "Mẫu 45",
+      "topic": "Mẫu 45 · Tóm lại là, nói cách khác",
+      "pattern": "～つまり",
+      "romaji": "〜tsumari",
+      "usage": "Từ nối dùng để tổng kết hoặc diễn đạt lại ngắn gọn ý vừa trình bày.",
+      "rule": "câu A + つまり + câu B (rephrasing)",
+      "example": "彼は大学の教授です。つまり、専門家です。",
+      "exampleRomaji": "Kare wa daigaku no kyouju desu. Tsumari, senmonka desu.",
+      "translation": "He is a university professor. In other words, he is an expert.",
+      "examples": [
+        {
+          "jp": "今日は土曜日だ。つまり、明日は日曜日だ。",
+          "romaji": "Kyou wa doyoubi da. Tsumari, ashita wa nichiyoubi da.",
+          "vi": "Today is Saturday. That is to say, tomorrow is Sunday."
+        },
+        {
+          "jp": "山田さんは友達のお姉さんです。つまり、私たちの知り合いです。",
+          "romaji": "Yamada-san wa tomodachi no oneesan desu. Tsumari, watashitachi no shiriai desu.",
+          "vi": "Ms. Yamada is my friend's older sister. In short, she's someone we know."
+        },
+        {
+          "jp": "彼女はフランス出身です。つまり、フランス語が話せます。",
+          "romaji": "Kanojo wa Furansu shusshin desu. Tsumari, Furansugo ga hanasemasu.",
+          "vi": "She is from France. In other words, she can speak French."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-046",
+      "code": "Mẫu 46",
+      "topic": "Mẫu 46 · Đã từng định... (nhưng không như ý)",
+      "pattern": "～つもりでした",
+      "romaji": "〜tsumori deshita",
+      "usage": "Diễn tả ý định trước đây hoặc cảm giác cứ ngỡ là mình đã làm vậy nhưng thực tế lại khác.",
+      "rule": "Động từ-casual (Thể từ điển) + つもりでした",
+      "example": "昨日は友達に会うつもりでしたが、風邪を引いてしまいました。",
+      "exampleRomaji": "Kinou wa tomodachi ni au tsumori deshita ga, kaze o hiite shimaimashita.",
+      "translation": "I was planning to meet my friend yesterday, but I caught a cold.",
+      "examples": [
+        {
+          "jp": "映画を見るつもりでしたが、時間がなくなりました。",
+          "romaji": "Eiga o miru tsumori deshita ga, jikan ga nakunarimashita.",
+          "vi": "I intended to watch a movie, but I ran out of time."
+        },
+        {
+          "jp": "彼らが来るつもりでしたが、電話でキャンセルされました。",
+          "romaji": "Karera ga kuru tsumori deshita ga, denwa de kyanseru saremashita.",
+          "vi": "They were supposed to come, but they canceled by phone."
+        },
+        {
+          "jp": "この本を読むつもりでしたが、もう読み終わっていました。",
+          "romaji": "Kono hon o yomu tsumori deshita ga, mou yomiowatte imashita.",
+          "vi": "I meant to read this book, but I realized I'd already finished it."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-047",
+      "code": "Mẫu 47",
+      "topic": "Mẫu 47 · Bảo / Nhờ rằng hãy làm cho...",
+      "pattern": "～てくれと",
+      "romaji": "〜te kureto",
+      "usage": "Trích dẫn lời yêu cầu ai đó làm giúp việc gì (～てくれと言う/頼む).",
+      "rule": "Động từ-て form + くれと (言う / 頼む / 伝える, etc.)",
+      "example": "電話をかけてくれと言われました。",
+      "exampleRomaji": "Denwa o kakete kureto iwaremashita.",
+      "translation": "I was told to make a phone call.",
+      "examples": [
+        {
+          "jp": "この荷物を運んでくれと頼まれました。",
+          "romaji": "Kono nimotsu o hakonde kureto tanomaremashita.",
+          "vi": "I was asked to carry this luggage."
+        },
+        {
+          "jp": "最後まで待ってくれとお願いされました。",
+          "romaji": "Saigo made matte kureto onegai saremashita.",
+          "vi": "I was asked to wait until the end."
+        },
+        {
+          "jp": "休んでくれと言われました。",
+          "romaji": "Yasunde kureto iwaremashita.",
+          "vi": "I was told to please take a rest."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-048",
+      "code": "Mẫu 48",
+      "topic": "Mẫu 48 · Thử làm xem nào",
+      "pattern": "～てごらん",
+      "romaji": "〜te goran",
+      "usage": "Cách nói thân mật của ～てみてください, thường dùng khi bề trên khuyến khích người dưới làm thử.",
+      "rule": "Động từ-て form + ごらん",
+      "example": "そのゲームをやってごらん。",
+      "exampleRomaji": "Sono geemu o yatte goran.",
+      "translation": "Why don't you try playing that game?",
+      "examples": [
+        {
+          "jp": "彼に話してごらん。",
+          "romaji": "Kare ni hanashite goran.",
+          "vi": "Try talking to him."
+        },
+        {
+          "jp": "新しいレシピを作ってごらん。",
+          "romaji": "Atarashii reshipi o tsukutte goran.",
+          "vi": "Why don't you try making a new recipe?"
+        },
+        {
+          "jp": "そのドレスを着てごらん。",
+          "romaji": "Sono doresu o kite goran.",
+          "vi": "Try putting on that dress."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-049",
+      "code": "Mẫu 49",
+      "topic": "Mẫu 49 · Chính vì vậy, cho nên (lịch sự)",
+      "pattern": "ですから～",
+      "romaji": "desu kara",
+      "usage": "Liên từ nối nguyên nhân – kết quả lịch sự đầu câu (vì thế nên...).",
+      "rule": "câu A + ですから + câu B",
+      "example": "今日は寒いですから、コートを着てください。",
+      "exampleRomaji": "Kyou wa samui desu kara, kooto o kite kudasai.",
+      "translation": "It's cold today, so please wear a coat.",
+      "examples": [
+        {
+          "jp": "この映画は面白いですから、ぜひ見てください。",
+          "romaji": "Kono eiga wa omoshiroi desu kara, zehi mite kudasai.",
+          "vi": "This movie is interesting, so please watch it."
+        },
+        {
+          "jp": "明日は休みですから、ゆっくり休んでください。",
+          "romaji": "Ashita wa yasumi desu kara, yukkuri yasunde kudasai.",
+          "vi": "Tomorrow is a day off, so please take your time to rest."
+        },
+        {
+          "jp": "彼は親切ですから、手伝ってくれるでしょう。",
+          "romaji": "Kare wa shinsetsu desu kara, tetsudatte kureru deshou.",
+          "vi": "He's kind, so he'll probably help you."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-050",
+      "code": "Mẫu 50",
+      "topic": "Mẫu 50 · Chỉ sau khi... mới lần đầu nhận ra",
+      "pattern": "～てはじめて",
+      "romaji": "〜te hajimete",
+      "usage": "Vて + はじめて nhấn mạnh trải nghiệm lần đầu hiểu ra giá trị/sự thật sau khi trải qua điều gì.",
+      "rule": "Động từ-て form + はじめて",
+      "example": "海外に行ってはじめて、日本の良さが分かりました。",
+      "exampleRomaji": "Kaigai ni itte hajimete, Nihon no yosa ga wakarimashita.",
+      "translation": "Only after going abroad did I realize how great Japan is.",
+      "examples": [
+        {
+          "jp": "彼女と別れてはじめて、彼女の大切さに気づいた。",
+          "romaji": "Kanojo to wakarete hajimete, kanojo no taisetsusa ni kizuita.",
+          "vi": "I realized her importance only after breaking up with her."
+        },
+        {
+          "jp": "大学を卒業してはじめて、学生時代の楽しさが分かった。",
+          "romaji": "Daigaku o sotsugyou shite hajimete, gakusei jidai no tanoshisa ga wakatta.",
+          "vi": "I understood how fun my student days were only after graduating from university."
+        },
+        {
+          "jp": "子供ができてはじめて、親の気持ちが分かった。",
+          "romaji": "Kodomo ga dekite hajimete, oya no kimochi ga wakatta.",
+          "vi": "I understood how parents feel only after I had a child."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-051",
+      "code": "Mẫu 51",
+      "topic": "Mẫu 51 · Muốn ai đó làm / đừng làm...",
+      "pattern": "～てほしい",
+      "romaji": "〜te hoshii",
+      "usage": "Vて / Vないで + ほしい bày tỏ mong muốn người khác thực hiện (hoặc không thực hiện) hành động cho mình.",
+      "rule": "Động từ-て form + ほしい",
+      "example": "子供にもっと勉強してほしい。",
+      "exampleRomaji": "Kodomo ni motto benkyou shite hoshii.",
+      "translation": "I want my child to study more.",
+      "examples": [
+        {
+          "jp": "彼に私に電話してほしい。",
+          "romaji": "Kare ni watashi ni denwa shite hoshii.",
+          "vi": "I want him to call me."
+        },
+        {
+          "jp": "友達に手伝ってほしい。",
+          "romaji": "Tomodachi ni tetsudatte hoshii.",
+          "vi": "I want my friend to help me."
+        },
+        {
+          "jp": "彼女に明日ここに来てほしい。",
+          "romaji": "Kanojo ni ashita koko ni kite hoshii.",
+          "vi": "I want her to come here tomorrow."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-052",
+      "code": "Mẫu 52",
+      "topic": "Mẫu 52 · Cho dù... cũng...",
+      "pattern": "～ても",
+      "romaji": "〜temo",
+      "usage": "Biểu thị điều kiện nhượng bộ: dù tình huống vế trước xảy ra thì vế sau vẫn không thay đổi.",
+      "rule": "Động từ-て form + も, Tính từ い (～く) + ても, Tính từ な/Danh từ (～で) + も",
+      "example": "雨が降っても、運動会は開催されます。",
+      "exampleRomaji": "Ame ga futte mo, undoukai wa kaisai saremasu.",
+      "translation": "Even if it rains, the sports festival will be held.",
+      "examples": [
+        {
+          "jp": "忙しくても、毎日勉強する時間を作る。",
+          "romaji": "Isogashikute mo, mainichi benkyou suru jikan o tsukuru.",
+          "vi": "Even though I'm busy, I make time to study every day."
+        },
+        {
+          "jp": "高くても、良い品質のものを買います。",
+          "romaji": "Takakute mo, yoi hinshitsu no mono o kaimasu.",
+          "vi": "Even if it's expensive, I'll buy something of good quality."
+        },
+        {
+          "jp": "彼女が有名人でも、私は彼女のことを知らない。",
+          "romaji": "Kanojo ga yuumeijin demo, watashi wa kanojo no koto o shiranai.",
+          "vi": "Even if she's famous, I don't know her."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-053",
+      "code": "Mẫu 53",
+      "topic": "Mẫu 53 · Ước gì... thì tốt biết mấy",
+      "pattern": "～といいなあ",
+      "romaji": "〜to ii naa",
+      "usage": "Bày tỏ mong ước, hy vọng nhẹ nhàng của người nói (giá mà... thì hay quá).",
+      "rule": "Động từ-casual + といいなあ, Tính từ い + といいなあ, Tính từ な + だといいなあ, Danh từ + だといいなあ",
+      "example": "明日晴れるといいなあ。",
+      "exampleRomaji": "Ashita hareru to ii naa.",
+      "translation": "I hope it's sunny tomorrow.",
+      "examples": [
+        {
+          "jp": "この試験に合格するといいなあ。",
+          "romaji": "Kono shiken ni goukaku suru to ii naa.",
+          "vi": "I hope I pass this exam."
+        },
+        {
+          "jp": "彼女が元気だといいなあ。",
+          "romaji": "Kanojo ga genki da to ii naa.",
+          "vi": "I hope she is doing well."
+        },
+        {
+          "jp": "彼が新しい仕事が見つかるといいなあ。",
+          "romaji": "Kare ga atarashii shigoto ga mitsukaru to ii naa.",
+          "vi": "I hope he finds a new job."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-054",
+      "code": "Mẫu 54",
+      "topic": "Mẫu 54 · Gọi là, mang tên là, nói rằng",
+      "pattern": "～という",
+      "romaji": "〜to iu",
+      "usage": "Dùng để giới thiệu tên gọi, định nghĩa hoặc dẫn nội dung thông tin đi kèm danh từ.",
+      "rule": "Danh từ + という + Danh từ, Động từ-casual + という + Danh từ, Tính từ い + という + Danh từ, Tính từ な + という + Danh từ",
+      "example": "本屋で「ハリー・ポッター」という本を買いました。",
+      "exampleRomaji": "Hon'ya de 'Harry Potter' to iu hon o kaimashita.",
+      "translation": "I bought a book called 'Harry Potter' at the bookstore.",
+      "examples": [
+        {
+          "jp": "昨日、美味しいというケーキを食べました。",
+          "romaji": "Kinou, oishii to iu keeki o tabemashita.",
+          "vi": "Yesterday, I ate a cake that is said to be delicious."
+        },
+        {
+          "jp": "彼はとても親切だという評判です。",
+          "romaji": "Kare wa totemo shinsetsu da to iu hyouban desu.",
+          "vi": "He has a reputation for being very kind."
+        },
+        {
+          "jp": "今年の夏、東京にある「ディズニーランド」というテーマパークに行きたいです。",
+          "romaji": "Kotoshi no natsu, Toukyou ni aru 'Disneyland' to iu teema paaku ni ikitai desu.",
+          "vi": "I want to go to a theme park called 'Disneyland' in Tokyo this summer."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-055",
+      "code": "Mẫu 55",
+      "topic": "Mẫu 55 · Nghĩa là / Nghe nói là...",
+      "pattern": "～ということだ",
+      "romaji": "〜to iu koto da",
+      "usage": "Tóm lược ý nghĩa của điều vừa nêu hoặc truyền đạt lại thông tin nghe được.",
+      "rule": "Động từ-casual + ということだ, Tính từ い + ということだ, Tính từ な + だということだ, Danh từ + だということだ",
+      "example": "彼は来週結婚するということだ。",
+      "exampleRomaji": "Kare wa raishuu kekkon suru to iu koto da.",
+      "translation": "I heard that he is getting married next week.",
+      "examples": [
+        {
+          "jp": "この試験は難しいということだ。",
+          "romaji": "Kono shiken wa muzukashii to iu koto da.",
+          "vi": "It means this exam is difficult."
+        },
+        {
+          "jp": "彼女が引っ越したということだ。",
+          "romaji": "Kanojo ga hikkoshita to iu koto da.",
+          "vi": "I heard that she has moved."
+        },
+        {
+          "jp": "彼は仕事がうまくいかないだということだ。",
+          "romaji": "Kare wa shigoto ga umaku ikanai da to iu koto da.",
+          "vi": "It can be said that his work is not going well."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-056",
+      "code": "Mẫu 56",
+      "topic": "Mẫu 56 · Hễ nhắc đến... thì...",
+      "pattern": "～というと",
+      "romaji": "〜to iu to",
+      "usage": "Nêu hình ảnh, đặc trưng đầu tiên hiện ra trong đầu khi nhắc tới một chủ đề.",
+      "rule": "Danh từ + というと",
+      "example": "日本料理というと、寿司が思い浮かぶ。",
+      "exampleRomaji": "Nihon ryouri to iu to, sushi ga omoiukabu.",
+      "translation": "When it comes to Japanese cuisine, sushi comes to mind.",
+      "examples": [
+        {
+          "jp": "パリというと、エッフェル塔を思い出す。",
+          "romaji": "Pari to iu to, Efferu Tou wo omoidasu.",
+          "vi": "Speaking of Paris, I recall the Eiffel Tower."
+        },
+        {
+          "jp": "夏休みというと、海に行くことが楽しみだ。",
+          "romaji": "Natsu yasumi to iu to, umi ni iku koto ga tanoshimi da.",
+          "vi": "When it comes to summer vacation, I look forward to going to the beach."
+        },
+        {
+          "jp": "彼というと、いつも元気な人だと思う。",
+          "romaji": "Kare to iu to, itsumo genki na hito da to omou.",
+          "vi": "Speaking of him, I think he's always energetic."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-057",
+      "code": "Mẫu 57",
+      "topic": "Mẫu 57 · Điều gọi là... / Cái tên...",
+      "pattern": "～というの～",
+      "romaji": "〜to iu no〜",
+      "usage": "Dùng khi giải thích, xác nhận hoặc nhấn mạnh đối tượng được nhắc tới.",
+      "rule": "Động từ-casual + というの, Tính từ い + というの, Tính từ な + だというの, Danh từ + だというの",
+      "example": "遅刻したのは、電車が遅れたというのだ。",
+      "exampleRomaji": "Chikoku shita no wa, densha ga okureta to iu no da.",
+      "translation": "The reason I was late is because the train was delayed.",
+      "examples": [
+        {
+          "jp": "この部屋が汚いのは、掃除をしなかったというのだ。",
+          "romaji": "Kono heya ga kitanai no wa, souji o shinakatta to iu no da.",
+          "vi": "The reason this room is dirty is because I didn't clean it."
+        },
+        {
+          "jp": "彼女が怒っているのは、彼が約束を破ったというのだ。",
+          "romaji": "Kanojo ga okotte iru no wa, kare ga yakusoku o yabutta to iu no da.",
+          "vi": "The reason she is angry is that he broke his promise."
+        },
+        {
+          "jp": "彼が成功したのは、努力して勉強したというのだ。",
+          "romaji": "Kare ga seikou shita no wa, doryoku shite benkyou shita to iu no da.",
+          "vi": "The reason he succeeded is because he studied hard."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-058",
+      "code": "Mẫu 58",
+      "topic": "Mẫu 58 · Cái gọi là... nghĩa là...",
+      "pattern": "～というのは",
+      "romaji": "〜to iu no wa",
+      "usage": "Định nghĩa, giải thích ý nghĩa hoặc lý do của từ ngữ/khái niệm đứng trước.",
+      "rule": "Phrase/câu + というのは + explanation/definition",
+      "example": "日本に行くというのは、日本に旅行することです。",
+      "exampleRomaji": "Nihon ni iku to iu no wa, Nihon ni ryokou suru koto desu.",
+      "translation": "Going to Japan, that is to say, traveling to Japan.",
+      "examples": [
+        {
+          "jp": "この問題は難しいというのは、解決に時間がかかるということです。",
+          "romaji": "Kono mondai wa muzukashii to iu no wa, kaiketsu ni jikan ga kakaru to iu koto desu.",
+          "vi": "When I say this problem is difficult, I mean it takes time to solve."
+        },
+        {
+          "jp": "彼が怒っているというのは、彼が不満を感じているということです。",
+          "romaji": "Kare ga okotteiru to iu no wa, kare ga fuman wo kanjiteiru to iu koto desu.",
+          "vi": "By saying that he's angry, I mean he's feeling dissatisfied."
+        },
+        {
+          "jp": "太るというのは、体重が増えるということです。",
+          "romaji": "Futoru to iu no wa, taijuu ga fueru to iu koto desu.",
+          "vi": "Gaining weight, that is to say, increasing one's body weight."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-059",
+      "code": "Mẫu 59",
+      "topic": "Mẫu 59 · Nói là... thì đúng hơn là...",
+      "pattern": "～というより",
+      "romaji": "〜to iu yori",
+      "usage": "So sánh hai cách diễn đạt và khẳng định cách nói thứ hai chính xác hơn.",
+      "rule": "Động từ-casual + というより, Tính từ い + というより, Tính từ な + だというより, Danh từ + だというより",
+      "example": "この部屋は狭いというより、居心地がいい。",
+      "exampleRomaji": "Kono heya wa semai to iu yori, igokochi ga ii.",
+      "translation": "Rather than saying this room is small, it's more like it's cozy.",
+      "examples": [
+        {
+          "jp": "彼は怖いというより、頼りがいがある。",
+          "romaji": "Kare wa kowai to iu yori, tayori gai ga aru.",
+          "vi": "Instead of saying he's scary, he's more like a reliable person."
+        },
+        {
+          "jp": "映画はつまらないというより、ちょっと長かった。",
+          "romaji": "Eiga wa tsumaranai to iu yori, chotto nagakatta.",
+          "vi": "Rather than calling the movie boring, I'd say it was a bit long."
+        },
+        {
+          "jp": "彼女は友達だというより、家族のような存在だ。",
+          "romaji": "Kanojo wa tomodachi da to iu yori, kazoku no you na sonzai da.",
+          "vi": "Rather than a friend, she's more like family."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-060",
+      "code": "Mẫu 60",
+      "topic": "Mẫu 60 · Tuy nói là... nhưng thực tế...",
+      "pattern": "～といっても",
+      "romaji": "〜to ittemo",
+      "usage": "Thừa nhận thông tin ở vế trước nhưng làm rõ thực tế không giống mức độ mọi người tưởng.",
+      "rule": "Động từ-casual + といっても, Tính từ い + といっても, Tính từ な + だといっても, Danh từ + だといっても",
+      "example": "彼は有名だといっても、みんなに知られているわけではありません。",
+      "exampleRomaji": "Kare wa yuumei da to ittemo, minna ni shirarete iru wake de wa arimasen.",
+      "translation": "Even though he's famous, it doesn't mean everyone knows him.",
+      "examples": [
+        {
+          "jp": "このスープは辛いといっても、私にはちょうどいいです。",
+          "romaji": "Kono suupu wa karai to ittemo, watashi ni wa choudo ii desu.",
+          "vi": "Although this soup is spicy, it's just right for me."
+        },
+        {
+          "jp": "彼女は若いですが、経験があるといっても、まだ新人です。",
+          "romaji": "Kanojo wa wakai desu ga, keiken ga aru to ittemo, mada shinjin desu.",
+          "vi": "She's young, and although she has some experience, she's still a newcomer."
+        },
+        {
+          "jp": "このレストランは高いだといっても、美味しい料理が食べられるので価値があります。",
+          "romaji": "Kono resutoran wa takai da to ittemo, oishii ryouri ga taberareru node kachi ga arimasu.",
+          "vi": "Even though this restaurant is expensive, it's worth it because you can enjoy delicious dishes."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-061",
+      "code": "Mẫu 61",
+      "topic": "Mẫu 61 · Đúng theo như...",
+      "pattern": "～とおり",
+      "romaji": "〜toori",
+      "usage": "Làm việc gì đó theo đúng như chỉ dẫn, kế hoạch hoặc điều đã nghe/thấy.",
+      "rule": "Động từ-て form + とおり, Danh từ + のとおり",
+      "example": "先生が言ったとおり、宿題をやりました。",
+      "exampleRomaji": "Sensei ga itta toori, shukudai wo yarimashita.",
+      "translation": "I did my homework exactly as the teacher said.",
+      "examples": [
+        {
+          "jp": "地図に書いてあるとおりに行けば、駅に着きます。",
+          "romaji": "Chizu ni kaite aru toori ni ikeba, eki ni tsukimasu.",
+          "vi": "If you follow what's written on the map, you'll arrive at the station."
+        },
+        {
+          "jp": "レシピのとおりにケーキを作った。",
+          "romaji": "Reshipi no toori ni keeki o tsukutta.",
+          "vi": "I baked the cake according to the recipe."
+        },
+        {
+          "jp": "彼女は約束したとおりに時間通りに来ました。",
+          "romaji": "Kanojo wa yakusoku shita toori ni jikan doori ni kimashita.",
+          "vi": "She arrived on time, just as she promised."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-062",
+      "code": "Mẫu 62",
+      "topic": "Mẫu 62 · Làm sẵn trước (khẩu ngữ của ておく)",
+      "pattern": "～とく",
+      "romaji": "〜toku",
+      "usage": "Dạng rút gọn thân mật của ～ておく trong giao tiếp hàng ngày (chuẩn bị sẵn trước).",
+      "rule": "Động từ-て form + とく (e.g., 食べておく→食べとく, 読んでおく→読んどく)",
+      "example": "夜遅くなるから、今晩のご飯を作っとく。",
+      "exampleRomaji": "Yoru osoku naru kara, konban no gohan wo tsukutoku.",
+      "translation": "Since it will be late tonight, I'll prepare dinner in advance.",
+      "examples": [
+        {
+          "jp": "傘が必要かもしれないので、持っておく。",
+          "romaji": "Kasa ga hitsuyou kamoshirenai node, motte oku.",
+          "vi": "I might need an umbrella, so I'll bring one along (just in case)."
+        },
+        {
+          "jp": "試験が近いから、今から勉強しとこう。",
+          "romaji": "Shiken ga chikai kara, ima kara benkyou shitokou.",
+          "vi": "The exam is coming up, so I'll start studying now."
+        },
+        {
+          "jp": "明日は忙しいので、洗濯をしとく。",
+          "romaji": "Ashita wa isogashii node, sentaku wo shitoku.",
+          "vi": "Since I'll be busy tomorrow, I'll do the laundry in advance."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-063",
+      "code": "Mẫu 63",
+      "topic": "Mẫu 63 · Thế nhưng, trái lại bất ngờ",
+      "pattern": "～ところが",
+      "romaji": "〜tokoro ga",
+      "usage": "Nối hai câu mà kết quả phía sau hoàn toàn trái ngược, gây bất ngờ so với dự đoán ở câu trước.",
+      "rule": "Phrase 1 (expected situation) + ところが + Phrase 2 (unexpected result)",
+      "example": "彼はいつも遅刻するところが、今日は早く来ました。",
+      "exampleRomaji": "Kare wa itsumo chikoku suru tokoro ga, kyou wa hayaku kimashita.",
+      "translation": "He's always late, but today he arrived early.",
+      "examples": [
+        {
+          "jp": "昨日は暑かったところが、今日は寒くなりました。",
+          "romaji": "Kinou wa atsukatta tokoro ga, kyou wa samuku narimashita.",
+          "vi": "Yesterday was hot, but today it got cold."
+        },
+        {
+          "jp": "試合で負けると思ったところが、意外にも勝ちました。",
+          "romaji": "Shiai de makeru to omotta tokoro ga, igai ni mo kachimashita.",
+          "vi": "I thought we would lose the match, but surprisingly we won."
+        },
+        {
+          "jp": "決勝戦で優勝するところが、最後のポイントで負けました。",
+          "romaji": "Kesshousen de yuushou suru tokoro ga, saigo no pointo de makemashita.",
+          "vi": "We were about to win the final, but we lost at the last point."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-064",
+      "code": "Mẫu 64",
+      "topic": "Mẫu 64 · Suýt chút nữa thì...",
+      "pattern": "～ところだった",
+      "romaji": "〜tokoro datta",
+      "usage": "Vる + ところだった diễn tả một sự việc nguy hiểm/không hay suýt nữa đã xảy ra nhưng may mắn tránh được.",
+      "rule": "Động từ (Thể từ điển or ている form) + ところだった",
+      "example": "もう少しで遅れるところだった。",
+      "exampleRomaji": "Mou sukoshi de okureru tokoro datta.",
+      "translation": "I was just about to be late.",
+      "examples": [
+        {
+          "jp": "彼が危うく事故にあうところだった。",
+          "romaji": "Kare ga ayauku jiko ni au tokoro datta.",
+          "vi": "He almost had an accident."
+        },
+        {
+          "jp": "電車に乗るところだったが、ドアが閉まってしまった。",
+          "romaji": "Densha ni noru tokoro datta ga, doa ga shimatte shimatta.",
+          "vi": "I was just about to get on the train, but the door closed."
+        },
+        {
+          "jp": "忘れ物をするところだった。",
+          "romaji": "Wasuremono wo suru tokoro datta.",
+          "vi": "I almost forgot my belongings."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-065",
+      "code": "Mẫu 65",
+      "topic": "Mẫu 65 · Nhân tiện chuyển chủ đề, à này...",
+      "pattern": "ところで",
+      "romaji": "tokorode",
+      "usage": "Từ nối đặt đầu câu để chuyển hẳn sang một chủ đề trò chuyện mới.",
+      "rule": "ところで + new topic or question",
+      "example": "ところで、昨日の宿題はもう終わりましたか？",
+      "exampleRomaji": "Tokorode, kinou no shukudai wa mou owari mashita ka?",
+      "translation": "By the way, did you finish yesterday's homework?",
+      "examples": [
+        {
+          "jp": "彼はプールで泳いでいます。ところで、お昼ご飯は何にしますか？",
+          "romaji": "Kare wa puuru de oyoide imasu. Tokorode, ohiru gohan wa nani ni shimasu ka?",
+          "vi": "He is swimming in the pool. By the way, what do you want for lunch?"
+        },
+        {
+          "jp": "昨日は楽しかったですね。ところで、この写真を見ましたか？",
+          "romaji": "Kinou wa tanoshikatta desu ne. Tokorode, kono shashin wo mimashita ka?",
+          "vi": "Yesterday was fun, wasn't it? By the way, did you see this photo?"
+        },
+        {
+          "jp": "ところで、明日の会議の時間を知っていますか？",
+          "romaji": "Tokorode, ashita no kaigi no jikan wo shitte imasu ka?",
+          "vi": "By the way, do you know the time of tomorrow's meeting?"
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-066",
+      "code": "Mẫu 66",
+      "topic": "Mẫu 66 · Giả sử như là...",
+      "pattern": "～としたら",
+      "romaji": "〜to shitara",
+      "usage": "Đặt ra một tình huống giả định (nếu giả sử... thì sao?) để bàn luận kết quả.",
+      "rule": "Động từ-casual + としたら, Tính từ い + としたら, Tính từ な + だとしたら, Danh từ + だとしたら",
+      "example": "明日雨が降るとしたら、傘を持って行きましょう。",
+      "exampleRomaji": "Ashita ame ga furu to shitara, kasa wo motte ikimashou.",
+      "translation": "If it rains tomorrow, let's bring an umbrella.",
+      "examples": [
+        {
+          "jp": "このケーキが美味しくないとしたら、誰も食べないでしょう。",
+          "romaji": "Kono keeki ga oishikunai to shitara, daremo tabenai deshou.",
+          "vi": "If this cake is not delicious, nobody will eat it."
+        },
+        {
+          "jp": "彼が病気だとしたら、すぐに病院に行かせてあげてください。",
+          "romaji": "Kare ga byouki da to shitara, sugu ni byouin ni ikasete agete kudasai.",
+          "vi": "If he is sick, please take him to the hospital right away."
+        },
+        {
+          "jp": "彼女が学生だとしたら、このレストランは割引があるでしょう。",
+          "romaji": "Kanojo ga gakusei da to shitara, kono resutoran wa waribiki ga aru deshou.",
+          "vi": "If she is a student, there will be a discount at this restaurant."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-067",
+      "code": "Mẫu 67",
+      "topic": "Mẫu 67 · Với tư cách là, trên cương vị là...",
+      "pattern": "～として",
+      "romaji": "〜to shite",
+      "usage": "Nêu vai trò, lập trường, tư cách hoặc chức danh của đối tượng.",
+      "rule": "Động từ-casual + として, Tính từ い + として, Tính từ な + だとして, Danh từ + だとして",
+      "example": "彼は弁護士として働いています。",
+      "exampleRomaji": "Kare wa bengoshi to shite hataraite imasu.",
+      "translation": "He is working as a lawyer.",
+      "examples": [
+        {
+          "jp": "この料理はスナックとして食べられます。",
+          "romaji": "Kono ryouri wa sunakku to shite taberaremasu.",
+          "vi": "This dish can be eaten as a snack."
+        },
+        {
+          "jp": "彼女はリーダーとして尊敬されている。",
+          "romaji": "Kanojo wa riidaa to shite sonkei sarete iru.",
+          "vi": "She is respected as a leader."
+        },
+        {
+          "jp": "この本は参考書として使われます。",
+          "romaji": "Kono hon wa sankousho to shite tsukawaremasu.",
+          "vi": "This book is used as a reference."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-068",
+      "code": "Mẫu 68",
+      "topic": "Mẫu 68 · Biết bao nhiêu! (cảm thán)",
+      "pattern": "～どんなに～ことか",
+      "romaji": "〜donna ni〜koto ka",
+      "usage": "Nhấn mạnh mức độ cảm xúc dâng trào (biết bao nhiêu, đến nhường nào).",
+      "rule": "どんなに + Tính từ + ことか, どんなに + Động từ + ことか",
+      "example": "どんなに疲れたことか、言葉では表せません。",
+      "exampleRomaji": "Donna ni tsukareta koto ka, kotoba de wa arawasemasen.",
+      "translation": "I can't put into words how tired I am.",
+      "examples": [
+        {
+          "jp": "どんなに辛いことか、彼女は毎日頑張って働いています。",
+          "romaji": "Donna ni tsurai koto ka, kanojo wa mainichi ganbatte hataraiteimasu.",
+          "vi": "How hard it must be, she works hard every day."
+        },
+        {
+          "jp": "彼の成功はどんなに喜ばしいことか。",
+          "romaji": "Kare no seikou wa donna ni yorokobashii koto ka.",
+          "vi": "How happy his success must be."
+        },
+        {
+          "jp": "どんなに楽しいことか、みんなで旅行に行く。",
+          "romaji": "Donna ni tanoshii koto ka, minna de ryokou ni iku.",
+          "vi": "How fun it is to go on a trip with everyone."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-069",
+      "code": "Mẫu 69",
+      "topic": "Mẫu 69 · Dù có... đến mấy đi nữa thì vẫn...",
+      "pattern": "どんなに～ても",
+      "romaji": "donna ni ~ temo",
+      "usage": "Nhấn mạnh sự nhượng bộ ở mức độ cao nhất (dù cố gắng/khó khăn đến đâu vẫn...).",
+      "rule": "どんなに + Động từ thể て + も, どんなに + Tính từ い-てform + も, どんなに + Tính từ な + でも",
+      "example": "どんなに勉強しても、まだわからないことがある。",
+      "exampleRomaji": "Donna ni benkyou shite mo, mada wakaranai koto ga aru.",
+      "translation": "No matter how much I study, there are still things I don't understand.",
+      "examples": [
+        {
+          "jp": "どんなに速く走っても、彼には勝てません。",
+          "romaji": "Donna ni hayaku hashitte mo, kare ni wa katemasen.",
+          "vi": "No matter how fast I run, I can't beat him."
+        },
+        {
+          "jp": "どんなに疲れても、仕事を終わらせるまで帰れません。",
+          "romaji": "Donna ni tsukarete mo, shigoto o owaraseru made kaeremasen.",
+          "vi": "No matter how tired I am, I can't go home until I finish my work."
+        },
+        {
+          "jp": "どんなに美味しくても、これ以上食べられない。",
+          "romaji": "Donna ni oishikute mo, kore ijou taberarenai.",
+          "vi": "No matter how delicious it is, I can't eat any more."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-070",
+      "code": "Mẫu 70",
+      "topic": "Mẫu 70 · Không phải là không...",
+      "pattern": "～ないことはない",
+      "romaji": "〜nai koto wa nai",
+      "usage": "Phủ định kép diễn tả sự khẳng định dè dặt, mức độ vừa phải (cũng có thể / không hẳn là không).",
+      "rule": "Động từ-ない form + ことはない",
+      "example": "この問題を解けないことはないが、時間がかかりそうだ。",
+      "exampleRomaji": "Kono mondai wo tokenai koto wa nai ga, jikan ga kakari sou da.",
+      "translation": "It's not that I can't solve this problem, but it seems like it will take time.",
+      "examples": [
+        {
+          "jp": "彼に会わないことはないけど、あまり話したくない。",
+          "romaji": "Kare ni awanai koto wa nai kedo, amari hanashitakunai.",
+          "vi": "It's not that I can't meet him, but I don't really want to talk."
+        },
+        {
+          "jp": "この映画を見ないことはないけれど、他の映画がもっと面白いと思う。",
+          "romaji": "Kono eiga wo minai koto wa nai keredo, hoka no eiga ga motto omoshiroi to omou.",
+          "vi": "It's not that I cannot watch this movie, but I think other movies are more interesting."
+        },
+        {
+          "jp": "その本を読まないことはないが、長いので気をつけてください。",
+          "romaji": "Sono hon wo yomanai koto wa nai ga, nagai node ki wo tsukete kudasai.",
+          "vi": "It's not that I can't read that book, but it's long, so be careful."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-071",
+      "code": "Mẫu 71",
+      "topic": "Mẫu 71 · Nếu không... thì sẽ không được / phải...",
+      "pattern": "～ないと",
+      "romaji": "〜nai to",
+      "usage": "Dạng rút gọn thân mật của ～ないとだめだ / ～なければならない (phải làm ngay).",
+      "rule": "Động từ-Thể phủ định + ないと",
+      "example": "朝食を食べないと、お腹が空く。",
+      "exampleRomaji": "Asa gohan wo tabenai to, onaka ga suku.",
+      "translation": "If I don't eat breakfast, I will be hungry.",
+      "examples": [
+        {
+          "jp": "宿題をしないと、先生に怒られる。",
+          "romaji": "Shukudai wo shinai to, sensei ni okorareru.",
+          "vi": "If I don't do my homework, the teacher will be angry."
+        },
+        {
+          "jp": "充電をしないと、電話が使えなくなる。",
+          "romaji": "Juden wo shinai to, denwa ga tsukaenaku naru.",
+          "vi": "If I don't charge it, I won't be able to use the phone."
+        },
+        {
+          "jp": "この事故を報告しないと、問題が大きくなる。",
+          "romaji": "Kono jiko wo houkoku shinai to, mondai ga ookiku naru.",
+          "vi": "If I don't report this accident, the problem will become bigger."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-072",
+      "code": "Mẫu 72",
+      "topic": "Mẫu 72 · Bởi vì (giải thích lý do rõ ràng)",
+      "pattern": "～なぜなら",
+      "romaji": "〜nazenara",
+      "usage": "Liên từ đặt đầu câu để giải thích nguyên nhân (thường kết thúc bằng ～からだ / ～からです).",
+      "rule": "câu/Statement + なぜなら + Reason + から/だから",
+      "example": "このレストランが大好きだ。なぜなら料理が美味しいから。",
+      "exampleRomaji": "Kono resutoran ga daisuki da. Nazenara ryouri ga oishii kara.",
+      "translation": "I love this restaurant because the food is delicious.",
+      "examples": [
+        {
+          "jp": "彼女は試験に合格しなかった。なぜなら勉強しなかったから。",
+          "romaji": "Kanojo wa shiken ni goukaku shinakatta. Nazenara benkyou shinakatta kara.",
+          "vi": "She didn't pass the exam because she didn't study."
+        },
+        {
+          "jp": "私は映画を見に行かない。なぜなら今日は忙しいから。",
+          "romaji": "Watashi wa eiga o mi ni ikanai. Nazenara kyou wa isogashii kara.",
+          "vi": "I won't go to see a movie because I am busy today."
+        },
+        {
+          "jp": "彼はこのプロジェクトを任せられる。なぜなら経験が豊富だから。",
+          "romaji": "Kare wa kono purojekuto wo makaserareru. Nazenara keiken ga houfu dakara.",
+          "vi": "He can be trusted with this project because he has a wealth of experience."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-073",
+      "code": "Mẫu 73",
+      "topic": "Mẫu 73 · Vân vân, chẳng hạn như...",
+      "pattern": "～など",
+      "romaji": "〜nado",
+      "usage": "Liệt kê ví dụ tiêu biểu hoặc làm mềm câu nói khi đưa ra gợi ý.",
+      "rule": "Danh từ + など",
+      "example": "魚、果物などを市場で買いました。",
+      "exampleRomaji": "Sakana, kudamono nado wo ichiba de kaimashita.",
+      "translation": "I bought fish, fruits, and such at the market.",
+      "examples": [
+        {
+          "jp": "彼は日本語、英語、中国語などを話せます。",
+          "romaji": "Kare wa nihongo, eigo, chuugokugo nado wo hanasemasu.",
+          "vi": "He can speak languages such as Japanese, English, and Chinese."
+        },
+        {
+          "jp": "美術館では絵画、彫刻などの作品を見ました。",
+          "romaji": "Bijutsukan de wa kaiga, choukoku nado no sakuhin wo mimashita.",
+          "vi": "At the art museum, I saw works like paintings, sculptures, and others."
+        },
+        {
+          "jp": "この店ではパン、ケーキなどのお菓子を売っています。",
+          "romaji": "Kono mise de wa pan, keeki nado no okashi wo utteimasu.",
+          "vi": "This store sells sweets such as bread, cakes, and so on."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-074",
+      "code": "Mẫu 74",
+      "topic": "Mẫu 74 · Kiểu như, cỡ như (khẩu ngữ)",
+      "pattern": "～なんか",
+      "romaji": "〜nanka",
+      "usage": "Cách nói thân mật của など khi nêu ví dụ hoặc mang sắc thái khiêm tốn/nhẹ bớt.",
+      "rule": "Danh từ + なんか, Động từ-casual + なんか, Tính từ い + なんか, Tính từ な + なんか",
+      "example": "お金なんかいらない。",
+      "exampleRomaji": "Okane nanka iranai.",
+      "translation": "I don't need money or anything like that.",
+      "examples": [
+        {
+          "jp": "彼はピアノなんかも弾けます。",
+          "romaji": "Kare wa piano nanka mo hikemasu.",
+          "vi": "He can play things like the piano."
+        },
+        {
+          "jp": "忙しいなんかじゃないよ。",
+          "romaji": "Isogashii nanka janai yo.",
+          "vi": "I'm not really busy or anything like that."
+        },
+        {
+          "jp": "彼女は親切なんかじゃない。",
+          "romaji": "Kanojo wa shinsetsu nanka janai.",
+          "vi": "She's not kind or anything like that."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-075",
+      "code": "Mẫu 75",
+      "topic": "Mẫu 75 · Tại, ở trong (bối cảnh trang trọng)",
+      "pattern": "～において",
+      "romaji": "〜ni oite",
+      "usage": "Cách nói trang trọng của trợ từ で chỉ địa điểm, thời đại hoặc lĩnh vực diễn ra sự việc.",
+      "rule": "Danh từ (Place/Time/Context) + において",
+      "example": "日本において、お盆は家族が集まる大切な行事です。",
+      "exampleRomaji": "Nihon ni oite, obon wa kazoku ga atsumaru taisetsu na gyouji desu.",
+      "translation": "In Japan, Obon is an important event where families gather.",
+      "examples": [
+        {
+          "jp": "会議において、彼の意見が一番説得力がありました。",
+          "romaji": "Kaigi ni oite, kare no iken ga ichiban settokuryoku ga arimashita.",
+          "vi": "In the meeting, his opinion was the most persuasive."
+        },
+        {
+          "jp": "科学の分野において、研究が日々進んでいます。",
+          "romaji": "Kagaku no bun'ya ni oite, kenkyuu ga hibi susunde imasu.",
+          "vi": "In the field of science, research is advancing daily."
+        },
+        {
+          "jp": "幼少期において、子供たちは勢いよく物を覚えます。",
+          "romaji": "Youshouki ni oite, kodomo-tachi wa ikioi yoku mono wo oboemasu.",
+          "vi": "During early childhood, children learn things rapidly."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-076",
+      "code": "Mẫu 76",
+      "topic": "Mẫu 76 · Thay mặt cho, thay thế cho...",
+      "pattern": "～にかわって",
+      "romaji": "〜ni kawatte",
+      "usage": "Diễn tả hành động làm thay vai trò/vị trí của một người hoặc sự vật khác.",
+      "rule": "Danh từ + にかわって",
+      "example": "彼が病気なので、私が会議に出席することになりました。私が彼にかわって会議に出席します。",
+      "exampleRomaji": "Kare ga byouki na no de, watashi ga kaigi ni shusseki suru koto ni narimashita. Watashi ga kare ni kawatte kaigi ni shusseki shimasu.",
+      "translation": "He is sick, so I will attend the meeting. I will attend the meeting on his behalf.",
+      "examples": [
+        {
+          "jp": "母は忙しいので、私が母にかわって料理を作ります。",
+          "romaji": "Haha wa isogashii no de, watashi ga haha ni kawatte ryouri wo tsukurimasu.",
+          "vi": "My mother is busy, so I will cook the meal instead of her."
+        },
+        {
+          "jp": "今度の旅行は妹にかわって、私が一緒に行きます。",
+          "romaji": "Kondo no ryokou wa imouto ni kawatte, watashi ga issho ni ikimasu.",
+          "vi": "For this trip, I will go together instead of my younger sister."
+        },
+        {
+          "jp": "先生が出張中でいないので、助手が先生にかわってクラスを担当します。",
+          "romaji": "Sensei ga shucchou chuu de inai no de, joshu ga sensei ni kawatte kurasu wo tantou shimasu.",
+          "vi": "The teacher is not here because of a business trip, so the assistant will take charge of the class instead of the teacher."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-077",
+      "code": "Mẫu 77",
+      "topic": "Mẫu 77 · So với tiêu chuẩn của... thì...",
+      "pattern": "～にしては",
+      "romaji": "〜ni shite wa",
+      "usage": "Đưa ra nhận xét bất ngờ so với mức độ thường thấy của đối tượng làm chuẩn (tuy còn trẻ/lần đầu nhưng...).",
+      "rule": "Động từ-casual + にしては, Tính từ い + にしては, Tính từ な + にしては, Danh từ + にしては",
+      "example": "彼女は初心者にしては、上手に水泳ができる。",
+      "exampleRomaji": "Kanojo wa shoshinsha ni shite wa, jouzu ni suiei ga dekiru.",
+      "translation": "Considering she is a beginner, she can swim well.",
+      "examples": [
+        {
+          "jp": "このお寿司は安いにしては、とても美味しい。",
+          "romaji": "Kono o-sushi wa yasui ni shite wa, totemo oishii.",
+          "vi": "Considering this sushi is cheap, it's very delicious."
+        },
+        {
+          "jp": "彼は若いにしては、とても落ち着いている。",
+          "romaji": "Kare wa wakai ni shite wa, totemo ochitsuite iru.",
+          "vi": "Considering he is young, he is very calm."
+        },
+        {
+          "jp": "あの人は外国人にしては、日本語がうまい。",
+          "romaji": "Ano hito wa gaikokujin ni shite wa, nihongo ga umai.",
+          "vi": "For a foreigner, that person is good at Japanese."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-078",
+      "code": "Mẫu 78",
+      "topic": "Mẫu 78 · Ngay cả khi / Dù cho là...",
+      "pattern": "～にしても",
+      "romaji": "〜ni shitemo",
+      "usage": "Chấp nhận một giả định hay trường hợp nào đó rồi nêu nhận định bất biến ở vế sau.",
+      "rule": "Động từ-casual + にしても, Tính từ い + にしても, Tính từ な + だにしても, Danh từ + だにしても",
+      "example": "雨が降るにしても、学校へ行かなければなりません。",
+      "exampleRomaji": "Ame ga furu ni shitemo, gakkou e ikanakereba narimasen.",
+      "translation": "Even if it rains, I have to go to school.",
+      "examples": [
+        {
+          "jp": "彼女が怒っているにしても、話し合いは避けられない。",
+          "romaji": "Kanojo ga okotte iru ni shitemo, hanashiai wa sakerarenai.",
+          "vi": "Even if she is angry, we can't avoid talking."
+        },
+        {
+          "jp": "このレストランが高いにしても、料理の質がよくておすすめです。",
+          "romaji": "Kono resutoran ga takai ni shitemo, ryouri no shitsu ga yokute osusume desu.",
+          "vi": "Even if this restaurant is expensive, I recommend it because the quality of the food is good."
+        },
+        {
+          "jp": "彼が有名だにしても、彼の私生活について話すのは失礼だ。",
+          "romaji": "Kare ga yuumei da ni shitemo, kare no shiseikatsu ni tsuite hanasu no wa shitsurei da.",
+          "vi": "Even if he is famous, it's rude to talk about his private life."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-079",
+      "code": "Mẫu 79",
+      "topic": "Mẫu 79 · Về (chủ đề, nội dung)...",
+      "pattern": "～について",
+      "romaji": "〜ni tsuite",
+      "usage": "Nêu đối tượng hoặc chủ đề được nói tới, suy nghĩ hoặc nghiên cứu.",
+      "rule": "Danh từ + について",
+      "example": "日本の文化について学びたいです。",
+      "exampleRomaji": "Nihon no bunka ni tsuite manabitai desu.",
+      "translation": "I want to learn about Japanese culture.",
+      "examples": [
+        {
+          "jp": "彼の意見について話し合いましょう。",
+          "romaji": "Kare no iken ni tsuite hanashiaimashou.",
+          "vi": "Let's discuss his opinion."
+        },
+        {
+          "jp": "この問題について詳しく教えてください。",
+          "romaji": "Kono mondai ni tsuite kuwashiku oshiete kudasai.",
+          "vi": "Please explain this issue in detail."
+        },
+        {
+          "jp": "子供たちの教育について考えなければなりません。",
+          "romaji": "Kodomo-tachi no kyouiku ni tsuite kangaenakereba narimasen.",
+          "vi": "We have to think about the children's education."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-080",
+      "code": "Mẫu 80",
+      "topic": "Mẫu 80 · Đối với (lập trường của ai đó)...",
+      "pattern": "～にとって",
+      "romaji": "〜ni totte",
+      "usage": "Nêu góc nhìn, đánh giá từ phía lập trường của một người hoặc tổ chức.",
+      "rule": "Danh từ (person or thing) + にとって + Động từ/Tính từ/Danh từ",
+      "example": "私にとって、健康は一番大切なことです。",
+      "exampleRomaji": "Watashi ni totte, kenkou wa ichiban taisetsu na koto desu.",
+      "translation": "For me, health is the most important thing.",
+      "examples": [
+        {
+          "jp": "あの会社にとって、このプロジェクトは重要な意味があります。",
+          "romaji": "Ano kaisha ni totte, kono purojekuto wa juuyou na imi ga arimasu.",
+          "vi": "For that company, this project has significant meaning."
+        },
+        {
+          "jp": "子供たちにとって、おもちゃは楽しいものです。",
+          "romaji": "Kodomotachi ni totte, omocha wa tanoshii mono desu.",
+          "vi": "For children, toys are fun things."
+        },
+        {
+          "jp": "外国人にとって、日本語は難しい言語の一つです。",
+          "romaji": "Gaikokujin ni totte, nihongo wa muzukashii gengo no hitotsu desu.",
+          "vi": "For foreigners, Japanese is one of the difficult languages."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-081",
+      "code": "Mẫu 81",
+      "topic": "Mẫu 81 · Tùy theo / Bởi / Nhờ vào...",
+      "pattern": "～によって",
+      "romaji": "〜ni yotte",
+      "usage": "Dùng đa nghĩa: tùy thuộc vào từng trường hợp, nguyên nhân/phương tiện, hoặc tác giả trong câu bị động.",
+      "rule": "Động từ-casual + によって, Tính từ い + によって, Tính từ な + によって, Danh từ + によって",
+      "example": "その事故は悪天候によって引き起こされた。",
+      "exampleRomaji": "Sono jiko wa akutenkou ni yotte hikiokosareta.",
+      "translation": "The accident was caused by bad weather.",
+      "examples": [
+        {
+          "jp": "生活習慣によって、健康状態が変わります。",
+          "romaji": "Seikatsu shuukan ni yotte, kenkou joutai ga kawarimasu.",
+          "vi": "Health conditions change depending on lifestyle habits."
+        },
+        {
+          "jp": "彼の成功は努力によって得られたものだ。",
+          "romaji": "Kare no seikou wa doryoku ni yotte erareta mono da.",
+          "vi": "His success was achieved through hard work."
+        },
+        {
+          "jp": "結果は試験の難易度によって異なります。",
+          "romaji": "Kekka wa shiken no nan'ido ni yotte kotonarimasu.",
+          "vi": "The results vary depending on the difficulty of the exam."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-082",
+      "code": "Mẫu 82",
+      "topic": "Mẫu 82 · Theo như (nguồn tin)...",
+      "pattern": "～によれば",
+      "romaji": "〜ni yoreba",
+      "usage": "Trích dẫn nguồn thông tin (theo báo, theo dự báo thời tiết, theo lời ai đó...) đi kèm そうだ / ということだ.",
+      "rule": "Danh từ + によれば",
+      "example": "天気予報によれば、明日は晴れるでしょう。",
+      "exampleRomaji": "Tenki yohou ni yoreba, ashita wa hareru deshou.",
+      "translation": "According to the weather forecast, it will be sunny tomorrow.",
+      "examples": [
+        {
+          "jp": "先生によれば、この問題は簡単だそうです。",
+          "romaji": "Sensei ni yoreba, kono mondai wa kantan da sou desu.",
+          "vi": "According to the teacher, this problem seems to be easy."
+        },
+        {
+          "jp": "調査によれば、若者の喫煙率が減っているということです。",
+          "romaji": "Chousa ni yoreba, wakamono no kitsuenritsu ga hette iru to iu koto desu.",
+          "vi": "According to the survey, the smoking rate among young people is decreasing."
+        },
+        {
+          "jp": "新聞記事によれば、その企業は倒産の危機にあるらしい。",
+          "romaji": "Shinbun kiji ni yoreba, sono kigyou wa tousan no kiki ni aru rashii.",
+          "vi": "According to the newspaper article, the company appears to be on the verge of bankruptcy."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-083",
+      "code": "Mẫu 83",
+      "topic": "Mẫu 83 · Đối với / Trái ngược với...",
+      "pattern": "～に対して",
+      "romaji": "～ni taishite",
+      "usage": "Chỉ đối tượng hướng tới của hành động/thái độ, hoặc so sánh tương phản giữa hai đối tượng.",
+      "rule": "Động từ-casual + に対して, Tính từ い + に対して, Tính từ な + に対して, Danh từ + に対して",
+      "example": "子供たちに対して、親は常にやさしくあるべきです。",
+      "exampleRomaji": "Kodomotachi ni taishite, oya wa tsune ni yasashiku aru beki desu.",
+      "translation": "Parents should always be kind towards their children.",
+      "examples": [
+        {
+          "jp": "彼は質問に対して正直に答えました。",
+          "romaji": "Kare wa shitsumon ni taishite shoujiki ni kotaemashita.",
+          "vi": "He answered the questions honestly."
+        },
+        {
+          "jp": "田中さんは成功したに対して、佐藤さんは失敗しました。",
+          "romaji": "Tanaka-san wa seikou shita ni taishite, Satou-san wa shippai shimashita.",
+          "vi": "In contrast to Tanaka-san's success, Satou-san failed."
+        },
+        {
+          "jp": "彼の意見に対して、私は反対の立場を取りました。",
+          "romaji": "Kare no iken ni taishite, watashi wa hantai no tachiba wo torimashita.",
+          "vi": "In response to his opinion, I took an opposing stance."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-084",
+      "code": "Mẫu 84",
+      "topic": "Mẫu 84 · So với...",
+      "pattern": "～に比べて",
+      "romaji": "〜ni kurabete",
+      "usage": "Đặt hai đối tượng cạnh nhau để so sánh sự khác biệt.",
+      "rule": "Động từ-casual + に比べて, Tính từ い + に比べて, Tính từ な + だ/である + に比べて, Danh từ + だ/である + に比べて",
+      "example": "夏に比べて、冬は寒いです。",
+      "exampleRomaji": "Natsu ni kurabete, fuyu wa samui desu.",
+      "translation": "Winter is cold compared to summer.",
+      "examples": [
+        {
+          "jp": "このトマトは赤いトマトに比べて美味しくない。",
+          "romaji": "Kono tomato wa akai tomato ni kurabete oishikunai.",
+          "vi": "This tomato is not as delicious compared to the red tomatoes."
+        },
+        {
+          "jp": "彼は私に比べて英語が上手です。",
+          "romaji": "Kare wa watashi ni kurabete eigo ga jouzu desu.",
+          "vi": "He is better at English compared to me."
+        },
+        {
+          "jp": "東京に比べて、京都は静かな町です。",
+          "romaji": "Toukyou ni kurabete, Kyouto wa shizukana machi desu.",
+          "vi": "Kyoto is a quieter city compared to Tokyo."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-085",
+      "code": "Mẫu 85",
+      "topic": "Mẫu 85 · Liên quan đến...",
+      "pattern": "～に関して",
+      "romaji": "〜ni kanshite",
+      "usage": "Cách nói trang trọng hơn ～について để chỉ phạm vi đề tài, lĩnh vực liên quan.",
+      "rule": "Danh từ + に関して",
+      "example": "健康に関して気を付けることが大切です。",
+      "exampleRomaji": "Kenkou ni kanshite ki wo tsukeru koto ga taisetsu desu.",
+      "translation": "It is important to be careful regarding health.",
+      "examples": [
+        {
+          "jp": "このプロジェクトに関しては、彼がすべての詳細を知っています。",
+          "romaji": "Kono purojekuto ni kanshite wa, kare ga subete no shousai wo shitteimasu.",
+          "vi": "Regarding this project, he knows all the details."
+        },
+        {
+          "jp": "環境問題に関して、私たちはもっと責任を持たなければなりません。",
+          "romaji": "Kankyou mondai ni kanshite, watashitachi wa motto sekinin wo motanakereba narimasen.",
+          "vi": "Concerning environmental issues, we must take more responsibility."
+        },
+        {
+          "jp": "この事件に関しての情報はまだ十分ではありません。",
+          "romaji": "Kono jiken ni kanshite no jouhou wa mada juubun de wa arimasen.",
+          "vi": "The information regarding this incident is still insufficient."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-086",
+      "code": "Mẫu 86",
+      "topic": "Mẫu 86 · Trợ từ の nối bổ nghĩa / đại từ",
+      "pattern": "～の～",
+      "romaji": "〜no 〜",
+      "usage": "Dùng の để liên kết bổ nghĩa danh từ hoặc thay thế danh từ đã nhắc trước đó.",
+      "rule": "Noun1 + の + Noun2",
+      "example": "これは私の傘です。",
+      "exampleRomaji": "Kore wa watashi no kasa desu.",
+      "translation": "This is my umbrella.",
+      "examples": [
+        {
+          "jp": "あのビルは東京の有名な観光スポットです。",
+          "romaji": "Ano biru wa Toukyou no yuumei na kankou supotto desu.",
+          "vi": "That building is a famous tourist spot in Tokyo."
+        },
+        {
+          "jp": "彼は部長の秘書です。",
+          "romaji": "Kare wa buchou no hisho desu.",
+          "vi": "He is the chief's secretary."
+        },
+        {
+          "jp": "彼女は音楽の先生です。",
+          "romaji": "Kanojo wa ongaku no sensei desu.",
+          "vi": "She is a music teacher."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-087",
+      "code": "Mẫu 87",
+      "topic": "Mẫu 87 · Toàn là / Chỉ toàn / Vừa mới...",
+      "pattern": "～ばかり",
+      "romaji": "〜bakari",
+      "usage": "Diễn tả trạng thái lặp đi lặp lại toàn một việc/đối tượng (toàn chơi game), hoặc chỉ lượng ước chừng.",
+      "rule": "Động từ-ますstem + ばかり, Tính từ い + ばかり, Tính từ な + ばかり, Danh từ + ばかり",
+      "example": "彼はゲームばかりしている。",
+      "exampleRomaji": "Kare wa geemu bakari shite iru.",
+      "translation": "He is always playing games.",
+      "examples": [
+        {
+          "jp": "この部屋は綺麗なものばかりだ。",
+          "romaji": "Kono heya wa kirei na mono bakari da.",
+          "vi": "This room has nothing but clean things."
+        },
+        {
+          "jp": "彼女は勉強ばかりしていて、遊んでいる暇がない。",
+          "romaji": "Kanojo wa benkyou bakari shite ite, asonde iru hima ga nai.",
+          "vi": "She is always studying and has no time to play."
+        },
+        {
+          "jp": "彼の話は嘘ばかりで、信じることができない。",
+          "romaji": "Kare no hanashi wa uso bakari de, shinjiru koto ga dekinai.",
+          "vi": "His words are nothing but lies, and I cannot believe them."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-088",
+      "code": "Mẫu 88",
+      "topic": "Mẫu 88 · Không những... mà còn...",
+      "pattern": "～ばかりか (〜bakarika) ～も",
+      "romaji": "mo",
+      "usage": "Nhấn mạnh không chỉ có vế A mà thậm chí còn thêm cả vế B (mức độ cao hơn).",
+      "rule": "Động từ-casual + ばかりか/も, Tính từ い + ばかりか/も, Tính từ な + だ + ばかりか/も, Danh từ + だ + ばかりか/も",
+      "example": "彼女は英語ばかりか、フランス語も話せます。",
+      "exampleRomaji": "Kanojo wa eigo bakarika, furansugo mo hanasemasu.",
+      "translation": "Not only can she speak English, but she can also speak French.",
+      "examples": [
+        {
+          "jp": "このレストランは味が良いばかりか、サービスも素晴らしい。",
+          "romaji": "Kono resutoran wa aji ga yoi bakarika, saabisu mo subarashii.",
+          "vi": "Not only does this restaurant have great taste, but the service is also wonderful."
+        },
+        {
+          "jp": "パーティは楽しかったばかりか、料理も美味しかった。",
+          "romaji": "Paatii wa tanoshikatta bakarika, ryouri mo oishikatta.",
+          "vi": "Not only was the party fun, but the food was also delicious."
+        },
+        {
+          "jp": "彼は頭がいいばかりか、スポーツも得意だ。",
+          "romaji": "Kare wa atama ga ii bakarika, supootsu mo tokui da.",
+          "vi": "Not only is he smart, but he is also good at sports."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-089",
+      "code": "Mẫu 89",
+      "topic": "Mẫu 89 · Chắc chắn là, lẽ ra phải...",
+      "pattern": "～はずだ",
+      "romaji": "〜hazu da",
+      "usage": "Suy luận có độ tin cậy cao dựa trên cơ sở, quy luật hoặc lịch trình cụ thể.",
+      "rule": "Động từ-casual + はずだ, Tính từ い + はずだ, Tính từ な + なはずだ, Danh từ + のはずだ",
+      "example": "彼はもう着いたはずだ。",
+      "exampleRomaji": "Kare wa mou tsuita hazu da.",
+      "translation": "He should have arrived by now.",
+      "examples": [
+        {
+          "jp": "この薬を飲むと、痛みがなくなるはずだ。",
+          "romaji": "Kono kusuri wo nomu to, itami ga nakunaru hazu da.",
+          "vi": "If you take this medicine, the pain should go away."
+        },
+        {
+          "jp": "明日は晴れるはずだ。",
+          "romaji": "Ashita wa hareru hazu da.",
+          "vi": "It is supposed to be sunny tomorrow."
+        },
+        {
+          "jp": "彼女は元気なはずだ。",
+          "romaji": "Kanojo wa genki na hazu da.",
+          "vi": "She is supposed to be well."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-090",
+      "code": "Mẫu 90",
+      "topic": "Mẫu 90 · Giá mà... thì đã... (tiếc nuối)",
+      "pattern": "～ば～のに",
+      "romaji": "〜ba 〜noni",
+      "usage": "Diễn tả sự tiếc nuối hoặc trách móc khi thực tế đã không diễn ra như điều kiện vế trước.",
+      "rule": "Động từ-ば form + ～のに, Tính từ い-ば form + ～のに, Tính từ な + であれば + ～のに, Danh từ + であれば + ～のに",
+      "example": "もっと早く来れば、電車に間に合ったのに。",
+      "exampleRomaji": "Motto hayaku kureba, densha ni maniatta noni.",
+      "translation": "If only I had come earlier, I would have made it to the train.",
+      "examples": [
+        {
+          "jp": "もっと勉強すれば、試験に合格したのに。",
+          "romaji": "Motto benkyou sureba, shiken ni goukaku shita noni.",
+          "vi": "I wish I had studied more, I would have passed the exam."
+        },
+        {
+          "jp": "彼女がもっと優しければ、彼と上手くいくのに。",
+          "romaji": "Kanojo ga motto yasashikereba, kare to umaku iku noni.",
+          "vi": "If only she were kinder, she would get along with him."
+        },
+        {
+          "jp": "日本語が上手であれば、この本が読めるのに。",
+          "romaji": "Nihongo ga jouzu de areba, kono hon ga yomeru noni.",
+          "vi": "I wish I were good at Japanese, then I could read this book."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-091",
+      "code": "Mẫu 91",
+      "topic": "Mẫu 91 · Càng... thì càng...",
+      "pattern": "～ば～ほど",
+      "romaji": "〜ba 〜hodo",
+      "usage": "Diễn tả mối quan hệ tỷ lệ thuận: mức độ vế trước tăng thì vế sau cũng tăng theo.",
+      "rule": "Động từ-casual + ば + Động từ-casual + ほど, Tính từ い + ば + Tính từ い + ほど, Tính từ な + であれば + Tính từ な + ほど",
+      "example": "早く起きれば起きるほど、時間がたくさんある。",
+      "exampleRomaji": "Hayaku okireba okiru hodo, jikan ga takusan aru.",
+      "translation": "The earlier you wake up, the more time you have.",
+      "examples": [
+        {
+          "jp": "練習すればするほど、上達します。",
+          "romaji": "Renshuu sureba suru hodo, joutatsu shimasu.",
+          "vi": "The more you practice, the more you will improve."
+        },
+        {
+          "jp": "料理が美味しければ美味しいほど、皆が喜びます。",
+          "romaji": "Ryouri ga oishikereba oishii hodo, mina ga yorokobimasu.",
+          "vi": "The more delicious the food is, the happier everyone will be."
+        },
+        {
+          "jp": "日本語が上手であれば上手なほど、日本の生活が楽になります。",
+          "romaji": "Nihongo ga jouzu de areba jouzu na hodo, Nihon no seikatsu ga raku ni narimasu.",
+          "vi": "The better your Japanese is, the easier life in Japan will be."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-092",
+      "code": "Mẫu 92",
+      "topic": "Mẫu 92 · Đương nhiên là... mà còn...",
+      "pattern": "～はもちろん～も",
+      "romaji": "〜wa mochiron 〜mo",
+      "usage": "Khẳng định A là điều hiển nhiên và bổ sung thêm B cũng đúng như vậy.",
+      "rule": "Noun1 + はもちろん + Noun2 + も",
+      "example": "彼は数学はもちろん、英語も得意です。",
+      "exampleRomaji": "Kare wa suugaku wa mochiron, eigo mo tokui desu.",
+      "translation": "Not only is he good at math, but he is also good at English.",
+      "examples": [
+        {
+          "jp": "このレストランは和食はもちろん、洋食も美味しいです。",
+          "romaji": "Kono resutoran wa washoku wa mochiron, youshoku mo oishii desu.",
+          "vi": "This restaurant not only has delicious Japanese food but also delicious Western food."
+        },
+        {
+          "jp": "私の趣味は音楽はもちろん、読書も大好きです。",
+          "romaji": "Watashi no shumi wa ongaku wa mochiron, dokusho mo daisuki desu.",
+          "vi": "My hobbies are not only listening to music, but I also love reading."
+        },
+        {
+          "jp": "東京は観光はもちろん、ビジネスも盛んです。",
+          "romaji": "Toukyou wa kankou wa mochiron, bijinesu mo sakan desu.",
+          "vi": "Tokyo is not only famous for sightseeing but also has a thriving business scene."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-093",
+      "code": "Mẫu 93",
+      "topic": "Mẫu 93 · Giá mà đã... thì tốt rồi",
+      "pattern": "～ばよかった",
+      "romaji": "〜ba yokatta",
+      "usage": "Bày tỏ sự hối tiếc về việc đã làm hoặc đã không làm trong quá khứ.",
+      "rule": "Động từ-ば-form + よかった, Tính từ い-く + ばよかった, Tính từ な + ならよかった",
+      "example": "もっと早く起きればよかった。",
+      "exampleRomaji": "Motto hayaku okireba yokatta.",
+      "translation": "I wish I had woken up earlier.",
+      "examples": [
+        {
+          "jp": "昨日のパーティーに行けばよかった。",
+          "romaji": "Kinou no paatii ni ikeba yokatta.",
+          "vi": "I wish I had gone to yesterday's party."
+        },
+        {
+          "jp": "もっと安いものを買えばよかった。",
+          "romaji": "Motto yasui mono wo kaeba yokatta.",
+          "vi": "I wish I had bought something cheaper."
+        },
+        {
+          "jp": "あの時、もっと勉強すればよかった。",
+          "romaji": "Ano toki, motto benkyou sureba yokatta.",
+          "vi": "I wish I had studied more at that time."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-094",
+      "code": "Mẫu 94",
+      "topic": "Mẫu 94 · Giả vờ như là...",
+      "pattern": "～ふりをする",
+      "romaji": "〜furi wo suru",
+      "usage": "Cố ý tỏ ra, làm bộ như đang ở một trạng thái không có thật (giả vờ ngủ, giả vờ không biết).",
+      "rule": "Động từ (Thể từ điển) + ふりをする, Tính từ い + ふりをする, Tính từ な + ふりをする, Danh từ + ふりをする",
+      "example": "彼は知らないふりをしました。",
+      "exampleRomaji": "Kare wa shiranai furi wo shimashita.",
+      "translation": "He pretended not to know.",
+      "examples": [
+        {
+          "jp": "彼女は病気のふりをして、学校を休みました。",
+          "romaji": "Kanojo wa byouki no furi wo shite, gakkou wo yasumimashita.",
+          "vi": "She pretended to be sick and skipped school."
+        },
+        {
+          "jp": "彼は嬉しいふりをしていますが、本当は悲しいです。",
+          "romaji": "Kare wa ureshii furi wo shiteimasu ga, hontou wa kanashii desu.",
+          "vi": "He is pretending to be happy, but he is actually sad."
+        },
+        {
+          "jp": "彼女はリーダーのふりをして、チームを率いました。",
+          "romaji": "Kanojo wa riidaa no furi wo shite, chiimu wo hikimashita.",
+          "vi": "She pretended to be a leader and led the team."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-095",
+      "code": "Mẫu 95",
+      "topic": "Mẫu 95 · Nên làm (nghĩa vụ, đạo lý)",
+      "pattern": "～べきだ",
+      "romaji": "〜beki da",
+      "usage": "Nêu lời khuyên mạnh mẽ mang tính trách nhiệm, lẽ phải hoặc điều đương nhiên nên làm.",
+      "rule": "Động từ-Thể từ điển + べきだ",
+      "example": "勉強するべきだ。",
+      "exampleRomaji": "Benkyou suru beki da.",
+      "translation": "You should study.",
+      "examples": [
+        {
+          "jp": "早く寝るべきだ。",
+          "romaji": "Hayaku neru beki da.",
+          "vi": "You should sleep early."
+        },
+        {
+          "jp": "静かにするべきだ。",
+          "romaji": "Shizuka ni suru beki da.",
+          "vi": "You should be quiet."
+        },
+        {
+          "jp": "彼に謝るべきだ。",
+          "romaji": "Kare ni ayamaru beki da.",
+          "vi": "You should apologize to him."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-096",
+      "code": "Mẫu 96",
+      "topic": "Mẫu 96 · Đến mức / Càng... / Không bằng...",
+      "pattern": "～ほど～",
+      "romaji": "〜hodo〜",
+      "usage": "Diễn tả mức độ cao (đến mức muốn khóc) hoặc so sánh ngang bằng trong phủ định.",
+      "rule": "Động từ-casual + ほど, Tính từ い + ほど, Tính từ な + ほど, Danh từ + ほど",
+      "example": "彼女は私ほど速く走ることができません。",
+      "exampleRomaji": "Kanojo wa watashi hodo hayaku hashiru koto ga dekimasen.",
+      "translation": "She cannot run as fast as me.",
+      "examples": [
+        {
+          "jp": "このケーキはあのケーキほど美味しくない。",
+          "romaji": "Kono keeki wa ano keeki hodo oishikunai.",
+          "vi": "This cake is not as delicious as that cake."
+        },
+        {
+          "jp": "日本ほど四季がはっきりしている国はない。",
+          "romaji": "Nihon hodo shiki ga hakkiri shite iru kuni wa nai.",
+          "vi": "There is no country with as distinct seasons as Japan."
+        },
+        {
+          "jp": "東京は大阪ほど人が多くない。",
+          "romaji": "Toukyou wa Oosaka hodo hito ga ookunai.",
+          "vi": "Tokyo does not have as many people as Osaka."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-097",
+      "code": "Mẫu 97",
+      "topic": "Mẫu 97 · Cầu mong sao cho...",
+      "pattern": "～ますように",
+      "romaji": "〜masu you ni",
+      "usage": "Dùng trong lời chúc, lời cầu nguyện (mong cho sức khỏe, mong thi đỗ...).",
+      "rule": "Động từ-ます form, remove final る + ように",
+      "example": "明日のテストで良い点をとりますように。",
+      "exampleRomaji": "Ashita no tesuto de ii ten wo torimasu you ni.",
+      "translation": "I hope I get good grades on tomorrow's test.",
+      "examples": [
+        {
+          "jp": "彼が無事に帰ってきますように。",
+          "romaji": "Kare ga buji ni kaette kimasu you ni.",
+          "vi": "I hope he comes back safely."
+        },
+        {
+          "jp": "みんなが健康でいられますように。",
+          "romaji": "Minna ga kenkou de iraremasu you ni.",
+          "vi": "I hope everyone stays healthy."
+        },
+        {
+          "jp": "彼女に幸せになりますように。",
+          "romaji": "Kanojo ni shiawase ni narimasu you ni.",
+          "vi": "I hope she becomes happy."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-098",
+      "code": "Mẫu 98",
+      "topic": "Mẫu 98 · Hoàn toàn không...",
+      "pattern": "まったく～ない",
+      "romaji": "mattaku ~nai",
+      "usage": "Phó từ nhấn mạnh phủ định tuyệt đối (hoàn toàn không biết/không hiểu).",
+      "rule": "まったく + Động từ-negative, まったく + Tính từ い-negative, まったく + Tính từ な-negative",
+      "example": "彼は、まったく覚えていない。",
+      "exampleRomaji": "Kare wa, mattaku oboete inai.",
+      "translation": "He doesn't remember at all.",
+      "examples": [
+        {
+          "jp": "この部屋はまったく暖かくない。",
+          "romaji": "Kono heya wa mattaku atatakakunai.",
+          "vi": "This room is not warm at all."
+        },
+        {
+          "jp": "彼女はまったく遅れていない。",
+          "romaji": "Kanojo wa mattaku okurete inai.",
+          "vi": "She is not late at all."
+        },
+        {
+          "jp": "これはまったく便利ではない。",
+          "romaji": "Kore wa mattaku benri de wa nai.",
+          "vi": "This is not convenient at all."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-099",
+      "code": "Mẫu 99",
+      "topic": "Mẫu 99 · Đến tận, ngay cả...",
+      "pattern": "～まで",
+      "romaji": "〜made",
+      "usage": "Nhấn mạnh giới hạn mở rộng đến mức đáng ngạc nhiên (ngay cả... cũng...).",
+      "rule": "Động từ-casual + まで, Tính từ い + まで, Tính từ な + まで, Danh từ + まで",
+      "example": "10時まで働きます。",
+      "exampleRomaji": "Ju-ji made hatarakimasu.",
+      "translation": "I will work until 10 o'clock.",
+      "examples": [
+        {
+          "jp": "東京まで電車で行きます。",
+          "romaji": "Toukyou made densha de ikimasu.",
+          "vi": "I will go by train as far as Tokyo."
+        },
+        {
+          "jp": "彼は疲れるまで走りました。",
+          "romaji": "Kare wa tsukareru made hashirimashita.",
+          "vi": "He ran until he got tired."
+        },
+        {
+          "jp": "5ページまで読んでください。",
+          "romaji": "Go-peeji made yonde kudasai.",
+          "vi": "Please read up to page 5."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-100",
+      "code": "Mẫu 100",
+      "topic": "Mẫu 100 · Giữ nguyên trạng thái như vậy",
+      "pattern": "～まま",
+      "romaji": "〜mama",
+      "usage": "Làm hành động vế sau trong khi vẫn giữ nguyên trạng thái trước đó không thay đổi (để nguyên giày vào nhà).",
+      "rule": "Động từ bỏ ます + まま, Tính từ い + まま, Tính từ な + なまま, Danh từ + のまま",
+      "example": "部屋の窓を開けたまま寝ました。",
+      "exampleRomaji": "Heya no mado wo aketa mama nemashita.",
+      "translation": "I slept with the window of the room open.",
+      "examples": [
+        {
+          "jp": "熱いままのコーヒーを飲んで、舌を焦がしました。",
+          "romaji": "Atsui mama no koohii wo nonde, shita wo kogashimashita.",
+          "vi": "I drank the coffee while it was still hot and burned my tongue."
+        },
+        {
+          "jp": "彼は忙しいなまま、休みの日も仕事をしています。",
+          "romaji": "Kare wa isogashii na mama, yasumi no hi mo shigoto wo shiteimasu.",
+          "vi": "He continues to be busy, working even on his days off."
+        },
+        {
+          "jp": "彼女は故郷にいるまま、外国に行かないで仕事を見つけた。",
+          "romaji": "Kanojo wa furusato ni iru mama, gaikoku ni ikanaide shigoto wo mitsuketa.",
+          "vi": "She found a job without going abroad, staying in her hometown."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-101",
+      "code": "Mẫu 101",
+      "topic": "Mẫu 101 · Giống hệt như là...",
+      "pattern": "まるで～よう",
+      "romaji": "maru de ~ you",
+      "usage": "So sánh ví von sinh động hai sự vật/trạng thái trông giống hệt nhau (đi kèm ようだ / みたいだ).",
+      "rule": "まるで + phrase/câu + よう",
+      "example": "彼女はまるで天使のように美しい。",
+      "exampleRomaji": "Kanojo wa maru de tenshi no you ni utsukushii.",
+      "translation": "She is as beautiful as an angel.",
+      "examples": [
+        {
+          "jp": "彼はまるでロボットのように仕事をしている。",
+          "romaji": "Kare wa maru de robotto no you ni shigoto wo shite iru.",
+          "vi": "He works as if he is a robot."
+        },
+        {
+          "jp": "あの家はまるでお城のようだ。",
+          "romaji": "Ano ie wa maru de oshiro no you da.",
+          "vi": "That house is just like a castle."
+        },
+        {
+          "jp": "ここはまるで楽園のような場所です。",
+          "romaji": "Koko wa maru de rakuen no you na basho desu.",
+          "vi": "This place is as though it's a paradise."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-102",
+      "code": "Mẫu 102",
+      "topic": "Mẫu 102 · Thử làm xem sao",
+      "pattern": "～てみる",
+      "romaji": "〜te miru",
+      "usage": "Thực hiện thử một hành động để kiểm nghiệm cảm giác hoặc kết quả.",
+      "rule": "Động từ-て form + みる",
+      "example": "彼は走ってみたが、まだ膝が痛いと感じた。",
+      "exampleRomaji": "Kare wa hashitte mita ga, mada hiza ga itai to kanjita.",
+      "translation": "He tried running, but he still felt pain in his knee.",
+      "examples": [
+        {
+          "jp": "彼女は料理を作ってみたが、失敗してしまった。",
+          "romaji": "Kanojo wa ryouri o tsukutte mita ga, shippai shite shimatta.",
+          "vi": "She tried cooking but ended up failing."
+        },
+        {
+          "jp": "初めてのデートで、彼は彼女にサプライズをしようと考え、歌ってみた。",
+          "romaji": "Hajimete no deeto de, kare wa kanojo ni sapuraizu o shiyou to kangae, utatte mita.",
+          "vi": "On their first date, he thought of surprising her and tried singing."
+        },
+        {
+          "jp": "このケーキは美味しそうだから、味見に食べてみる。",
+          "romaji": "Kono keeki wa oishisou dakara, ajimi ni tabete miru.",
+          "vi": "Since this cake looks delicious, I will try tasting it."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-103",
+      "code": "Mẫu 103",
+      "topic": "Mẫu 103 · Giống như / Có vẻ như (khẩu ngữ)",
+      "pattern": "～みたいだ",
+      "romaji": "〜mitai da",
+      "usage": "Cách nói thân mật của ～ようだ trong giao tiếp (phỏng đoán hoặc ví von).",
+      "rule": "Động từ-casual + みたいだ, Tính từ い + みたいだ, Tính từ な + みたいだ, Danh từ + みたいだ",
+      "example": "彼は怒っているみたいだ。",
+      "exampleRomaji": "Kare wa okotte iru mitai da.",
+      "translation": "He seems to be angry.",
+      "examples": [
+        {
+          "jp": "そのビルは古いみたいだ。",
+          "romaji": "Sono biru wa furui mitai da.",
+          "vi": "That building looks old."
+        },
+        {
+          "jp": "彼女は疲れているみたいだ。",
+          "romaji": "Kanojo wa tsukarete iru mitai da.",
+          "vi": "She seems to be tired."
+        },
+        {
+          "jp": "この料理は辛いみたいだ。",
+          "romaji": "Kono ryouri wa karai mitai da.",
+          "vi": "This dish seems to be spicy."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-104",
+      "code": "Mẫu 104",
+      "topic": "Mẫu 104 · Hiếm khi... (đi với phủ định)",
+      "pattern": "～めったに～ない",
+      "romaji": "〜metta ni 〜nai",
+      "usage": "Phó từ chỉ tần suất cực kỳ thấp: hầu như không bao giờ làm/xảy ra.",
+      "rule": "めったに + Động từ[ない-form] / めったに + Tính từ い[ない-form] / めったに + Tính từ な[じゃない/ではない-form]",
+      "example": "彼はめったに外食しない。",
+      "exampleRomaji": "Kare wa metta ni gaishoku shinai.",
+      "translation": "He hardly ever eats out.",
+      "examples": [
+        {
+          "jp": "私はめったに寿司を食べない。",
+          "romaji": "Watashi wa metta ni sushi wo tabenai.",
+          "vi": "I seldom eat sushi."
+        },
+        {
+          "jp": "この地域はめったに雪が降らない。",
+          "romaji": "Kono chiiki wa metta ni yuki ga furanai.",
+          "vi": "It hardly ever snows in this area."
+        },
+        {
+          "jp": "彼女はめったに怒らない。",
+          "romaji": "Kanojo wa metta ni okoranai.",
+          "vi": "She hardly ever gets angry."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-105",
+      "code": "Mẫu 105",
+      "topic": "Mẫu 105 · Hiếm có, hầu như không có",
+      "pattern": "～めったにない",
+      "romaji": "〜metta ni nai",
+      "usage": "Biểu thị sự việc hoặc đối tượng cực kỳ hiếm gặp trong thực tế.",
+      "rule": "Động từ-negative + めったにない, Tính từ い-negative + めったにない, Tính từ な-negative + めったにない, Danh từ-negative + めったにない",
+      "example": "この町では雪が降ることはめったにない。",
+      "exampleRomaji": "Kono machi de wa yuki ga furu koto wa metta ni nai.",
+      "translation": "It hardly ever snows in this town.",
+      "examples": [
+        {
+          "jp": "彼はめったに外食しない。",
+          "romaji": "Kare wa metta ni gaishoku shinai.",
+          "vi": "He rarely eats out."
+        },
+        {
+          "jp": "友達が遊びに来るのはめったにない。",
+          "romaji": "Tomodachi ga asobi ni kuru no wa metta ni nai.",
+          "vi": "Friends seldom come to visit."
+        },
+        {
+          "jp": "彼女はめったに怒らない。",
+          "romaji": "Kanojo wa metta ni okoranai.",
+          "vi": "She hardly ever gets angry."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-106",
+      "code": "Mẫu 106",
+      "topic": "Mẫu 106 · Biết đâu chừng có thể...",
+      "pattern": "もしかすると〜かもしれない",
+      "romaji": "moshikasuru to 〜kamoshirenai",
+      "usage": "Nhấn mạnh khả năng phỏng đoán không chắc chắn nhưng vẫn có thể xảy ra.",
+      "rule": "もしかすると + câu + かもしれない",
+      "example": "もしかすると彼は遅刻するかもしれない。",
+      "exampleRomaji": "Moshikasuru to kare wa chikoku suru kamoshirenai.",
+      "translation": "Maybe he might be late.",
+      "examples": [
+        {
+          "jp": "もしかすると彼女は疲れているかもしれない。",
+          "romaji": "Moshikasuru to kanojo wa tsukarete iru kamoshirenai.",
+          "vi": "Perhaps she might be tired."
+        },
+        {
+          "jp": "もしかすると雨が降るかもしれない。",
+          "romaji": "Moshikasuru to ame ga furu kamoshirenai.",
+          "vi": "It might rain, maybe."
+        },
+        {
+          "jp": "もしかすると彼らはその映画が好きじゃないかもしれない。",
+          "romaji": "Moshikasuru to karera wa sono eiga ga suki janai kamoshirenai.",
+          "vi": "Maybe they might not like that movie."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-107",
+      "code": "Mẫu 107",
+      "topic": "Mẫu 107 · Nếu như mà đã...",
+      "pattern": "もし～たなら",
+      "romaji": "moshi ~ tanara",
+      "usage": "Đặt giả định rõ ràng cho một tình huống cụ thể (nếu rơi vào trường hợp đó thì...).",
+      "rule": "もし + Động từ-casual past + なら, もし + Tính từ い-casual past + なら, もし + Tính từ な + だったなら, もし + Danh từ + だったなら",
+      "example": "もし雨が降ったなら、傘を持って行きましょう。",
+      "exampleRomaji": "Moshi ame ga futta nara, kasa wo motte ikimashou.",
+      "translation": "If it rains, let's bring an umbrella.",
+      "examples": [
+        {
+          "jp": "もしケーキが美味しくなかったなら、誰も食べないでしょう。",
+          "romaji": "Moshi keeki ga oishikunakatta nara, daremo tabenai deshou.",
+          "vi": "If the cake was not delicious, nobody would eat it."
+        },
+        {
+          "jp": "もし彼が病気だったなら、すぐに病院に行かせてあげてください。",
+          "romaji": "Moshi kare ga byouki datta nara, sugu ni byouin ni ikasete agete kudasai.",
+          "vi": "If he was sick, please take him to the hospital right away."
+        },
+        {
+          "jp": "もし彼女が学生だったなら、このレストランは割引があるでしょう。",
+          "romaji": "Moshi kanojo ga gakusei datta nara, kono resutoran wa waribiki ga aru deshou.",
+          "vi": "If she were a student, there would be a discount at this restaurant."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-108",
+      "code": "Mẫu 108",
+      "topic": "Mẫu 108 · Giả sử dù có... thì vẫn...",
+      "pattern": "もし～ても",
+      "romaji": "moshi ~ temo",
+      "usage": "Kết hợp もし với ても để nhấn mạnh dù tình huống giả định xảy ra thì kết quả vẫn giữ nguyên.",
+      "rule": "もし + Động từ-て form + も / もし + Tính từ い(く) + ても / もし + Tính từ な/Danh từ + でも",
+      "example": "もし雨が降っても、ピクニックに行きます。",
+      "exampleRomaji": "Moshi ame ga futtemo, pikunikku ni ikimasu.",
+      "translation": "Even if it rains, we will go on a picnic.",
+      "examples": [
+        {
+          "jp": "もし彼が謝っても、まだ怒っているでしょう。",
+          "romaji": "Moshi kare ga ayamattemo, mada okotteiru deshou.",
+          "vi": "Even if he apologizes, I will still be angry."
+        },
+        {
+          "jp": "もし試験に合格しても、まだ勉強を続けます。",
+          "romaji": "Moshi shiken ni goukaku shitemo, mada benkyou wo tsuzukemasu.",
+          "vi": "Even if I pass the exam, I will still continue studying."
+        },
+        {
+          "jp": "もし彼女が遅く来ても、待っています。",
+          "romaji": "Moshi kanojo ga osoku kite mo, matteimasu.",
+          "vi": "Even if she comes late, I will wait."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-109",
+      "code": "Mẫu 109",
+      "topic": "Mẫu 109 · Nếu giả sử mà...",
+      "pattern": "もしも～なら",
+      "romaji": "moshimo ~ nara",
+      "usage": "Nhấn mạnh sắc thái giả định cao hơn もし thường (nhỡ đâu, nếu giả sử...).",
+      "rule": "Động từ-casual + なら, Tính từ い + なら, Tính từ な + なら, Danh từ + なら",
+      "example": "もしも明日雨が降ったなら、出かけません。",
+      "exampleRomaji": "Moshimo ashita ame ga futta nara, dekakemasen.",
+      "translation": "If it rains tomorrow, I won't go out.",
+      "examples": [
+        {
+          "jp": "もしも彼が来なかったなら、私たちだけでパーティーをします。",
+          "romaji": "Moshimo kare ga konakatta nara, watashitachi dake de paatii wo shimasu.",
+          "vi": "If he doesn't come, we'll have the party just by ourselves."
+        },
+        {
+          "jp": "もしも彼女が疲れているなら、休ませてあげてください。",
+          "romaji": "Moshimo kanojo ga tsukarete iru nara, yasumasete agete kudasai.",
+          "vi": "If she is tired, please let her rest."
+        },
+        {
+          "jp": "もしもそれが真実なら、認めなければなりません。",
+          "romaji": "Moshimo sore ga shinjitsu nara, mitomenakereba narimasen.",
+          "vi": "If that is true, we have to admit it."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-110",
+      "code": "Mẫu 110",
+      "topic": "Mẫu 110 · Không hề có ý định / Không chịu...",
+      "pattern": "～ようとしない",
+      "romaji": "〜you to shinai",
+      "usage": "V意向形 + としない diễn tả chủ thể hoàn toàn không chịu cố gắng hoặc không có dấu hiệu thay đổi.",
+      "rule": "Động từ-Thể ý hướng + としない",
+      "example": "彼は勉強しようとしない。",
+      "exampleRomaji": "Kare wa benkyou shiyou to shinai.",
+      "translation": "He doesn't show any sign of trying to study.",
+      "examples": [
+        {
+          "jp": "彼女は謝ろうとしない。",
+          "romaji": "Kanojo wa ayamarou to shinai.",
+          "vi": "She doesn't show any intention of apologizing."
+        },
+        {
+          "jp": "息子は部屋を片付けようとしない。",
+          "romaji": "Musuko wa heya wo katazuke you to shinai.",
+          "vi": "My son doesn't show any intention of cleaning his room."
+        },
+        {
+          "jp": "犬は散歩に行こうとしない。",
+          "romaji": "Inu wa sanpo ni ikou to shinai.",
+          "vi": "The dog doesn't show any sign of wanting to go for a walk."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-111",
+      "code": "Mẫu 111",
+      "topic": "Mẫu 111 · Định sẽ làm (ý định cá nhân)",
+      "pattern": "～ようと思う",
+      "romaji": "〜you to omou",
+      "usage": "Bày tỏ dự định, kế hoạch của bản thân người nói (đang định sẽ...).",
+      "rule": "Động từ-volitional + と思う",
+      "example": "今日は早く寝ようと思います。",
+      "exampleRomaji": "Kyou wa hayaku neyou to omoimasu.",
+      "translation": "I think I will go to bed early today.",
+      "examples": [
+        {
+          "jp": "明日美術館に行こうと思っています。",
+          "romaji": "Ashita bijutsukan ni ikou to omotteimasu.",
+          "vi": "I am planning to go to the art museum tomorrow."
+        },
+        {
+          "jp": "新しいカメラを買おうと思います。",
+          "romaji": "Atarashii kamera wo kaou to omoimasu.",
+          "vi": "I think I will buy a new camera."
+        },
+        {
+          "jp": "来週友達と映画を見ようと思っています。",
+          "romaji": "Raishuu tomodachi to eiga wo miyou to omotteimasu.",
+          "vi": "I am planning to watch a movie with my friend next week."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-112",
+      "code": "Mẫu 112",
+      "topic": "Mẫu 112 · Để cho... (mục đích)",
+      "pattern": "～ように",
+      "romaji": "〜you ni",
+      "usage": "Diễn tả mục đích hướng tới trạng thái mong muốn (thường đi với động từ khả năng hoặc phủ định).",
+      "rule": "Động từ-casual + ように, Tính từ い + ように, Tính từ な + に, Danh từ + のように",
+      "example": "早く家に帰るように、仕事を急いで終わらせました。",
+      "exampleRomaji": "Hayaku ie ni kaeru you ni, shigoto wo isoide owarasemashita.",
+      "translation": "In order to get home early, I hurried to finish my work.",
+      "examples": [
+        {
+          "jp": "彼女は美しい花のように見えました。",
+          "romaji": "Kanojo wa utsukushii hana no you ni miemashita.",
+          "vi": "She looked like a beautiful flower."
+        },
+        {
+          "jp": "この部屋がきれいになるように、掃除をしましょう。",
+          "romaji": "Kono heya ga kirei ni naru you ni, souji wo shimashou.",
+          "vi": "Let's clean so that this room becomes clean."
+        },
+        {
+          "jp": "山田さんは元気なように振る舞っていましたが、実際は疲れているらしいです。",
+          "romaji": "Yamada-san wa genki na you ni furumatte imashita ga, jissai wa tsukarete iru rashii desu.",
+          "vi": "Yamada-san was acting as if he was energetic, but he actually seems to be tired."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-113",
+      "code": "Mẫu 113",
+      "topic": "Mẫu 113 · Sao cho / Theo hướng... (cách thức)",
+      "pattern": "～ように",
+      "romaji": "〜you ni",
+      "usage": "Chỉ mục tiêu hoặc chiều hướng tiến triển tự nhiên mà người nói mong muốn đạt được.",
+      "rule": "Động từ-casual + ように, Tính từ い + ように, Tính từ な + だように, Danh từ + のように",
+      "example": "子供が安全に過ごせるように、家の中を整理します。",
+      "exampleRomaji": "Kodomo ga anzen ni sugoseru you ni, ie no naka wo seiri shimasu.",
+      "translation": "I will organize the inside of the house so that the children can spend time safely.",
+      "examples": [
+        {
+          "jp": "美しい花のように、彼女は笑顔が素敵です。",
+          "romaji": "Utsukushii hana no you ni, kanojo wa egao ga suteki desu.",
+          "vi": "Like a beautiful flower, her smile is lovely."
+        },
+        {
+          "jp": "自然に英語を話せるように、毎日練習しています。",
+          "romaji": "Shizen ni eigo wo hanaseru you ni, mainichi renshuu shiteimasu.",
+          "vi": "I practice every day to be able to speak English naturally."
+        },
+        {
+          "jp": "成功するように、計画を立てましょう。",
+          "romaji": "Seikou suru you ni, keikaku wo tatemashou.",
+          "vi": "Let's make a plan to succeed."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-114",
+      "code": "Mẫu 114",
+      "topic": "Mẫu 114 · Như là / Giống như / Để cho...",
+      "pattern": "～ように",
+      "romaji": "〜you ni",
+      "usage": "Dùng để ví von, lấy ví dụ mẫu hoặc nối mục đích của hành động.",
+      "rule": "Động từ-casual + ように, Tính từ い + ように, Tính từ な + に, Danh từ + のように",
+      "example": "分かりやすいように説明してください。",
+      "exampleRomaji": "Wakariyasui you ni setsumei shite kudasai.",
+      "translation": "Please explain it in a way that is easy to understand.",
+      "examples": [
+        {
+          "jp": "彼は鳥のように歌います。",
+          "romaji": "Kare wa tori no you ni utaimasu.",
+          "vi": "He sings like a bird."
+        },
+        {
+          "jp": "友達と仲良くするように努めています。",
+          "romaji": "Tomodachi to nakayoku suru you ni tsutometeimasu.",
+          "vi": "I am trying to get along well with my friends."
+        },
+        {
+          "jp": "日本語が上手になるように勉強しています。",
+          "romaji": "Nihongo ga jouzu ni naru you ni benkyou shiteimasu.",
+          "vi": "I am studying to become better at Japanese."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-115",
+      "code": "Mẫu 115",
+      "topic": "Mẫu 115 · Hãy cùng cố gắng...",
+      "pattern": "～ようにしましょう",
+      "romaji": "〜you ni shimashou",
+      "usage": "Lời kêu gọi, đề nghị mọi người cùng ý thức nỗ lực duy trì một hành động tốt.",
+      "rule": "Động từ-Thể từ điển + ようにしましょう / Động từ-Thể phủ định + ようにしましょう",
+      "example": "毎日運動するようにしましょう。",
+      "exampleRomaji": "Mainichi undou suru you ni shimashou.",
+      "translation": "Let's try to exercise every day.",
+      "examples": [
+        {
+          "jp": "早く寝るようにしましょう。",
+          "romaji": "Hayaku neru you ni shimashou.",
+          "vi": "Let's make sure to go to bed early."
+        },
+        {
+          "jp": "親切にするようにしましょう。",
+          "romaji": "Shinsetsu ni suru you ni shimashou.",
+          "vi": "Let's try to be kind."
+        },
+        {
+          "jp": "時間を無駄にしないようにしましょう。",
+          "romaji": "Jikan wo muda ni shinai you ni shimashou.",
+          "vi": "Let's make sure not to waste time."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-116",
+      "code": "Mẫu 116",
+      "topic": "Mẫu 116 · Đã trở nên có thể / Đã bắt đầu...",
+      "pattern": "～ようになった",
+      "romaji": "〜you ni natta",
+      "usage": "Diễn tả sự biến đổi trạng thái hoặc năng lực đã thành hiện thực so với trước kia.",
+      "rule": "Động từ-casual + ようになった",
+      "example": "彼は料理を作るようになった。",
+      "exampleRomaji": "Kare wa ryouri wo tsukuru you ni natta.",
+      "translation": "He became able to cook.",
+      "examples": [
+        {
+          "jp": "その子は読めるようになった。",
+          "romaji": "Sono ko wa yomeru you ni natta.",
+          "vi": "That child started to be able to read."
+        },
+        {
+          "jp": "会議は週に一度開催されるようになった。",
+          "romaji": "Kaigi wa shuu ni ichido kaisai sareru you ni natta.",
+          "vi": "The meeting started to be held once a week."
+        },
+        {
+          "jp": "日本語がわかるようになった。",
+          "romaji": "Nihongo ga wakaru you ni natta.",
+          "vi": "I became able to understand Japanese."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-117",
+      "code": "Mẫu 117",
+      "topic": "Mẫu 117 · Bảo / Nhắc ai đó hãy làm...",
+      "pattern": "～ように言う",
+      "romaji": "〜you ni iu",
+      "usage": "Truyền đạt lời nhắn, chỉ dẫn hoặc yêu cầu gián tiếp tới người khác.",
+      "rule": "Động từ-Thể từ điển + ように言う / Động từ-nai form + ように言う",
+      "example": "先生は私にもっと勉強するように言った。",
+      "exampleRomaji": "Sensei wa watashi ni motto benkyou suru you ni itta.",
+      "translation": "The teacher told me to study more.",
+      "examples": [
+        {
+          "jp": "彼女は彼に待つように言いました。",
+          "romaji": "Kanojo wa kare ni matsu you ni iimashita.",
+          "vi": "She told him to wait."
+        },
+        {
+          "jp": "母は私に部屋を片付けるように言いました。",
+          "romaji": "Haha wa watashi ni heya wo katazukeru you ni iimashita.",
+          "vi": "My mother told me to clean my room."
+        },
+        {
+          "jp": "先生は生徒に質問をするように言った。",
+          "romaji": "Sensei wa seito ni shitsumon wo suru you ni itta.",
+          "vi": "The teacher told the student to ask a question."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-118",
+      "code": "Mẫu 118",
+      "topic": "Mẫu 118 · Nghe nói là / Có vẻ rất ra dáng...",
+      "pattern": "～らしい",
+      "romaji": "〜rashii",
+      "usage": "Diễn tả thông tin nghe được hoặc mang đậm đặc trưng đúng chất của danh từ đứng trước.",
+      "rule": "Động từ-casual + らしい, Tính từ い + らしい, Tính từ な + だらしい, Danh từ + だらしい",
+      "example": "彼はインフルエンザらしい。",
+      "exampleRomaji": "Kare wa infuruenza rashii.",
+      "translation": "Apparently, he has the flu.",
+      "examples": [
+        {
+          "jp": "明日雪が降るらしい。",
+          "romaji": "Ashita yuki ga furu rashii.",
+          "vi": "I heard it will snow tomorrow."
+        },
+        {
+          "jp": "このレストランは美味しいらしい。",
+          "romaji": "Kono resutoran wa oishii rashii.",
+          "vi": "I heard that this restaurant is delicious."
+        },
+        {
+          "jp": "彼女は医者だらしい。",
+          "romaji": "Kanojo wa isha darashii.",
+          "vi": "It seems that she is a doctor."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-119",
+      "code": "Mẫu 119",
+      "topic": "Mẫu 119 · Thể bị động quá khứ (được / bị)",
+      "pattern": "～られた",
+      "romaji": "〜rareta",
+      "usage": "Diễn tả hành động đã chịu tác động từ người hoặc sự việc khác (được khen, bị mắng, bị làm phiền).",
+      "rule": "Động từ (passive form, Thể quá khứ) + られた",
+      "example": "この本はたくさんの人に読まれた。",
+      "exampleRomaji": "Kono hon wa takusan no hito ni yomareta.",
+      "translation": "This book was read by many people.",
+      "examples": [
+        {
+          "jp": "彼は友達に騙された。",
+          "romaji": "Kare wa tomodachi ni damasareta.",
+          "vi": "He was deceived by his friend."
+        },
+        {
+          "jp": "昨日、私の財布が盗まれました。",
+          "romaji": "Kinou, watashi no saifu ga nusumaremashita.",
+          "vi": "Yesterday, my wallet was stolen."
+        },
+        {
+          "jp": "彼女は映画に感動させられた。",
+          "romaji": "Kanojo wa eiga ni kandou saserareta.",
+          "vi": "She was deeply moved by the movie."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-120",
+      "code": "Mẫu 120",
+      "topic": "Mẫu 120 · Đang diễn ra / Trạng thái kết quả / Thói quen",
+      "pattern": "～ている",
+      "romaji": "〜te iru",
+      "usage": "Ôn tổng hợp các sắc thái chính của ～ている: đang làm, trạng thái kéo dài và thói quen lặp lại.",
+      "rule": "Động từ-て form + いる",
+      "example": "窓が開けられている。",
+      "exampleRomaji": "Mado ga akerarete iru.",
+      "translation": "The window is open (someone opened it and it remains open).",
+      "examples": [
+        {
+          "jp": "ケーキが全部食べられている。",
+          "romaji": "Keeki ga zenbu taberarete iru.",
+          "vi": "The whole cake has been eaten."
+        },
+        {
+          "jp": "彼女は病気で寝込んでいる。",
+          "romaji": "Kanojo wa byouki de nekonde iru.",
+          "vi": "She is bedridden due to illness."
+        },
+        {
+          "jp": "宿題が終わっている。",
+          "romaji": "Shukudai ga owatte iru.",
+          "vi": "The homework is finished (has been done)."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-121",
+      "code": "Mẫu 121",
+      "topic": "Mẫu 121 · Không đời nào có chuyện...",
+      "pattern": "～わけがない",
+      "romaji": "〜wake ga nai",
+      "usage": "Phủ định mạnh mẽ dựa trên suy luận logic (chắc chắn không thể có chuyện đó được).",
+      "rule": "Động từ-casual + わけがない, Tính từ い + わけがない, Tính từ な + なわけがない, Danh từ + のわけがない",
+      "example": "彼がそんなことを言うわけがない。",
+      "exampleRomaji": "Kare ga sonna koto wo iu wake ga nai.",
+      "translation": "There's no way he would say something like that.",
+      "examples": [
+        {
+          "jp": "あのレストランがまずいわけがない。",
+          "romaji": "Ano resutoran ga mazui wake ga nai.",
+          "vi": "There's no way that restaurant tastes bad."
+        },
+        {
+          "jp": "彼女が優しくないわけがない。",
+          "romaji": "Kanojo ga yasashiku nai wake ga nai.",
+          "vi": "There's no way she's not kind."
+        },
+        {
+          "jp": "彼が試験に合格しないわけがない。",
+          "romaji": "Kare ga shiken ni goukaku shinai wake ga nai.",
+          "vi": "There's no way he won't pass the exam."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-122",
+      "code": "Mẫu 122",
+      "topic": "Mẫu 122 · Thảo nào / Đương nhiên là...",
+      "pattern": "～わけだ",
+      "romaji": "〜wake da",
+      "usage": "Nêu kết luận tự nhiên rút ra từ sự việc hay điều kiện đã biết (bảo sao mà...).",
+      "rule": "Động từ-casual + わけだ, Tính từ い + わけだ, Tính từ な + なわけだ, Danh từ + のわけだ",
+      "example": "彼は風邪を引いている。だから、声がかすれているわけだ。",
+      "exampleRomaji": "Kare wa kaze wo hiite iru. Dakara, koe ga kasurete iru wake da.",
+      "translation": "He has a cold. That's why his voice is hoarse.",
+      "examples": [
+        {
+          "jp": "今日は忙しかった。だから、疲れたわけだ。",
+          "romaji": "Kyou wa isogashikatta. Dakara, tsukareta wake da.",
+          "vi": "Today was busy. No wonder I'm tired."
+        },
+        {
+          "jp": "田中さんはたくさん勉強している。だから、試験に合格したわけだ。",
+          "romaji": "Tanaka-san wa takusan benkyou shite iru. Dakara, shiken ni goukaku shita wake da.",
+          "vi": "Tanaka has been studying a lot. It means he passed the exam."
+        },
+        {
+          "jp": "彼女は有名な歌手の娘なんだ。だから、歌が上手なわけだ。",
+          "romaji": "Kanojo wa yuumei na kashu no musume nan da. Dakara, uta ga jouzu na wake da.",
+          "vi": "She's the daughter of a famous singer. That's why she's good at singing."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-123",
+      "code": "Mẫu 123",
+      "topic": "Mẫu 123 · Không hẳn là, không có nghĩa là...",
+      "pattern": "～わけではない",
+      "romaji": "〜wake dewa nai",
+      "usage": "Phủ định một phần để tránh hiểu lầm (tuy thế nhưng không có nghĩa là hoàn toàn như vậy).",
+      "rule": "Động từ-casual + わけではない, Tính từ い + わけではない, Tính từ な + だわけではない, Danh từ + だわけではない",
+      "example": "彼が忙しいからといって、友達がいないわけではない。",
+      "exampleRomaji": "Kare ga isogashii kara to itte, tomodachi ga inai wake dewa nai.",
+      "translation": "Just because he's busy doesn't mean he has no friends.",
+      "examples": [
+        {
+          "jp": "この映画は面白くないわけではないが、好みではない。",
+          "romaji": "Kono eiga wa omoshirokunai wake dewa nai ga, konomi dewa nai.",
+          "vi": "It's not that this movie isn't interesting; it's just not my taste."
+        },
+        {
+          "jp": "彼女が病気だからといって、毎日寝ているわけではない。",
+          "romaji": "Kanojo ga byouki dakara to itte, mainichi nete iru wake dewa nai.",
+          "vi": "Just because she's sick doesn't mean she's in bed all day."
+        },
+        {
+          "jp": "彼が大学に行っていないからといって、バカだわけではない。",
+          "romaji": "Kare ga daigaku ni itte inai kara to itte, baka da wake dewa nai.",
+          "vi": "Just because he didn't go to college doesn't mean he's stupid."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-124",
+      "code": "Mẫu 124",
+      "topic": "Mẫu 124 · Không thể nào làm được (vì lý do xã hội/tâm lý)",
+      "pattern": "～わけにはいかない",
+      "romaji": "〜wake ni wa ikanai",
+      "usage": "Diễn tả dù muốn hay không cũng không thể làm do ràng buộc đạo đức, hoàn cảnh hoặc trách nhiệm.",
+      "rule": "Động từ-casual + わけにはいかない",
+      "example": "こんなところで寝るわけにはいかない。",
+      "exampleRomaji": "Konna tokoro de neru wake ni wa ikanai.",
+      "translation": "I can't possibly sleep in a place like this.",
+      "examples": [
+        {
+          "jp": "試験が明日だから、遊びに行くわけにはいかない。",
+          "romaji": "Shiken ga ashita dakara, asobi ni iku wake ni wa ikanai.",
+          "vi": "I can't afford to go out to have fun, since the exam is tomorrow."
+        },
+        {
+          "jp": "こんなに高いものを買うわけにはいかない。",
+          "romaji": "Konna ni takai mono wo kau wake ni wa ikanai.",
+          "vi": "I can't allow myself to purchase something so expensive."
+        },
+        {
+          "jp": "体調が悪いから、パーティーに参加するわけにはいかない。",
+          "romaji": "Taichou ga warui kara, paatii ni sanka suru wake ni wa ikanai.",
+          "vi": "Since I'm not feeling well, I can't attend the party."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-125",
+      "code": "Mẫu 125",
+      "topic": "Mẫu 125 · Tuy là... nhưng so ra thì...",
+      "pattern": "～わりには",
+      "romaji": "〜wari ni wa",
+      "usage": "So sánh kết quả thực tế bất ngờ hơn dự đoán dựa trên tiêu chuẩn vế trước (tuy giá rẻ nhưng chất lượng tốt).",
+      "rule": "Động từ-casual + わりには, Tính từ い + わりには, Tính từ な + だわりには, Danh từ + だわりには",
+      "example": "彼はあまり勉強しないわりには、テストの点数が高いです。",
+      "exampleRomaji": "Kare wa amari benkyou shinai wari ni wa, tesuto no tensuu ga takai desu.",
+      "translation": "Despite not studying much, he gets high scores on tests.",
+      "examples": [
+        {
+          "jp": "この料理は見た目が悪いわりには、味は美味しいです。",
+          "romaji": "Kono ryouri wa mitame ga warui wari ni wa, aji wa oishii desu.",
+          "vi": "Even though this dish doesn't look good, it tastes delicious."
+        },
+        {
+          "jp": "彼女は若いわりには、とても落ち着いていますね。",
+          "romaji": "Kanojo wa wakai wari ni wa, totemo ochitsuite imasu ne.",
+          "vi": "Considering she's young, she's very calm."
+        },
+        {
+          "jp": "この部屋は狭いわりには、家賃が高いです。",
+          "romaji": "Kono heya wa semai wari ni wa, yachin ga takai desu.",
+          "vi": "Despite being small, this room’s rent is high."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-126",
+      "code": "Mẫu 126",
+      "topic": "Mẫu 126 · Nghe bảo là... (khẩu ngữ)",
+      "pattern": "～んだって",
+      "romaji": "〜n datte",
+      "usage": "Cách nói thân mật của ～そうだ / ～ということだ khi truyền tai nhau thông tin.",
+      "rule": "Động từ-casual + んだって, Tính từ い + んだって, Tính từ な + なんだって, Danh từ + なんだって",
+      "example": "彼は東京に行くんだって。",
+      "exampleRomaji": "Kare wa Toukyou ni iku n datte.",
+      "translation": "I heard he's going to Tokyo.",
+      "examples": [
+        {
+          "jp": "この映画、面白いんだって。",
+          "romaji": "Kono eiga, omoshiroi n datte.",
+          "vi": "They said this movie is interesting."
+        },
+        {
+          "jp": "彼女は有名な歌手なんだって。",
+          "romaji": "Kanojo wa yuumei na kashu na n datte.",
+          "vi": "I heard she's a famous singer."
+        },
+        {
+          "jp": "あのレストラン、夜景がきれいなんだって。",
+          "romaji": "Ano resutoran, yakei ga kirei na n datte.",
+          "vi": "They said the night view at that restaurant is beautiful."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-127",
+      "code": "Mẫu 127",
+      "topic": "Mẫu 127 · Tại vì mà! (khẩu ngữ thân mật)",
+      "pattern": "～んだもん",
+      "romaji": "〜nda mon",
+      "usage": "Dùng cuối câu để biện minh, nũng nịu hoặc nêu lý do cá nhân trong hội thoại gần gũi.",
+      "rule": "Động từ-casual + んだもん, Tính từ い + んだもん, Tính từ な + なんだもん, Danh từ + なんだもん",
+      "example": "遅れたんだもん、ごめん。",
+      "exampleRomaji": "Okureta nda mon, gomen.",
+      "translation": "I was late, that's why I'm sorry.",
+      "examples": [
+        {
+          "jp": "おいしいんだもん、もうちょっと食べたい。",
+          "romaji": "Oishii nda mon, mou chotto tabetai.",
+          "vi": "It's delicious, that's why I want to eat more."
+        },
+        {
+          "jp": "疲れているんだもん、早く寝たい。",
+          "romaji": "Tsukarete iru nda mon, hayaku netai.",
+          "vi": "I'm tired, that's why I want to go to bed early."
+        },
+        {
+          "jp": "彼は友達なんだもん、手伝わないわけにはいかない。",
+          "romaji": "Kare wa tomodachi nan da mon, tetsudawanai wake ni wa ikanai.",
+          "vi": "He's my friend, that's why I can't not help him."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-128",
+      "code": "Mẫu 128",
+      "topic": "Mẫu 128 · Làm xong hoàn toàn / Nâng lên hết mức",
+      "pattern": "～上げる",
+      "romaji": "〜ageru",
+      "usage": "Hậu tố ghép sau động từ bỏ ます chỉ hành động hoàn tất trọn vẹn đến cuối cùng (viết xong, làm xong...).",
+      "rule": "Động từ-ますstem + 上げる",
+      "example": "レポートを書き上げるまで、寝られません。",
+      "exampleRomaji": "Repooto o kakiageru made, neraremasen.",
+      "translation": "I cannot sleep until I finish writing the report.",
+      "examples": [
+        {
+          "jp": "彼女は早速部屋の掃除を始め、一時間で掃除をやり上げた。",
+          "romaji": "Kanojo wa sassoku heya no souji o hajime, ichijikan de souji o yariageta.",
+          "vi": "She started cleaning the room right away and finished cleaning it in an hour."
+        },
+        {
+          "jp": "試験前夜、勉強をやり上げてから寝た。",
+          "romaji": "Shiken zenya, benkyou o yariagete kara neta.",
+          "vi": "I went to bed after finishing studying on the night before the exam."
+        },
+        {
+          "jp": "このプロジェクトをやり上げるためには、みんなの協力が必要です。",
+          "romaji": "Kono purojekuto o yariageru tame ni wa, minna no kyouryoku ga hitsuyou desu.",
+          "vi": "To finish this project, everyone's cooperation is needed."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-129",
+      "code": "Mẫu 129",
+      "topic": "Mẫu 129 · Không thể làm hết / Không kham nổi",
+      "pattern": "～切れない",
+      "romaji": "～kirenai",
+      "usage": "V(bỏ ます) + 切れない diễn tả số lượng quá lớn hoặc mức độ quá cao nên không thể hoàn thành hết.",
+      "rule": "Động từ-stem + 切れない",
+      "example": "この本を一晩で読み切れない。",
+      "exampleRomaji": "Kono hon wo hitoban de yomikirenai.",
+      "translation": "I cannot finish reading this book in one night.",
+      "examples": [
+        {
+          "jp": "彼は泣き切れないほど嬉しかった。",
+          "romaji": "Kare wa nakikirenai hodo ureshikatta.",
+          "vi": "He was so happy that he couldn't stop crying."
+        },
+        {
+          "jp": "この部屋を一日で掃除し切れない。",
+          "romaji": "Kono heya wo ichinichi de soujishikirenai.",
+          "vi": "I cannot finish cleaning this room in one day."
+        },
+        {
+          "jp": "彼女は話し切れないほどの悩みがある。",
+          "romaji": "Kanojo wa hanashikirenai hodo no nayami ga aru.",
+          "vi": "She has so many worries that she can't finish talking about them."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-130",
+      "code": "Mẫu 130",
+      "topic": "Mẫu 130 · Không hẳn lúc nào cũng...",
+      "pattern": "必ずしも～とは限らない",
+      "romaji": "kanarazushimo ～ towa kagiranai",
+      "usage": "Phủ định tính tuyệt đối: không phải lúc nào điều đó cũng đúng, vẫn có ngoại lệ.",
+      "rule": "必ずしも + Statement + とは限らない",
+      "example": "高いものが必ずしも良いとは限らない。",
+      "exampleRomaji": "Takai mono ga kanarazushimo yoi to wa kagiranai.",
+      "translation": "Expensive things are not necessarily better.",
+      "examples": [
+        {
+          "jp": "有名な人が必ずしも幸せとは限らない。",
+          "romaji": "Yuumei na hito ga kanarazushimo shiawase to wa kagiranai.",
+          "vi": "Famous people are not necessarily happy."
+        },
+        {
+          "jp": "外国語が話せる人が必ずしも英語が得意とは限らない。",
+          "romaji": "Gaikokugo ga hanaseru hito ga kanarazushimo eigo ga tokui to wa kagiranai.",
+          "vi": "People who can speak a foreign language are not always good at English."
+        },
+        {
+          "jp": "勉強時間が多い生徒が必ずしも試験で点数が高いとは限らない。",
+          "romaji": "Benkyou jikan ga ooi seito ga kanarazushimo shiken de tensuu ga takai to wa kagiranai.",
+          "vi": "Students who study a lot are not necessarily scoring high on exams."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-131",
+      "code": "Mẫu 131",
+      "topic": "Mẫu 131 · Đúng ngay giữa lúc đang...",
+      "pattern": "～最中に",
+      "romaji": "～saichuu ni",
+      "usage": "Nの / Vている + 最中に diễn tả một sự việc khác bất ngờ xen vào đúng lúc hành động chính đang diễn ra cao trào.",
+      "rule": "Động từ-て form + いる + 最中に, Danh từ + の + 最中に",
+      "example": "昼寝をしている最中に電話が鳴った。",
+      "exampleRomaji": "Hirune o shiteiru saichuu ni denwa ga natta.",
+      "translation": "The phone rang while I was taking a nap.",
+      "examples": [
+        {
+          "jp": "料理を作っている最中に火事が起こった。",
+          "romaji": "Ryouri o tsukutteiru saichuu ni kaji ga okotta.",
+          "vi": "A fire broke out in the middle of cooking."
+        },
+        {
+          "jp": "会議の最中に急な用事で出なければならなかった。",
+          "romaji": "Kaigi no saichuu ni kyuu na youji de denakereba naranakatta.",
+          "vi": "I had to leave during the meeting because of an urgent matter."
+        },
+        {
+          "jp": "試験の最中に地震が起こった。",
+          "romaji": "Shiken no saichuu ni jishin ga okotta.",
+          "vi": "An earthquake occurred during the exam."
+        }
+      ]
+    },
+    {
+      "id": "n3-hb-132",
+      "code": "Mẫu 132",
+      "topic": "Mẫu 132 · Nhất định không, tuyệt đối không...",
+      "pattern": "決して～ない",
+      "romaji": "kesshite ~ nai",
+      "usage": "Phó từ đi với phủ định để bày tỏ quyết tâm mạnh mẽ hoặc sự phủ nhận tuyệt đối.",
+      "rule": "決して + Động từ (Thể phủ định)",
+      "example": "彼は決して遅刻しない。",
+      "exampleRomaji": "Kare wa kesshite chikoku shinai.",
+      "translation": "He never arrives late.",
+      "examples": [
+        {
+          "jp": "この秘密を決して誰にも言わないでください。",
+          "romaji": "Kono himitsu o kesshite darenimo iwanai de kudasai.",
+          "vi": "Please never tell this secret to anyone."
+        },
+        {
+          "jp": "決して諦めないで、最後までがんばりましょう。",
+          "romaji": "Kesshite akiramenai de, saigo made ganbarimashou.",
+          "vi": "Never give up and keep trying until the end."
+        },
+        {
+          "jp": "彼女は決して嘘をつかない人です。",
+          "romaji": "Kanojo wa kesshite uso o tsukanai hito desu.",
+          "vi": "She is a person who never lies."
+        }
+      ]
     }
   ]
 }

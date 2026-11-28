@@ -1,11 +1,13 @@
 (function (global) {
     const AppState = global.MimiAppState;
+    const Engine = global.MimiQuizEngine;
     const { escapeHtml, escapeJsAttr } = AppState;
 
     const grammarCache = new Map();
     const loadingPromises = new Map();
     const selectedIndexByLevel = new Map();
     const selectedChoiceByLesson = new Map();
+    const searchQueryByLevel = new Map();
 
     let currentLevelId = "n3";
 
@@ -59,6 +61,68 @@
         return 0;
     }
 
+    function filterLessonsWithIndex(lessons, query) {
+        const trimmed = String(query || "").trim();
+        if (!trimmed) {
+            return lessons.map((lesson, index) => ({ lesson, index }));
+        }
+        const qLower = trimmed.toLowerCase();
+        const qNormVi = Engine && typeof Engine.normalizeVi === "function"
+            ? Engine.normalizeVi(trimmed)
+            : qLower;
+
+        return lessons
+            .map((lesson, index) => ({ lesson, index }))
+            .filter(({ lesson }) => {
+                const pattern = String(lesson.pattern || "").toLowerCase();
+                const romaji = String(lesson.romaji || "").toLowerCase();
+                const code = String(lesson.code || "").toLowerCase();
+                const topic = String(lesson.topic || "");
+                const usage = String(lesson.usage || "");
+                const topicNorm = Engine ? Engine.normalizeVi(topic) : topic.toLowerCase();
+                const usageNorm = Engine ? Engine.normalizeVi(usage) : usage.toLowerCase();
+
+                return (
+                    pattern.includes(qLower) ||
+                    romaji.includes(qLower) ||
+                    code.includes(qLower) ||
+                    topic.toLowerCase().includes(qLower) ||
+                    (qNormVi && (topicNorm.includes(qNormVi) || usageNorm.includes(qNormVi)))
+                );
+            });
+    }
+
+    function ensureSearchInput() {
+        const navEl = document.getElementById("grammar-lesson-nav");
+        if (!navEl || !navEl.parentElement) return null;
+
+        let searchWrap = document.getElementById("grammar-search-wrap");
+        if (!searchWrap) {
+            searchWrap = document.createElement("div");
+            searchWrap.id = "grammar-search-wrap";
+            searchWrap.className = "lib-grammar-search-wrap";
+            searchWrap.innerHTML = `
+                <input id="grammar-search-input" type="search" autocomplete="off"
+                    placeholder="Tìm mẫu ngữ pháp (tiếng Nhật, romaji, nghĩa)..."
+                    class="lib-grammar-search" />
+            `;
+            navEl.parentElement.insertBefore(searchWrap, navEl);
+
+            const inputEl = searchWrap.querySelector("#grammar-search-input");
+            if (inputEl) {
+                inputEl.addEventListener("input", (e) => {
+                    searchQueryByLevel.set(currentLevelId, e.target.value || "");
+                    const lessons = getCachedLessons(currentLevelId);
+                    if (lessons) {
+                        const activeIdx = getActiveIndex(currentLevelId, lessons.length);
+                        renderLessonNav(lessons, activeIdx);
+                    }
+                });
+            }
+        }
+        return searchWrap.querySelector("#grammar-search-input");
+    }
+
     async function renderGrammarSection(levelId) {
         const lvl = (levelId || AppState.state.currentLevel || "n3").toLowerCase();
         currentLevelId = lvl;
@@ -94,6 +158,15 @@
             return;
         }
 
+        const searchInput = ensureSearchInput();
+        const searchWrap = document.getElementById("grammar-search-wrap");
+        if (searchWrap) {
+            searchWrap.classList.toggle("hidden", lessons.length <= 4);
+        }
+        if (searchInput) {
+            searchInput.value = searchQueryByLevel.get(lvl) || "";
+        }
+
         const activeIndex = getActiveIndex(lvl, lessons.length);
         selectedIndexByLevel.set(lvl, activeIndex);
 
@@ -106,8 +179,16 @@
         const navEl = document.getElementById("grammar-lesson-nav");
         if (!navEl) return;
 
-        navEl.innerHTML = lessons.map((lesson, idx) => {
-            const isActive = idx === activeIndex;
+        const query = searchQueryByLevel.get(currentLevelId) || "";
+        const filtered = filterLessonsWithIndex(lessons, query);
+
+        if (filtered.length === 0) {
+            navEl.innerHTML = `<div class="lib-empty-note text-xs">Không tìm thấy mẫu khớp với "${escapeHtml(query)}".</div>`;
+            return;
+        }
+
+        navEl.innerHTML = filtered.map(({ lesson, index }) => {
+            const isActive = index === activeIndex;
             const codeLine = lesson.code
                 ? `<span class="lib-lesson-code">${escapeHtml(lesson.code)}</span>`
                 : "";
@@ -116,7 +197,7 @@
                 : (lesson.topic || "");
 
             return `
-                <button type="button" onclick="MimiApp.openGrammarLesson(${idx})"
+                <button type="button" onclick="MimiApp.openGrammarLesson(${index})"
                     aria-pressed="${isActive ? "true" : "false"}">
                     ${codeLine}
                     <b lang="ja">${escapeHtml(lesson.pattern)}</b>
@@ -152,12 +233,20 @@
 
         const allExamples = [];
         if (lesson.example) {
-            allExamples.push({ jp: lesson.example, vi: lesson.translation || "" });
+            allExamples.push({
+                jp: lesson.example,
+                romaji: lesson.exampleRomaji || "",
+                vi: lesson.translation || ""
+            });
         }
         if (Array.isArray(lesson.examples)) {
             for (const ex of lesson.examples) {
                 if (ex && ex.jp) {
-                    allExamples.push({ jp: ex.jp, vi: ex.vi || "" });
+                    allExamples.push({
+                        jp: ex.jp,
+                        romaji: ex.romaji || "",
+                        vi: ex.vi || ex.en || ""
+                    });
                 }
             }
         }
@@ -168,6 +257,7 @@
                 <div class="lib-grammar-example-row">
                     <div class="min-w-0">
                         <p class="lib-grammar-example" lang="ja">${escapeHtml(ex.jp)}</p>
+                        ${ex.romaji ? `<p class="lib-grammar-romaji">${escapeHtml(ex.romaji)}</p>` : ""}
                         ${ex.vi ? `<p class="lib-grammar-translation">${escapeHtml(ex.vi)}</p>` : ""}
                     </div>
                     <button type="button" onclick="MimiApp.speakSpecific('${audioAttr}')"
@@ -181,40 +271,56 @@
         }).join("");
 
         const options = Array.isArray(lesson.options) ? lesson.options : [];
-        const choicesHtml = options.map((opt, idx) => {
-            const isPicked = pickedIdx === idx;
-            const isCorrectOpt = idx === lesson.correct;
-            let stateCls = "";
-            if (pickedIdx !== null) {
-                if (isPicked && isCorrectOpt) {
-                    stateCls = " is-correct";
-                } else if (isPicked && !isCorrectOpt) {
-                    stateCls = " is-wrong";
-                }
-            }
-            return `
-                <button type="button" lang="ja"
-                    class="lib-choice-btn${stateCls}"
-                    aria-pressed="${isPicked ? "true" : "false"}"
-                    onclick="MimiApp.selectGrammarChoice(${idx})">
-                    ${escapeHtml(opt)}
-                </button>
-            `;
-        }).join("");
+        const hasQuiz = Boolean(lesson.question && options.length > 0);
+        let quizSectionHtml = "";
 
-        let feedbackHtml = `<p class="lib-grammar-feedback" role="status"></p>`;
-        if (pickedIdx !== null && options[lesson.correct] !== undefined) {
-            const isRight = pickedIdx === lesson.correct;
-            const prefix = isRight
-                ? "✓ Đúng. "
-                : `✕ Đáp án phù hợp là ${options[lesson.correct]}. `;
-            const fbClass = isRight ? "lib-grammar-feedback is-correct" : "lib-grammar-feedback is-wrong";
-            feedbackHtml = `<p class="${fbClass}" role="status">${escapeHtml(prefix + (lesson.explanation || ""))}</p>`;
+        if (hasQuiz) {
+            const choicesHtml = options.map((opt, idx) => {
+                const isPicked = pickedIdx === idx;
+                const isCorrectOpt = idx === lesson.correct;
+                let stateCls = "";
+                if (pickedIdx !== null) {
+                    if (isPicked && isCorrectOpt) {
+                        stateCls = " is-correct";
+                    } else if (isPicked && !isCorrectOpt) {
+                        stateCls = " is-wrong";
+                    }
+                }
+                return `
+                    <button type="button" lang="ja"
+                        class="lib-choice-btn${stateCls}"
+                        aria-pressed="${isPicked ? "true" : "false"}"
+                        onclick="MimiApp.selectGrammarChoice(${idx})">
+                        ${escapeHtml(opt)}
+                    </button>
+                `;
+            }).join("");
+
+            let feedbackHtml = `<p class="lib-grammar-feedback" role="status"></p>`;
+            if (pickedIdx !== null && options[lesson.correct] !== undefined) {
+                const isRight = pickedIdx === lesson.correct;
+                const prefix = isRight
+                    ? "✓ Đúng. "
+                    : `✕ Đáp án phù hợp là ${options[lesson.correct]}. `;
+                const fbClass = isRight ? "lib-grammar-feedback is-correct" : "lib-grammar-feedback is-wrong";
+                feedbackHtml = `<p class="${fbClass}" role="status">${escapeHtml(prefix + (lesson.explanation || ""))}</p>`;
+            }
+
+            quizSectionHtml = `
+                <h4 class="lib-grammar-subhead">Thử một câu</h4>
+                <p class="lib-grammar-question" lang="ja">${escapeHtml(lesson.question)}</p>
+                <div class="lib-grammar-choices">${choicesHtml}</div>
+                ${feedbackHtml}
+            `;
         }
+
+        const romajiBadge = lesson.romaji
+            ? `<span class="lib-grammar-pattern-romaji">${escapeHtml(lesson.romaji)}</span>`
+            : "";
 
         bodyEl.innerHTML = `
             <small class="lib-grammar-label">${escapeHtml(lesson.topic)}</small>
-            <h3 lang="ja" class="lib-grammar-pattern">${escapeHtml(lesson.pattern)}</h3>
+            <h3 lang="ja" class="lib-grammar-pattern">${escapeHtml(lesson.pattern)} ${romajiBadge}</h3>
             <p class="lib-grammar-usage">${escapeHtml(lesson.usage)}</p>
             <p class="lib-grammar-construction">
                 <b>Cấu trúc</b>
@@ -223,10 +329,7 @@
             ${pointsHtml}
             <h4 class="lib-grammar-subhead">Ví dụ</h4>
             <div class="lib-grammar-examples-stack">${examplesHtml}</div>
-            <h4 class="lib-grammar-subhead">Thử một câu</h4>
-            <p class="lib-grammar-question" lang="ja">${escapeHtml(lesson.question)}</p>
-            <div class="lib-grammar-choices">${choicesHtml}</div>
-            ${feedbackHtml}
+            ${quizSectionHtml}
         `;
     }
 

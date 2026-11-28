@@ -831,9 +831,55 @@ html.dark .lib-batch-badge.is-done {
    ========================================================= */
 .lib-grammar-layout {
     display: grid;
-    grid-template-columns: minmax(170px, 0.56fr) minmax(0, 1.44fr);
+    grid-template-columns: minmax(190px, 0.58fr) minmax(0, 1.42fr);
     gap: 24px;
     margin-top: 18px;
+}
+
+.lib-grammar-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.lib-grammar-search-wrap {
+    grid-column: 1;
+}
+
+.lib-grammar-search {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--lib-line);
+    background-color: var(--lib-paper-card);
+    color: var(--lib-ink);
+    font-size: 13px;
+}
+
+.lib-grammar-search::placeholder {
+    color: var(--lib-soft);
+}
+
+.lib-grammar-search:focus {
+    outline: none;
+    border-color: var(--lib-rust);
+}
+
+.lib-grammar-pattern-romaji {
+    display: inline-block;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--lib-soft);
+    margin-left: 6px;
+}
+
+.lib-grammar-romaji {
+    margin: 2px 0 0;
+    font-size: 12.5px;
+    color: var(--lib-soft);
+    font-style: italic;
 }
 
 .lib-lesson-nav {
