@@ -1,4 +1,4 @@
-const CACHE_NAME = "mimi-jlpt-v6";
+const CACHE_NAME = "mimi-jlpt-v9";
 
 const CORE_ASSETS = [
     "./",
@@ -15,6 +15,7 @@ const CORE_ASSETS = [
     "./js/theme.js",
     "./js/global-search.js",
     "./js/home-view.js",
+    "./js/batch-preview.js",
     "./js/quiz-controller.js",
     "./js/summary-view.js",
     "./js/mistake-bank.js",

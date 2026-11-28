@@ -154,6 +154,21 @@ input:focus-visible {
     outline-offset: 2px;
 }
 
+/* Compact Step 2 Hiragana toggle with touch-friendly hit area */
+.step2-hira-toggle {
+    position: relative;
+    height: 28px;
+    font-size: 12px;
+    line-height: 1;
+    padding: 0 10px;
+}
+
+.step2-hira-toggle::before {
+    content: "";
+    position: absolute;
+    inset: -8px -4px;
+}
+
 /* Mobile & print polish */
 @media (max-width: 640px) {
     .option-btn {
@@ -280,7 +295,10 @@ html.dark .text-slate-300 {
 
 /* Emerald tints */
 html.dark .bg-emerald-50,
+html.dark .bg-emerald-50\/90,
 html.dark .bg-emerald-50\/80,
+html.dark .bg-emerald-50\/70,
+html.dark .bg-emerald-50\/60,
 html.dark .bg-emerald-50\/50 {
     background-color: rgba(16, 185, 129, 0.14) !important;
 }
@@ -297,13 +315,17 @@ html.dark .hover\:bg-emerald-100:hover {
 
 html.dark .border-emerald-100,
 html.dark .border-emerald-200,
+html.dark .border-emerald-200\/80,
 html.dark .border-emerald-300,
-html.dark .border-emerald-300\/80 {
-    border-color: rgba(16, 185, 129, 0.4) !important;
+html.dark .border-emerald-300\/80,
+html.dark .border-emerald-400\/80 {
+    border-color: rgba(16, 185, 129, 0.45) !important;
 }
 
 html.dark .text-emerald-700,
 html.dark .text-emerald-800,
+html.dark .text-emerald-900,
+html.dark .hover\:text-emerald-700:hover,
 html.dark .group:hover .group-hover\:text-emerald-950 {
     color: #6ee7b7 !important;
 }
@@ -332,6 +354,10 @@ html.dark .bg-indigo-100 {
     background-color: rgba(99, 102, 241, 0.18) !important;
 }
 
+html.dark .hover\:bg-indigo-100:hover {
+    background-color: rgba(99, 102, 241, 0.28) !important;
+}
+
 html.dark .border-indigo-200 {
     border-color: rgba(129, 140, 248, 0.42) !important;
 }
@@ -344,6 +370,9 @@ html.dark .text-indigo-900 {
 
 /* Rose tints (Mistake bank & wrong answers) */
 html.dark .bg-rose-50,
+html.dark .bg-rose-50\/90,
+html.dark .bg-rose-50\/70,
+html.dark .bg-rose-50\/60,
 html.dark .bg-rose-50\/50,
 html.dark .bg-rose-100 {
     background-color: rgba(244, 63, 94, 0.15) !important;
@@ -361,18 +390,25 @@ html.dark .border-rose-300 {
 }
 
 html.dark .text-rose-700,
-html.dark .text-rose-800 {
+html.dark .text-rose-800,
+html.dark .text-rose-900 {
     color: #fda4af !important;
 }
 
 html.dark .from-rose-50 {
     --tw-gradient-from: rgba(244, 63, 94, 0.16) !important;
-    --tw-gradient-via: #131c31 !important;
-    --tw-gradient-to: rgba(245, 158, 11, 0.1) !important;
+    --tw-gradient-stops: var(--tw-gradient-from), #131c31, rgba(245, 158, 11, 0.1) !important;
 }
 
-/* Amber tints (Notes & override button) */
+html.dark .via-white {
+    --tw-gradient-via: #131c31 !important;
+}
+
+/* Amber tints (Notes, active batch & override button) */
 html.dark .bg-amber-50,
+html.dark .bg-amber-50\/90,
+html.dark .bg-amber-50\/70,
+html.dark .bg-amber-50\/40,
 html.dark .bg-amber-100 {
     background-color: rgba(245, 158, 11, 0.18) !important;
 }
@@ -382,6 +418,7 @@ html.dark .hover\:bg-amber-200:hover {
 }
 
 html.dark .border-amber-200,
+html.dark .border-amber-200\/70,
 html.dark .border-amber-300 {
     border-color: rgba(245, 158, 11, 0.45) !important;
 }

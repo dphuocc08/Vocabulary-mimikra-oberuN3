@@ -5,6 +5,7 @@
     const Theme = global.MimiTheme;
     const GlobalSearch = global.MimiGlobalSearch;
     const HomeView = global.MimiHomeView;
+    const BatchPreview = global.MimiBatchPreview;
     const Quiz = global.MimiQuizController;
     const Summary = global.MimiSummaryView;
     const MistakeBank = global.MimiMistakeBank;
@@ -33,6 +34,9 @@
             }
         }
         Audio.setupKeyboardShortcuts();
+        if (Quiz && typeof Quiz.setupPersistenceListeners === "function") {
+            Quiz.setupPersistenceListeners();
+        }
         if (GlobalSearch && typeof GlobalSearch.setupGlobalSearchListener === "function") {
             GlobalSearch.setupGlobalSearchListener();
         }
@@ -57,17 +61,30 @@
         refreshWordSpotlight: HomeView.refreshWordSpotlight,
         setStudyMode: HomeView.setStudyMode,
 
+        // Batch preview
+        openBatchPreview: BatchPreview ? BatchPreview.openBatchPreview : function () {},
+        startQuizFromPreview: BatchPreview ? BatchPreview.startQuizFromPreview : function () {},
+        closeBatchPreview: BatchPreview ? BatchPreview.closeBatchPreview : function () {},
+
         // Quiz flow
         startBatchQuiz: Quiz.startBatchQuiz,
         startUnitAllQuiz: Quiz.startUnitAllQuiz,
         startGlobalRandomQuiz: Quiz.startGlobalRandomQuiz,
         startMistakeBankQuiz: Quiz.startMistakeBankQuiz,
+        resumeSavedSession: Quiz.resumeSavedSession,
+        playListenAudio: Quiz.playListenAudio,
         selectOption: Quiz.selectOption,
+        toggleStep2Hiragana: Quiz.toggleStep2Hiragana,
         submitStep2: Quiz.submitStep2,
         overrideStep2AsCorrect: Quiz.overrideStep2AsCorrect,
         nextQuestion: Quiz.nextQuestion,
 
-        // Summary
+        // Summary & Session Review
+        startNextBatchFromSummary: Summary.startNextBatchFromSummary,
+        previewNextBatchFromSummary: Summary.previewNextBatchFromSummary,
+        openSessionReview: Summary.openSessionReview,
+        closeSessionReview: Summary.closeSessionReview,
+        setSessionReviewFilter: Summary.setSessionReviewFilter,
         retryWrong: Summary.retryWrong,
         restartCurrentSession: Summary.restartCurrentSession,
         backToMenu: Summary.backToMenu,
@@ -84,6 +101,7 @@
 
         // Audio
         speakWord: Audio.speakWord,
+        speakWordSlow: Audio.speakWordSlow,
         speakSpecific: Audio.speakSpecific
     };
 

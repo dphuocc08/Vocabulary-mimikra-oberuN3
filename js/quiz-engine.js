@@ -180,11 +180,50 @@
     }
 
     /**
+     * Generate 3 unique Vietnamese meaning distractors for Listening mode,
+     * prioritizing items from the same unit and POS and avoiding normalized duplicates.
+     */
+    function generateMeaningDistractors(target, pool) {
+        const distractors = [];
+        const targetNorm = normalizeVi(target.meaning);
+        const usedMeanings = new Set([String(target.meaning || "").trim()]);
+        const usedNorms = new Set(targetNorm ? [targetNorm] : []);
+        const candidates = (pool || []).filter((item) => item && item.id !== target.id && item.meaning);
+
+        const sameUnitAndPos = shuffle(
+            candidates.filter((item) => item.unitId === target.unitId && item.pos === target.pos)
+        );
+        const sameUnit = shuffle(
+            candidates.filter((item) => item.unitId === target.unitId)
+        );
+        const samePos = shuffle(
+            candidates.filter((item) => item.pos === target.pos)
+        );
+        const fallback = shuffle(candidates);
+
+        for (const tier of [sameUnitAndPos, sameUnit, samePos, fallback]) {
+            for (const item of tier) {
+                if (distractors.length >= 3) break;
+                const meaning = String(item.meaning || "").trim();
+                const norm = normalizeVi(meaning);
+                if (meaning && !usedMeanings.has(meaning) && (!norm || !usedNorms.has(norm))) {
+                    usedMeanings.add(meaning);
+                    if (norm) usedNorms.add(norm);
+                    distractors.push(meaning);
+                }
+            }
+            if (distractors.length >= 3) break;
+        }
+
+        return distractors;
+    }
+
+    /**
      * Build quiz question objects for a session.
      * Never drops Kana-only words; in 'two_step' mode, Kana-only words skip Step 1 automatically.
      */
     function buildQuestions(items, allPool, mode) {
-        const studyMode = mode === "context_fill" ? "context_fill" : "two_step";
+        const studyMode = mode === "context_fill" || mode === "listen_meaning" ? mode : "two_step";
         const orderedItems = shuffle(items);
 
         return orderedItems.map((target) => {
@@ -193,6 +232,20 @@
                 const options = shuffle([
                     { text: target.word, isCorrect: true },
                     ...distractors.map((w) => ({ text: w, isCorrect: false }))
+                ]);
+                return {
+                    target,
+                    mode: studyMode,
+                    needsStep1: false,
+                    options
+                };
+            }
+
+            if (studyMode === "listen_meaning") {
+                const distractors = generateMeaningDistractors(target, allPool);
+                const options = shuffle([
+                    { text: target.meaning, isCorrect: true },
+                    ...distractors.map((m) => ({ text: m, isCorrect: false }))
                 ]);
                 return {
                     target,
@@ -238,6 +291,7 @@
         getAllReadings,
         generateReadingDistractors,
         generateContextDistractors,
+        generateMeaningDistractors,
         buildQuestions,
         fillBlank
     };

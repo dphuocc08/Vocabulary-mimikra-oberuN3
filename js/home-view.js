@@ -1,7 +1,7 @@
 (function (global) {
     const Storage = global.MimiStorage;
     const AppState = global.MimiAppState;
-    const { state, escapeHtml, showScreen } = AppState;
+    const { state, escapeHtml, escapeJsAttr, formatShortPart, showScreen } = AppState;
 
     const LEVEL_STYLES = {
         sky: {
@@ -77,6 +77,7 @@
     function renderHome() {
         showScreen("selection-screen");
         renderLevelHeader();
+        renderContinueCard();
         renderLevelSwitcher();
         renderModeSwitcher();
         renderMistakeBanner();
@@ -85,6 +86,270 @@
         renderSidebarProgress();
         renderSidebarUnitNav();
         renderWordSpotlight(false);
+    }
+
+    function getValidActiveSessionForHome() {
+        const saved = Storage.getActiveSession();
+        if (!saved) return null;
+
+        if (!AppState.isValidManifestUnit(saved.levelId, saved.unitId)) {
+            Storage.clearActiveSession();
+            return null;
+        }
+
+        if (saved.levelId === state.currentLevel && global.MimiQuizController) {
+            const validated = global.MimiQuizController.validateSavedSessionForLoadedData(saved);
+            if (!validated) {
+                Storage.clearActiveSession();
+                return null;
+            }
+            return {
+                session: saved,
+                levelCode: validated.levelMeta.code,
+                unitCode: validated.unit.code,
+                part: validated.batch.part,
+                partTitle: validated.batch.partTitle || ""
+            };
+        }
+
+        const lvlMeta = AppState.getLevelMetaById(saved.levelId);
+        return {
+            session: saved,
+            levelCode: lvlMeta ? lvlMeta.code : saved.levelCode,
+            unitCode: saved.unitCode,
+            part: saved.part,
+            partTitle: saved.partTitle || ""
+        };
+    }
+
+    function getRecommendedNextBatchForCurrentLevel() {
+        const ordered = AppState.getOrderedBatchesForLevel(state.currentLevel);
+        if (ordered.length === 0) return null;
+
+        const completedBatches = Storage.getCompletedBatches();
+        const lastCompleted = Storage.getLastCompletedBatch();
+
+        if (lastCompleted) {
+            if (!AppState.isValidManifestUnit(lastCompleted.levelId, lastCompleted.unitId)) {
+                Storage.clearLastCompletedBatch();
+            } else if (lastCompleted.levelId === state.currentLevel) {
+                const existsInLevel = AppState.findUnitAndBatch(lastCompleted.unitId, lastCompleted.part);
+                if (!existsInLevel) {
+                    Storage.clearLastCompletedBatch();
+                } else {
+                    const nextAfterLast = AppState.getNextBatchInLevel(
+                        lastCompleted.unitId,
+                        lastCompleted.part,
+                        state.currentLevel
+                    );
+                    if (nextAfterLast) {
+                        return {
+                            kind: "next_after_completed",
+                            entry: nextAfterLast,
+                            prevLabel: `${existsInLevel.unit.code} · ${formatShortPart(existsInLevel.batch.part)}`
+                        };
+                    }
+                    const firstIncomplete = ordered.find((e) => !completedBatches[e.batch.batchKey]);
+                    if (firstIncomplete) {
+                        return {
+                            kind: "next_incomplete",
+                            entry: firstIncomplete,
+                            prevLabel: `${existsInLevel.unit.code} · ${formatShortPart(existsInLevel.batch.part)}`
+                        };
+                    }
+                    return {
+                        kind: "all_completed",
+                        entry: null,
+                        levelMeta: AppState.getCurrentLevelMeta()
+                    };
+                }
+            }
+        }
+
+        // Fallback for existing legacy progress stored in completedBatches
+        let latestCompletedEntry = null;
+        let latestTimestamp = -1;
+        for (const entry of ordered) {
+            const rec = completedBatches[entry.batch.batchKey];
+            if (rec) {
+                const ts = rec.lastPlayedAt ? Date.parse(rec.lastPlayedAt) : 0;
+                const safeTs = Number.isNaN(ts) ? 0 : ts;
+                if (safeTs >= latestTimestamp) {
+                    latestTimestamp = safeTs;
+                    latestCompletedEntry = entry;
+                }
+            }
+        }
+
+        if (latestCompletedEntry) {
+            const nextAfterLatest = AppState.getNextBatchInLevel(
+                latestCompletedEntry.unit.id,
+                latestCompletedEntry.batch.part,
+                state.currentLevel
+            );
+            if (nextAfterLatest) {
+                return {
+                    kind: "next_after_completed",
+                    entry: nextAfterLatest,
+                    prevLabel: `${latestCompletedEntry.unit.code} · ${formatShortPart(latestCompletedEntry.batch.part)}`
+                };
+            }
+            const firstIncomplete = ordered.find((e) => !completedBatches[e.batch.batchKey]);
+            if (firstIncomplete) {
+                return {
+                    kind: "next_incomplete",
+                    entry: firstIncomplete,
+                    prevLabel: `${latestCompletedEntry.unit.code} · ${formatShortPart(latestCompletedEntry.batch.part)}`
+                };
+            }
+            return {
+                kind: "all_completed",
+                entry: null,
+                levelMeta: AppState.getCurrentLevelMeta()
+            };
+        }
+
+        return {
+            kind: "first_batch",
+            entry: ordered[0],
+            prevLabel: ""
+        };
+    }
+
+    function describeQuizStep(session) {
+        if (session.studyMode === "context_fill") {
+            return session.quizStep === 3 ? "Đang xem giải thích" : "Điền ngữ cảnh";
+        }
+        if (session.studyMode === "listen_meaning") {
+            return session.quizStep === 3 ? "Đang xem giải thích" : "Nghe chọn nghĩa";
+        }
+        if (session.quizStep === 3) return "Đang xem giải thích";
+        if (session.quizStep === 2) return "Bước 2 (Gõ nghĩa)";
+        return "Bước 1 (Chọn đọc)";
+    }
+
+    function getStudyModeShortLabel(mode) {
+        if (mode === "context_fill") return "Ngữ cảnh";
+        if (mode === "listen_meaning") return "Nghe nghĩa";
+        return "2 Bước";
+    }
+
+    function renderContinueCard() {
+        const container = document.getElementById("continue-learning-card");
+        if (!container) return;
+
+        const activeInfo = getValidActiveSessionForHome();
+        if (activeInfo) {
+            const { session, levelCode, unitCode, part, partTitle } = activeInfo;
+            const total = session.questions.length;
+            const qNum = session.currentIndex + 1;
+            const pct = Math.round(((session.quizStep === 3 ? qNum : session.currentIndex) / total) * 100);
+            const modeText = getStudyModeShortLabel(session.studyMode);
+            const stepText = describeQuizStep(session);
+            const buttonLabel = `Học tiếp ${levelCode} · ${unitCode} · Câu ${qNum}/${total}`;
+            const partSummary = partTitle ? `${part} — ${partTitle}` : part;
+
+            container.classList.remove("hidden");
+            container.innerHTML = `
+                <div class="continue-card dashboard-card bg-white rounded-2xl p-4 sm:p-5 border-2 border-emerald-400/80 shadow-sm">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                        <div class="flex flex-wrap items-center gap-1.5">
+                            <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                                <span>Phiên đang học dở</span>
+                            </span>
+                            <span class="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-200">${escapeHtml(modeText)}</span>
+                            <span class="text-[11px] font-medium text-slate-500">${escapeHtml(stepText)}</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-xs font-bold">
+                            <span class="text-emerald-600">✓ ${session.correctCount}</span>
+                            <span class="text-slate-300">|</span>
+                            <span class="text-rose-500">✕ ${session.wrongCount}</span>
+                        </div>
+                    </div>
+
+                    <button id="continue-learning-btn" type="button" onclick="MimiApp.resumeSavedSession()"
+                        class="w-full py-3.5 px-4 sm:px-5 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-bold rounded-xl text-sm sm:text-base shadow-sm transition flex items-center justify-between gap-3 text-left">
+                        <span class="min-w-0 truncate">▶ ${escapeHtml(buttonLabel)}</span>
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </button>
+
+                    <div class="mt-2.5 flex items-center justify-between gap-3 text-xs text-slate-500">
+                        <span class="truncate">${escapeHtml(partSummary)}</span>
+                        <span class="shrink-0 font-semibold text-emerald-700">${pct}%</span>
+                    </div>
+                    <div class="mt-1.5 w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="bg-emerald-500 h-full transition-all duration-300" style="width: ${pct}%"></div>
+                    </div>
+                </div>
+            `;
+            return;
+        }
+
+        const recommendation = getRecommendedNextBatchForCurrentLevel();
+        if (!recommendation) {
+            container.classList.add("hidden");
+            container.innerHTML = "";
+            return;
+        }
+
+        if (recommendation.kind === "all_completed") {
+            const lvlCode = recommendation.levelMeta.code;
+            container.classList.remove("hidden");
+            container.innerHTML = `
+                <div class="continue-card dashboard-card bg-white rounded-2xl p-4 sm:p-5 border border-emerald-200 shadow-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <div class="space-y-1">
+                        <span class="inline-flex items-center text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">🏆 Hoàn thành ${escapeHtml(lvlCode)}</span>
+                        <div class="font-bold text-slate-900 text-sm sm:text-base">Bạn đã đi qua toàn bộ các chặng của JLPT ${escapeHtml(lvlCode)}!</div>
+                        <div class="text-xs text-slate-500">Hãy ôn tổng hợp ngẫu nhiên hoặc chuyển sang cấp độ tiếp theo.</div>
+                    </div>
+                    <button id="continue-learning-btn" type="button" onclick="MimiApp.startGlobalRandomQuiz(20)"
+                        class="w-full sm:w-auto px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-sm shadow-xs transition shrink-0">
+                        ⚡ Ôn tổng hợp ${escapeHtml(lvlCode)}
+                    </button>
+                </div>
+            `;
+            return;
+        }
+
+        const { entry, kind, prevLabel } = recommendation;
+        const shortPart = formatShortPart(entry.batch.part);
+        const unitIdAttr = escapeJsAttr(entry.unit.id);
+        const partAttr = escapeJsAttr(entry.batch.part);
+        const isFirst = kind === "first_batch";
+        const badgeText = isFirst ? "Bắt đầu nhanh" : "Chặng tiếp theo";
+        const btnPrefix = isFirst ? "Bắt đầu" : "Học tiếp";
+        const buttonLabel = `${btnPrefix} ${entry.levelMeta.code} · ${entry.unit.code} · ${shortPart}`;
+        const detailText = prevLabel
+            ? `Vừa xong ${prevLabel} · ${entry.batch.partTitle || entry.batch.part} (${entry.batch.items.length} từ)`
+            : `${entry.batch.part}${entry.batch.partTitle ? ` — ${entry.batch.partTitle}` : ""} (${entry.batch.items.length} từ)`;
+
+        container.classList.remove("hidden");
+        container.innerHTML = `
+            <div class="continue-card dashboard-card bg-white rounded-2xl p-4 sm:p-5 border-2 border-emerald-300/80 shadow-xs">
+                <div class="flex items-center justify-between gap-2 mb-2.5">
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+                        <span>${isFirst ? "✨" : "🚀"}</span>
+                        <span>${escapeHtml(badgeText)}</span>
+                    </span>
+                    <span class="text-xs font-medium text-slate-500">${entry.batch.items.length} từ</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
+                    <button id="continue-learning-btn" type="button" onclick="MimiApp.startBatchQuiz('${unitIdAttr}', '${partAttr}')"
+                        class="flex-grow py-3 px-4 bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-bold rounded-xl text-sm sm:text-base shadow-xs transition flex items-center justify-between gap-2 text-left">
+                        <span class="min-w-0 truncate">${escapeHtml(buttonLabel)}</span>
+                        <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                    </button>
+                    <button type="button" onclick="MimiApp.openBatchPreview('${unitIdAttr}', '${partAttr}')"
+                        class="py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold rounded-xl text-sm transition shrink-0 text-center">
+                        📖 Xem từ
+                    </button>
+                </div>
+
+                <div class="mt-2 text-xs text-slate-500 truncate">${escapeHtml(detailText)}</div>
+            </div>
+        `;
     }
 
     function renderLevelHeader() {
@@ -168,20 +433,22 @@
     }
 
     function renderModeSwitcher() {
-        const twoStepBtn = document.getElementById("mode-btn-two_step");
-        const contextBtn = document.getElementById("mode-btn-context_fill");
-        if (!twoStepBtn || !contextBtn) return;
-
+        const modes = ["two_step", "context_fill", "listen_meaning"];
         const activeClasses = "border-emerald-500 bg-emerald-50/80 ring-2 ring-emerald-500/20 shadow-sm";
         const inactiveClasses = "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50";
 
-        twoStepBtn.className = `p-4 rounded-xl border-2 text-left transition ${state.studyMode === "two_step" ? activeClasses : inactiveClasses}`;
-        contextBtn.className = `p-4 rounded-xl border-2 text-left transition ${state.studyMode === "context_fill" ? activeClasses : inactiveClasses}`;
-
-        const badge1 = document.getElementById("mode-badge-two_step");
-        const badge2 = document.getElementById("mode-badge-context_fill");
-        if (badge1) badge1.classList.toggle("hidden", state.studyMode !== "two_step");
-        if (badge2) badge2.classList.toggle("hidden", state.studyMode !== "context_fill");
+        for (const mode of modes) {
+            const btn = document.getElementById(`mode-btn-${mode}`);
+            const badge = document.getElementById(`mode-badge-${mode}`);
+            const isSelected = state.studyMode === mode;
+            if (btn) {
+                btn.className = `p-4 rounded-xl border-2 text-left transition flex flex-col justify-between ${isSelected ? activeClasses : inactiveClasses}`;
+                btn.setAttribute("aria-pressed", String(isSelected));
+            }
+            if (badge) {
+                badge.classList.toggle("hidden", !isSelected);
+            }
+        }
     }
 
     function renderMistakeBanner() {
@@ -280,6 +547,7 @@
 
         const masteredSet = new Set(Storage.getMasteredIds());
         const completedBatches = Storage.getCompletedBatches();
+        const activeSession = Storage.getActiveSession();
 
         container.innerHTML = levelUnits.map((unit) => {
             const totalItems = unit.items.length;
@@ -288,22 +556,47 @@
 
             const batchesHtml = unit.batches.map((batch) => {
                 const record = completedBatches[batch.batchKey];
-                const badgeHtml = record
-                    ? `<span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">✓ ${record.bestPct}%</span>`
-                    : `<span class="text-xs text-slate-400 group-hover:text-emerald-600 font-medium">${batch.items.length} từ →</span>`;
+                const isActiveBatch = Boolean(
+                    activeSession &&
+                    activeSession.unitId === unit.id &&
+                    activeSession.part === batch.part
+                );
+                let badgeHtml = `<span class="text-xs text-slate-400 font-medium">${batch.items.length} từ</span>`;
+                if (isActiveBatch) {
+                    badgeHtml = `<span class="text-xs font-bold text-amber-800 bg-amber-100 border border-amber-200 px-2 py-0.5 rounded-full">Đang học ${activeSession.currentIndex + 1}/${activeSession.questions.length}</span>`;
+                } else if (record) {
+                    badgeHtml = `<span class="text-xs font-bold text-emerald-700 bg-emerald-100 px-2 py-0.5 rounded-full">✓ ${record.bestPct}%</span>`;
+                }
+
+                const borderCls = isActiveBatch
+                    ? "border-amber-300 bg-amber-50/40"
+                    : (record ? "border-emerald-300/80 bg-slate-50" : "border-slate-200 bg-slate-50");
+                const unitIdAttr = escapeJsAttr(unit.id);
+                const partAttr = escapeJsAttr(batch.part);
 
                 return `
-                    <button onclick="MimiApp.startBatchQuiz('${escapeHtml(unit.id)}', '${escapeHtml(batch.part)}')"
-                        class="group p-4 bg-slate-50 hover:bg-emerald-50 border ${record ? "border-emerald-300/80" : "border-slate-200"} hover:border-emerald-400 rounded-xl text-left transition flex flex-col justify-between">
-                        <div class="flex items-center justify-between gap-2 mb-1.5">
-                            <span class="text-xs font-bold text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded">${escapeHtml(batch.part)}</span>
-                            ${badgeHtml}
+                    <div class="p-4 border ${borderCls} hover:border-emerald-400 rounded-xl text-left transition flex flex-col justify-between gap-3">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-1.5">
+                                <span class="text-xs font-bold text-emerald-800 bg-emerald-100/80 px-2 py-0.5 rounded">${escapeHtml(batch.part)}</span>
+                                ${badgeHtml}
+                            </div>
+                            <div class="font-semibold text-slate-800 text-sm leading-snug">
+                                ${escapeHtml(batch.partTitle || "Nhóm từ vựng")}
+                            </div>
+                            <div class="text-xs text-slate-500 mt-1">${batch.items.length} từ vựng</div>
                         </div>
-                        <div class="font-semibold text-slate-800 text-sm group-hover:text-emerald-950">
-                            ${escapeHtml(batch.partTitle || "Nhóm từ vựng")}
+                        <div class="grid grid-cols-2 gap-2 pt-1">
+                            <button type="button" onclick="MimiApp.openBatchPreview('${unitIdAttr}', '${partAttr}')"
+                                class="py-2 px-3 rounded-lg border border-slate-200 bg-white hover:bg-slate-100 text-slate-700 font-semibold text-xs sm:text-sm transition text-center">
+                                Xem từ
+                            </button>
+                            <button type="button" onclick="MimiApp.startBatchQuiz('${unitIdAttr}', '${partAttr}')"
+                                class="py-2 px-3 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm shadow-xs transition text-center">
+                                Làm bài
+                            </button>
                         </div>
-                        <div class="text-xs text-slate-500 mt-1">${batch.items.length} từ vựng</div>
-                    </button>
+                    </div>
                 `;
             }).join("");
 
@@ -483,6 +776,7 @@
         setStudyMode,
         renderLoadingState,
         renderHome,
+        renderContinueCard,
         renderLevelHeader,
         renderLevelSwitcher,
         renderModeSwitcher,

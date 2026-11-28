@@ -5,12 +5,15 @@
         COMPLETED_BATCHES: "mimi_n3_completed_batches",
         STUDY_MODE: "mimi_n3_study_mode",
         SELECTED_LEVEL: "mimi_selected_level",
-        THEME: "mimi_theme"
+        THEME: "mimi_theme",
+        ACTIVE_SESSION: "mimi_active_batch_session",
+        LAST_COMPLETED_BATCH: "mimi_last_completed_batch"
     };
 
-    const VALID_MODES = new Set(["two_step", "context_fill"]);
+    const VALID_MODES = new Set(["two_step", "context_fill", "listen_meaning"]);
     const VALID_LEVELS = new Set(["n5", "n4", "n3", "n2"]);
     const VALID_THEMES = new Set(["light", "dark"]);
+    const ACTIVE_SESSION_VERSION = 1;
 
     function safeGetItem(key) {
         try {
@@ -25,6 +28,16 @@
         try {
             if (typeof global.localStorage === "undefined") return false;
             global.localStorage.setItem(key, value);
+            return true;
+        } catch (err) {
+            return false;
+        }
+    }
+
+    function safeRemoveItem(key) {
+        try {
+            if (typeof global.localStorage === "undefined") return false;
+            global.localStorage.removeItem(key);
             return true;
         } catch (err) {
             return false;
@@ -168,18 +181,259 @@
         return nextTheme;
     }
 
+    function isNonEmptyString(val) {
+        return typeof val === "string" && val.trim().length > 0;
+    }
+
+    function sanitizeActiveSession(raw) {
+        if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
+        if (raw.version !== ACTIVE_SESSION_VERSION) return null;
+
+        const levelId = isNonEmptyString(raw.levelId) ? raw.levelId.trim().toLowerCase() : "";
+        const unitId = isNonEmptyString(raw.unitId) ? raw.unitId.trim() : "";
+        const part = isNonEmptyString(raw.part) ? raw.part.trim() : "";
+        const studyMode = VALID_MODES.has(raw.studyMode) ? raw.studyMode : null;
+        if (!VALID_LEVELS.has(levelId) || !unitId || !part || !studyMode) return null;
+
+        if (!Array.isArray(raw.questions) || raw.questions.length === 0) return null;
+
+        const cleanQuestions = [];
+        for (const q of raw.questions) {
+            if (!q || typeof q !== "object") return null;
+            const targetId = Number(q.targetId);
+            if (!Number.isInteger(targetId) || targetId <= 0) return null;
+
+            const qMode = VALID_MODES.has(q.mode) ? q.mode : null;
+            if (qMode !== studyMode) return null;
+
+            const needsStep1 = studyMode === "two_step" ? Boolean(q.needsStep1) : false;
+            const rawOptions = Array.isArray(q.options) ? q.options : [];
+            const cleanOptions = [];
+            for (const opt of rawOptions) {
+                if (!opt || typeof opt !== "object" || !isNonEmptyString(opt.text)) return null;
+                cleanOptions.push({
+                    text: opt.text,
+                    isCorrect: Boolean(opt.isCorrect)
+                });
+            }
+
+            if (studyMode === "context_fill" || studyMode === "listen_meaning" || needsStep1) {
+                if (cleanOptions.length < 2 || !cleanOptions.some((o) => o.isCorrect)) {
+                    return null;
+                }
+            }
+
+            cleanQuestions.push({
+                targetId,
+                mode: qMode,
+                needsStep1,
+                options: cleanOptions
+            });
+        }
+
+        const total = cleanQuestions.length;
+        const currentIndex = Number(raw.currentIndex);
+        if (!Number.isInteger(currentIndex) || currentIndex < 0 || currentIndex >= total) {
+            return null;
+        }
+
+        const quizStep = Number(raw.quizStep);
+        if (!Number.isInteger(quizStep) || quizStep < 1 || quizStep > 3) {
+            return null;
+        }
+
+        const currentQ = cleanQuestions[currentIndex];
+        if ((studyMode === "context_fill" || studyMode === "listen_meaning") && quizStep === 2) return null;
+        if (studyMode === "two_step" && !currentQ.needsStep1 && quizStep === 1) return null;
+
+        const correctCount = Number(raw.correctCount);
+        const wrongCount = Number(raw.wrongCount);
+        if (
+            !Number.isInteger(correctCount) || correctCount < 0 || correctCount > total ||
+            !Number.isInteger(wrongCount) || wrongCount < 0 || wrongCount > total ||
+            correctCount + wrongCount > total
+        ) {
+            return null;
+        }
+
+        const rawQState = raw.currentQuestionState && typeof raw.currentQuestionState === "object"
+            ? raw.currentQuestionState
+            : {};
+
+        let selectedOptionIndex = null;
+        if (rawQState.selectedOptionIndex !== null && rawQState.selectedOptionIndex !== undefined) {
+            const idx = Number(rawQState.selectedOptionIndex);
+            if (!Number.isInteger(idx) || idx < 0 || idx >= currentQ.options.length) {
+                return null;
+            }
+            selectedOptionIndex = idx;
+        }
+
+        const needsSelectedOption =
+            ((studyMode === "context_fill" || studyMode === "listen_meaning") && quizStep === 3) ||
+            (studyMode === "two_step" && currentQ.needsStep1 && quizStep >= 2);
+        if (needsSelectedOption && selectedOptionIndex === null) {
+            return null;
+        }
+
+        const cleanAnswerHistory = [];
+        if (Array.isArray(raw.answerHistory)) {
+            const seenIdx = new Set();
+            for (const entry of raw.answerHistory) {
+                if (!entry || typeof entry !== "object") continue;
+                const entryIndex = Number(entry.index);
+                const entryTargetId = Number(entry.targetId);
+                if (
+                    !Number.isInteger(entryIndex) || entryIndex < 0 || entryIndex >= total ||
+                    seenIdx.has(entryIndex) ||
+                    !Number.isInteger(entryTargetId) || entryTargetId <= 0
+                ) {
+                    continue;
+                }
+                const entryMode = VALID_MODES.has(entry.mode) ? entry.mode : studyMode;
+                const entrySelIdx = Number.isInteger(Number(entry.selectedOptionIndex)) && entry.selectedOptionIndex !== null
+                    ? Number(entry.selectedOptionIndex)
+                    : null;
+                seenIdx.add(entryIndex);
+                cleanAnswerHistory.push({
+                    index: entryIndex,
+                    targetId: entryTargetId,
+                    mode: entryMode,
+                    needsStep1: entryMode === "two_step" ? Boolean(entry.needsStep1) : false,
+                    isCorrect: Boolean(entry.isCorrect),
+                    selectedOptionIndex: entrySelIdx,
+                    selectedOptionText: typeof entry.selectedOptionText === "string" ? entry.selectedOptionText : "",
+                    correctOptionText: typeof entry.correctOptionText === "string" ? entry.correctOptionText : "",
+                    step1Correct: Boolean(entry.step1Correct),
+                    step2Correct: entry.step2Correct === undefined ? true : Boolean(entry.step2Correct),
+                    userInput: typeof entry.userInput === "string" ? entry.userInput : "",
+                    overridden: Boolean(entry.overridden)
+                });
+            }
+            cleanAnswerHistory.sort((a, b) => a.index - b.index);
+        }
+
+        return {
+            version: ACTIVE_SESSION_VERSION,
+            levelId,
+            levelCode: isNonEmptyString(raw.levelCode) ? raw.levelCode.trim() : levelId.toUpperCase(),
+            unitId,
+            unitCode: isNonEmptyString(raw.unitCode) ? raw.unitCode.trim() : unitId,
+            part,
+            partTitle: typeof raw.partTitle === "string" ? raw.partTitle : "",
+            batchKey: isNonEmptyString(raw.batchKey) ? raw.batchKey.trim() : `${unitId}::${part}`,
+            label: isNonEmptyString(raw.label) ? raw.label.trim() : `${unitId} • ${part}`,
+            studyMode,
+            questions: cleanQuestions,
+            currentIndex,
+            correctCount,
+            wrongCount,
+            wrongItemIds: sanitizeIdArray(raw.wrongItemIds),
+            answerHistory: cleanAnswerHistory,
+            quizStep,
+            currentQuestionState: {
+                selectedOptionIndex,
+                step1Correct: Boolean(rawQState.step1Correct),
+                step2Correct: rawQState.step2Correct === undefined ? true : Boolean(rawQState.step2Correct),
+                userInput: typeof rawQState.userInput === "string" ? rawQState.userInput : "",
+                wasInMistakeBankBefore: Boolean(rawQState.wasInMistakeBankBefore),
+                addedToBank: Boolean(rawQState.addedToBank),
+                graduatedFromBank: Boolean(rawQState.graduatedFromBank),
+                overridden: Boolean(rawQState.overridden)
+            },
+            updatedAt: typeof raw.updatedAt === "string" ? raw.updatedAt : new Date().toISOString()
+        };
+    }
+
+    function getActiveSession() {
+        const rawText = safeGetItem(KEYS.ACTIVE_SESSION);
+        if (!rawText) return null;
+        let parsed;
+        try {
+            parsed = JSON.parse(rawText);
+        } catch (err) {
+            safeRemoveItem(KEYS.ACTIVE_SESSION);
+            return null;
+        }
+        const clean = sanitizeActiveSession(parsed);
+        if (!clean) {
+            safeRemoveItem(KEYS.ACTIVE_SESSION);
+            return null;
+        }
+        return clean;
+    }
+
+    function saveActiveSession(session) {
+        const clean = sanitizeActiveSession(session);
+        if (!clean) return false;
+        return writeJson(KEYS.ACTIVE_SESSION, clean);
+    }
+
+    function clearActiveSession() {
+        return safeRemoveItem(KEYS.ACTIVE_SESSION);
+    }
+
+    function sanitizeLastCompletedBatch(raw) {
+        if (!raw || typeof raw !== "object" || Array.isArray(raw)) return null;
+        const levelId = isNonEmptyString(raw.levelId) ? raw.levelId.trim().toLowerCase() : "";
+        const unitId = isNonEmptyString(raw.unitId) ? raw.unitId.trim() : "";
+        const part = isNonEmptyString(raw.part) ? raw.part.trim() : "";
+        if (!VALID_LEVELS.has(levelId) || !unitId || !part) return null;
+        return {
+            levelId,
+            unitId,
+            unitCode: isNonEmptyString(raw.unitCode) ? raw.unitCode.trim() : unitId,
+            part,
+            batchKey: isNonEmptyString(raw.batchKey) ? raw.batchKey.trim() : `${unitId}::${part}`,
+            completedAt: typeof raw.completedAt === "string" ? raw.completedAt : new Date().toISOString()
+        };
+    }
+
+    function getLastCompletedBatch() {
+        const rawText = safeGetItem(KEYS.LAST_COMPLETED_BATCH);
+        if (!rawText) return null;
+        let parsed;
+        try {
+            parsed = JSON.parse(rawText);
+        } catch (err) {
+            safeRemoveItem(KEYS.LAST_COMPLETED_BATCH);
+            return null;
+        }
+        const clean = sanitizeLastCompletedBatch(parsed);
+        if (!clean) {
+            safeRemoveItem(KEYS.LAST_COMPLETED_BATCH);
+            return null;
+        }
+        return clean;
+    }
+
+    function setLastCompletedBatch(info) {
+        const clean = sanitizeLastCompletedBatch(info);
+        if (!clean) return false;
+        return writeJson(KEYS.LAST_COMPLETED_BATCH, clean);
+    }
+
+    function clearLastCompletedBatch() {
+        return safeRemoveItem(KEYS.LAST_COMPLETED_BATCH);
+    }
+
     function exportBackup() {
+        const lastCompletedBatch = getLastCompletedBatch();
+        const data = {
+            wrongIds: getWrongIds(),
+            masteredIds: getMasteredIds(),
+            completedBatches: getCompletedBatches(),
+            studyMode: getStudyMode(),
+            selectedLevel: getSelectedLevel()
+        };
+        if (lastCompletedBatch) {
+            data.lastCompletedBatch = lastCompletedBatch;
+        }
         const payload = {
             app: "mimi-kara-n3",
             version: 2,
             exportedAt: new Date().toISOString(),
-            data: {
-                wrongIds: getWrongIds(),
-                masteredIds: getMasteredIds(),
-                completedBatches: getCompletedBatches(),
-                studyMode: getStudyMode(),
-                selectedLevel: getSelectedLevel()
-            }
+            data
         };
         return JSON.stringify(payload, null, 2);
     }
@@ -221,6 +475,15 @@
             setSelectedLevel(parsed.data.selectedLevel);
         }
 
+        // Clear any stale local in-progress session when restoring a backup
+        clearActiveSession();
+        const cleanLastBatch = sanitizeLastCompletedBatch(parsed.data.lastCompletedBatch);
+        if (cleanLastBatch) {
+            writeJson(KEYS.LAST_COMPLETED_BATCH, cleanLastBatch);
+        } else {
+            clearLastCompletedBatch();
+        }
+
         return {
             wrongCount: cleanWrong.length,
             masteredCount: cleanMastered.length,
@@ -245,6 +508,14 @@
         setSelectedLevel,
         getTheme,
         setTheme,
+        sanitizeActiveSession,
+        getActiveSession,
+        saveActiveSession,
+        clearActiveSession,
+        sanitizeLastCompletedBatch,
+        getLastCompletedBatch,
+        setLastCompletedBatch,
+        clearLastCompletedBatch,
         exportBackup,
         importBackup
     };
